@@ -1,17 +1,16 @@
-import { createClient } from "@/lib/supabase/server";
-import { Suspense } from "react";
+import { ContactForm } from "@/components/contact-form";
 
-async function InstrumentsData() {
-  const supabase = await createClient();
-  const { data: instruments } = await supabase.from("instruments").select();
-
-  return <pre>{JSON.stringify(instruments, null, 2)}</pre>;
-}
-
-export default function Instruments() {
+export default function ContactPage() {
   return (
-    <Suspense fallback={<div>Loading instruments...</div>}>
-      <InstrumentsData />
-    </Suspense>
+    <main className="min-h-screen flex items-center justify-center p-8">
+      <div className="w-full max-w-3xl">
+        <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
+        <p className="mb-6 text-muted-foreground">
+          Have questions or feedback? Fill out the form and we'll get back to you.
+        </p>
+
+        <ContactForm />
+      </div>
+    </main>
   );
 }
