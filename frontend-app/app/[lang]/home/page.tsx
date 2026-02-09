@@ -28,7 +28,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 				</Link>
 
 				<Link
-					href={`/${lang}/notes`}
+					href={`/notes`}
 					className="px-4 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200"
 				>
 					Notes
