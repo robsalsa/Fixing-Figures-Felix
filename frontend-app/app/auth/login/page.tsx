@@ -8,10 +8,11 @@ export default function Page() {
         <LoginForm />
       </div>
       <div className="w-full max-w-sm mt-4 text-center text-sm text-gray-600">
-        IF YOU DO NOT WISH TO SIGN IN please{' '}
-        <Link href="/en/home" className="underline font-medium text-primary">
-          press here
-        </Link>
+          IF YOU DO NOT WISH TO SIGN IN please{' '}
+          <Link href="/auth/skip" className="underline font-medium text-primary">
+            press here
+          </Link>
+          {' '}to continue as a guest.
       </div>
     </div>
   );

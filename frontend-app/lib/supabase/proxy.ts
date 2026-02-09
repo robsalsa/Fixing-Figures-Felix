@@ -38,10 +38,24 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  // Previously this proxy enforced redirects to the login page for
-  // unauthenticated requests. To allow anonymous browsing we no longer
-  // enforce a redirect here. We still keep the proxy to sync cookies
-  // between Supabase and the Next response.
+  // Read session info (if present) and a skip flag cookie. We intentionally
+  // only force a redirect to the login page when the user hits the root
+  // path ("/") and they are not authenticated and have not chosen to
+  // "skip" authentication. This implements the requested behaviour where
+  // users are prompted only once at the root and can continue as guests.
+  const { data } = await supabase.auth.getClaims();
+  const user = data?.claims;
+  const skipAuth = request.cookies.get("skip_auth")?.value;
+
+  if (
+    request.nextUrl.pathname === "/" &&
+    !user &&
+    !skipAuth
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/auth/login";
+    return NextResponse.redirect(url);
+  }
 
   // IMPORTANT: You *must* return the supabaseResponse object as it is.
   // If you're creating a new response object with NextResponse.next() make sure to:
