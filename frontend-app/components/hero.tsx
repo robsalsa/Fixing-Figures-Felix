@@ -7,6 +7,7 @@ export function Hero() {
   return (
     <div className="flex flex-col gap-16 items-center">
       <div className="flex gap-8 justify-center items-center">
+        <p> this supa x next is an code-image within the components/supabase-logo.tsx</p>
         <a
           href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
           target="_blank"
@@ -21,9 +22,9 @@ export function Hero() {
       </div>
       <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
       <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        things get built here!!!!
+        things get built here!!!! In the components/hero.tsx 
       </p>
-      <Link href="en/home">Home Page</Link>
+      <Link href="en/home">Home Page (this part too)</Link>
       <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
     </div>
   );
