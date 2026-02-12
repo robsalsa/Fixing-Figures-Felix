@@ -8,8 +8,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 			<h2>Fixing Figures — Home</h2>
         
 			<p className="text-lg text-gray-600 mb-6 max-w-2xl text-center">
-				Welcome to a sample home page for the Fixing Figures demo. Use the links below to
-				explore the site and see example content for the About page, instruments and notes.
+				THIS IS THE HOME PAGE AND NEEDS A DESPRATE TUNE UP. WHAT THE HOME SHOULD HAVE SHOULD BE SIMILAR TO "www.ifixit.com"
 			</p>
 
 			<div className="flex gap-3">
