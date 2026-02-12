@@ -1,11 +1,13 @@
 "use client";
 
 import {useState, useEffect} from "react";
-import Link from "next/Link";
+import Link from "next/link";
 // import Image from "next/Image"; //in the chance there is an image/icon
 import {usePathname, useRouter} from "next/navigation";
 // import {trackLanguageChange, trackButtonClick, trackOutboundLink} from "@/lib/analytics"; //in the chance of analytics by Google
 // import {setPreferredLanguage } from "@/lib/languageDetection"; //this is for the language JSON or CMS
+
+import Image from "next/image";
 
 export default function Header(){
     const pathname = usePathname();
@@ -42,18 +44,31 @@ export default function Header(){
 
     //tracking languages
     const handleLanguageChange = (code: string) =>{
-        trackLanguageChange(lang, code);
-        setPreferredLanguage(code as 'en' | 'es' | 'ko');
-        const pathWithoutLang = pathname.replace(/^\/(en|es|ko)/, '') || '/';
+        const pathWithoutLang = pathname.replace(/^\/(en|es|ko)/, "") || "/";
+        const newPath = `/${code}${pathWithoutLang}`;
         router.push(newPath);
     };
 
     return (
         <header className="header" role="banner">
             <div className="container-header">
-                <Link href={lang === "es" ? "/es" : lang === "ko" ? "/ko" : "/en"} className="flex items-center gap-3" aria-lable="home">
-                    
+                <Link href={lang === "es" ? "/es/home" : lang === "ko" ? "/ko/home" : "/en/home"} className="flex items-center gap-3" aria-label="home">
+                    <Image
+                        src="/test-image.jpg"
+                        alt="loading..."
+                        width={20}
+                        height={20}
+                    />
                 </Link>
+
+                <Link href={lang === "es" ? "/es/home" : lang === "ko" ? "/ko/home" : "/en/home"}>
+                    <h2 className="web-title">
+                        Fixing Figure Felix
+                    </h2>
+                </Link>
+
+                {/* this is the rest of the burger menu/ header components */}
+                
             </div>
         </header>
 
