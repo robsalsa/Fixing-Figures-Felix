@@ -43,7 +43,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 href={`/${lang}/home`} 
                 className={`burgerItem ${isActive('home')}`}
                 onClick={closeMobileMenu}
-              >
+              style={{color:"black"}}>
                 Home
               </Link>
             </li>
@@ -52,7 +52,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 href={`/${lang}/about`} 
                 className={`burgerItem ${isActive('about')}`}
                 onClick={closeMobileMenu}
-              >
+              style={{color:"black"}}>
                 About
               </Link>
             </li>
@@ -61,7 +61,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 href={`/${lang}/questionnaire`} 
                 className={`burgerItem ${isActive('questionnaire')}`}
                 onClick={closeMobileMenu}
-              >
+              style={{color:"black"}}>
                 Fix Your Figures
               </Link>
             </li>
@@ -70,7 +70,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 href={`/${lang}/contact`} 
                 className={`burgerItem ${isActive('contact')}`}
                 onClick={closeMobileMenu}
-              >
+              style={{color:"black"}}>
                 Contact Us
               </Link>
             </li>

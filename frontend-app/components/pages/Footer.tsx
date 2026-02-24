@@ -26,15 +26,15 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         <div className="footerRight">
           <nav className="footerNav" aria-label="Footer">
             <ul>
-              <li><Link href={`/${lang}/home`}>Home</Link></li>
-              <li><Link href={`/${lang}/about`}>About</Link></li>
-              <li><Link href={`/${lang}/questionnaire`}>Fix Your Figures</Link></li>
-              <li><Link href={`/${lang}/contact`}>Contact Us</Link></li>
+              <li><Link href={`/${lang}/home`} style={{color:"black"}}>Home</Link></li>
+              <li><Link href={`/${lang}/about`} style={{color:"black"}}>About</Link></li>
+              <li><Link href={`/${lang}/questionnaire`} style={{color:"black"}}>Fix Your Figures</Link></li>
+              <li><Link href={`/${lang}/contact`} style={{color:"black"}}>Contact Us</Link></li>
             </ul>
           </nav>
           <p className="small muted">
             This is a passion project,{' '}
-            <a href="https://operation-null-trace.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <a href="https://operation-null-trace.vercel.app/" target="_blank" rel="noopener noreferrer" style={{color: "blue"}}>
               check out my website :)
             </a>
             {' '}for more dev background.
