@@ -1,16 +1,14 @@
-import { redirect } from "next/navigation";
-
 import { createClient } from "@/lib/supabase/server";
+import { Suspense } from "react";
 import { InfoIcon } from "lucide-react";
 import { FetchDataSteps } from "@/components/tutorial/fetch-data-steps";
-import { Suspense } from "react";
 
 async function UserDetails() {
   const supabase = await createClient();
   const { data, error } = await supabase.auth.getClaims();
 
   if (error || !data?.claims) {
-    redirect("/auth/login");
+    return "Not signed in. Please sign in to see more details.";
   }
 
   return JSON.stringify(data.claims, null, 2);

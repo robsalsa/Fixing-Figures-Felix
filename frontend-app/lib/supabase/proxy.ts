@@ -38,22 +38,20 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  // Do not run code between createServerClient and
-  // supabase.auth.getClaims(). A simple mistake could make it very hard to debug
-  // issues with users being randomly logged out.
-
-  // IMPORTANT: If you remove getClaims() and you use server-side rendering
-  // with the Supabase client, your users may be randomly logged out.
+  // Read session info (if present) and a skip flag cookie. We intentionally
+  // only force a redirect to the login page when the user hits the root
+  // path ("/") and they are not authenticated and have not chosen to
+  // "skip" authentication. This implements the requested behaviour where
+  // users are prompted only once at the root and can continue as guests.
   const { data } = await supabase.auth.getClaims();
   const user = data?.claims;
+  const skipAuth = request.cookies.get("skip_auth")?.value;
 
   if (
-    request.nextUrl.pathname !== "/" &&
+    request.nextUrl.pathname === "/" &&
     !user &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/auth")
+    !skipAuth
   ) {
-    // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone();
     url.pathname = "/auth/login";
     return NextResponse.redirect(url);

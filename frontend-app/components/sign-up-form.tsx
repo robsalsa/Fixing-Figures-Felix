@@ -14,7 +14,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import HCaptchaClient, { HCaptchaRef } from "@/components/hcaptcha-client";
 
 export function SignUpForm({
   className,
@@ -25,6 +26,8 @@ export function SignUpForm({
   const [repeatPassword, setRepeatPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptchaRef | null>(null);
   const router = useRouter();
 
   const handleSignUp = async (e: React.FormEvent) => {
@@ -45,6 +48,7 @@ export function SignUpForm({
         password,
         options: {
           emailRedirectTo: `${window.location.origin}/protected`,
+          captchaToken: captchaToken ?? undefined,
         },
       });
       if (error) throw error;
@@ -53,6 +57,9 @@ export function SignUpForm({
       setError(error instanceof Error ? error.message : "An error occurred");
     } finally {
       setIsLoading(false);
+      try {
+        captchaRef.current?.resetCaptcha();
+      } catch {}
     }
   };
 
@@ -102,9 +109,12 @@ export function SignUpForm({
                 />
               </div>
               {error && <p className="text-sm text-red-500">{error}</p>}
-              <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? "Creating an account..." : "Sign up"}
-              </Button>
+                <div className="mt-2">
+                  <HCaptchaClient ref={captchaRef} onVerify={(t) => setCaptchaToken(t)} />
+                </div>
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? "Creating an account..." : "Sign up"}
+                </Button>
             </div>
             <div className="mt-4 text-center text-sm">
               Already have an account?{" "}
