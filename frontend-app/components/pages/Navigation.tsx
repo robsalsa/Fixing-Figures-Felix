@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import translations from '@/lib/translations/headfoot.json';
 
 interface NavigationProps {
@@ -10,8 +11,16 @@ interface NavigationProps {
   currentPage?: string;
 }
 
+const languages = [
+  { code: 'en', label: 'English' },
+  { code: 'es', label: 'Español' },
+  { code: 'ja', label: '日本語' }
+];
+
 export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const t = translations[lang as keyof typeof translations] || translations.en;
   const navT = t.navigation;
 
@@ -23,7 +32,20 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
     setIsMobileMenuOpen(false);
   };
 
+  const toggleLanguageMenu = () => {
+    setIsLanguageMenuOpen(!isLanguageMenuOpen);
+  };
+
+  const closeLanguageMenu = () => {
+    setIsLanguageMenuOpen(false);
+  };
+
   const isActive = (page: string) => currentPage === page ? 'active' : '';
+
+  // Get the new path with a different language code
+  const getLanguagePath = (newLang: string) => {
+    return pathname.replace(`/${lang}`, `/${newLang}`);
+  };
 
   return (
     <header>
@@ -80,6 +102,76 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
           </ul>
         </nav>
 
+        {/* Language Switcher */}
+        <div className="languageSwitcher" style={{ position: 'relative', marginRight: '10px' }}>
+          <button 
+            className="languageSwitcherBtn" 
+            type="button"
+            aria-label="Change language"
+            aria-expanded={isLanguageMenuOpen}
+            onClick={toggleLanguageMenu}
+            style={{
+              padding: '8px 12px',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              background: 'white',
+              fontSize: '14px'
+            }}
+          >
+            {/* Desktop: Full text */}
+            <span style={{ display: 'none' }} className="langDesktop">
+              Language
+            </span>
+            {/* Mobile: Language code */}
+            <span className="langMobile">
+              {lang.toUpperCase()}
+            </span>
+          </button>
+
+          {/* Language Menu */}
+          {isLanguageMenuOpen && (
+            <ul 
+              className="languageMenu"
+              style={{
+                position: 'absolute',
+                top: '100%',
+                right: 0,
+                background: 'white',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                listStyle: 'none',
+                padding: 0,
+                margin: '5px 0 0 0',
+                minWidth: '120px',
+                zIndex: 100
+              }}
+            >
+              {languages.map((l) => (
+                <li key={l.code}>
+                  <Link
+                    href={getLanguagePath(l.code)}
+                    className={lang === l.code ? 'active' : ''}
+                    onClick={closeLanguageMenu}
+                    style={{
+                      display: 'block',
+                      padding: '10px 15px',
+                      color: '#333',
+                      textDecoration: 'none',
+                      borderBottom: '1px solid #eee',
+                      background: lang === l.code ? '#f0f0f0' : 'white',
+                      fontWeight: lang === l.code ? 'bold' : 'normal'
+                    }}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
         <button 
           className="burger" 
           type="button" 
@@ -92,6 +184,17 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
           <span className="bar"></span>
         </button>
       </div>
+
+      <style jsx>{`
+        @media (min-width: 768px) {
+          .langDesktop {
+            display: inline !important;
+          }
+          .langMobile {
+            display: none !important;
+          }
+        }
+      `}</style>
     </header>
   );
 };

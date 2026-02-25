@@ -87,9 +87,9 @@ export default function ContactPage({ params }: ContactPageProps) {
 							<div className="rightInnerContainer">
 								{!showSuccess ? (
 									<form id="contact-form" onSubmit={handleSubmit} className="contactForm">
-										<h2 className="lgView">Contact Us</h2>
-										<h2 className="smView">{t.contactLargeView}</h2>
-										<h2 className="smView">{t.contactSmallView}</h2>
+										{/* <h2 className="lgView">Contact Us</h2> */}
+										{/* <h2 className="smView">{t.contactLargeView}</h2>
+										<h2 className="smView">{t.contactSmallView}</h2> */}
 										<p>{t.requiredNote}</p>
 										<input
 											type="text"
