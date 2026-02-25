@@ -1,0 +1,50 @@
+{
+  "en": {
+    "emailUsTitle": "Email Us",
+    "emailUsDescription": "If you have any questions, wish to have your content added/removed, or something else. Please do not hesitate to email me.",
+    "emailUsNote": "Feel free to email me but please allow some time for me to respond.",
+    "contactSmallView": "Let's Chat",
+    "contactLargeView": "Contact",
+    "requiredNote": "* Required",
+    "namePlaceholder": "Name *",
+    "emailPlaceholder": "Email *",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "submitButton": "Submit",
+    "successTitle": "✓ Message Sent!",
+    "successMessage": "Thank you for reaching out. Your message has been sent successfully.",
+    "closeButton": "Close"
+  },
+  "es": {
+    "emailUsTitle": "Envíanos un Correo",
+    "emailUsDescription": "Si tienes alguna pregunta, deseas que se agregue/elimine tu contenido, o algo más. Por favor, no dudes en enviarme un correo electrónico.",
+    "emailUsNote": "Siéntete libre de enviarme un correo, pero por favor permite algo de tiempo para que responda.",
+    "contactSmallView": "Vamos a Charlar",
+    "contactLargeView": "Contacto",
+    "requiredNote": "* Requerido",
+    "namePlaceholder": "Nombre *",
+    "emailPlaceholder": "Correo Electrónico *",
+    "subjectPlaceholder": "Asunto",
+    "messagePlaceholder": "Mensaje",
+    "submitButton": "Enviar",
+    "successTitle": "✓ ¡Mensaje Enviado!",
+    "successMessage": "Gracias por comunicarte. Tu mensaje ha sido enviado exitosamente.",
+    "closeButton": "Cerrar"
+  },
+  "ja": {
+    "emailUsTitle": "メールを送信してこのページを開く",
+    "emailUsDescription": "ご質問がある場合、コンテンツの追加/削除を希望する場合、またはその他の場合は、メールを送信してください。",
+    "emailUsNote": "メールを送信してください。ただし、返信に少し時間をいただきますようお願いをいたします。",
+    "contactSmallView": "チャットをしましょう",
+    "contactLargeView": "お問い合わせ",
+    "requiredNote": "* 必須",
+    "namePlaceholder": "やってください。",
+    "emailPlaceholder": "メールアドレス *",
+    "subjectPlaceholder": "件名",
+    "messagePlaceholder": "メッセージ",
+    "submitButton": "投稿",
+    "successTitle": "✓ メッセージが送信されました！",
+    "successMessage": "お問い合わせいただきありがとうございます。メッセージは正常に送信されました。",
+    "closeButton": "閉じる"
+  }
+}

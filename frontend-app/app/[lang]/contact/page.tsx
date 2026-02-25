@@ -1,13 +1,19 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
+import contactTranslations from '@/lib/translations/contact.json';
 
-export default function ContactPage({ params }: { params: { lang: string } }) {
-	const lang = params?.lang ?? 'en';
+type ContactPageProps = {
+	params: Promise<{ lang: string }>;
+};
+
+export default function ContactPage({ params }: ContactPageProps) {
+	const { lang } = use(params);
+	const t = contactTranslations[lang as keyof typeof contactTranslations] || contactTranslations.en;
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [formData, setFormData] = useState({
 		name: '',
@@ -69,27 +75,27 @@ export default function ContactPage({ params }: { params: { lang: string } }) {
 					<div className="formContainer">
 						<div className="leftContainer">
 							<div className="leftInnerContainer">
-								<h2>Email Us</h2>
-								<p>
-									If you have any questions, wish to have your content added/removed, or something else. Please
-									do not hesitate to email me.
-								</p>
-								<br />
-								<p>Feel free to email me but please allow some time for me to respond.</p>
+							<h2>{t.emailUsTitle}</h2>
+							<p>
+								{t.emailUsDescription}
+							</p>
+							<br />
+							<p>{t.emailUsNote}</p>
 							</div>
 						</div>
 						<div className="rightContainer">
 							<div className="rightInnerContainer">
 								{!showSuccess ? (
 									<form id="contact-form" onSubmit={handleSubmit} className="contactForm">
-										<h2 className="lgView">Contact</h2>
-										<h2 className="smView">Let&apos;s Chat</h2>
-										<p>* Required</p>
+										<h2 className="lgView">Contact Us</h2>
+										<h2 className="smView">{t.contactLargeView}</h2>
+										<h2 className="smView">{t.contactSmallView}</h2>
+										<p>{t.requiredNote}</p>
 										<input
 											type="text"
 											name="name"
 											id="name"
-											placeholder="Name *"
+											placeholder={t.namePlaceholder}
 											required
 											value={formData.name}
 											onChange={handleInputChange}
@@ -99,7 +105,7 @@ export default function ContactPage({ params }: { params: { lang: string } }) {
 											type="email"
 											name="email"
 											id="email"
-											placeholder="Email *"
+											placeholder={t.emailPlaceholder}
 											required
 											value={formData.email}
 											onChange={handleInputChange}
@@ -109,7 +115,7 @@ export default function ContactPage({ params }: { params: { lang: string } }) {
 											type="text"
 											name="subject"
 											id="subject"
-											placeholder="Subject"
+											placeholder={t.subjectPlaceholder}
 											value={formData.subject}
 											onChange={handleInputChange}
 											className="formInput"
@@ -118,21 +124,22 @@ export default function ContactPage({ params }: { params: { lang: string } }) {
 											rows={4}
 											name="message"
 											id="message"
-											placeholder="Message"
+											placeholder={t.messagePlaceholder}
 											required
 											value={formData.message}
 											onChange={handleInputChange}
 											className="formTextarea"
 										></textarea>
-										<button type="submit">Submit</button>
+										<button type="submit">{t.submitButton}</button>
 									</form>
 								) : (
 									<div className="successMessage show">
 										<div className="successContent">
-											<h3>✓ Message Sent!</h3>
-											<p>Thank you for reaching out. Your message has been sent successfully.</p>
+											<h3>✓ {t.successTitle}</h3>
+											<p>{t.successMessage}</p>
 											<button onClick={closeSuccessMessage} className="closeBtn">
-												Close
+												{t.closeButton}
+												on
 											</button>
 										</div>
 									</div>

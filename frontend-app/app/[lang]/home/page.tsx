@@ -3,9 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
+import homeTranslations from '@/lib/translations/home.json';
 
-export default function HomePage({ params }: { params: { lang: string } }) {
-	const lang = params?.lang ?? 'en';
+export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
+	const { lang } = await params;
+	const t = homeTranslations[lang as keyof typeof homeTranslations] || homeTranslations.en;
 
 	return (
 		<>
@@ -15,13 +17,13 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 				<section className="hero">
 					<div className="container heroInner">
 						<div className="heroCopy">
-							<h1>"Never take broken for an answer!"</h1>
+							<h1>"{t.heroQuote}"</h1>
 							<div className="heroCtas">
 								<Link href={`/${lang}/questionnaire`} className="btn primary">
-									Fill out this questionnaire to find the best tutorial for you
+									{t.questionnaireCTA}
 								</Link>
 								<a href="#community" className="btn outline">
-									Community Stats (beta)
+									{t.communityStatsCTA}
 								</a>
 							</div>
 						</div>
@@ -43,59 +45,45 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 					<div className="container">
 						<div className="goalGrid">
 							<div className="goalContent">
-								<h2>Our Mission</h2>
+								<h2>{t.missionTitle}</h2>
 								<p>
-									Figure Fixing Felix is dedicated to providing clear, reliable repair guides and showcasing
-									statistics on figure flaws and quality issues.
+									{t.missionDescription}
 								</p>
 								<p>
-									As a figure collector myself, I truly love many of the figures I&apos;ve collected. I own figures
-									from various brands and lines such as MAFEX, Amazing Yamaguchi, figma, and many more. From
-									those lines, I&apos;ve collected figures like Manticora (SexyIce), Pumpkin Princess (SnailShell),
-									Arkham Knight Batman (Amazing Yamaguchi), and more, even some bootlegs/third-party figures.
+									{t.personalStory1}
 								</p>
 								<p>
-									While I really enjoy collecting figures that hold pieces of my childhood such as the Arkham
-									series or new favorites like the Artificial Evolution line from SexyIce, they are
-									unfortunately not immune to the passage of time or quality assurance (QA) issues.
+									{t.personalStory2}
 								</p>
 								<p>
-									As my passion for this hobby has grown, I&apos;ve realized how expensive figures can be and how
-									unreliable many DIY tutorials are. Even on Reddit, you&apos;re more likely to find collectors
-									asking, &quot;How do you fix…?&quot; rather than saying, &quot;This is how you fix…&quot;.
+									{t.personalStory3}
 								</p>
 								<p>
-									Which brings me to the mission of this project. I want to provide collectors like
-									myself who&apos;ve fallen into the unfortunate rabbit hole of unreliable information, a way out.
-									Through an iFixit-style web application, this project aims to provide clear, high quality
-									repair instructions and real-world data on which figures, brands, or product lines experience the
-									most issues or the highest peaks.
+									{t.personalStory4}
 								</p>
 								<p>
-									That way, collectors can make more informed decisions and better understand both the
-									strengths and weaknesses of a figure you might be keen on collecting.
+									{t.personalStory5}
 								</p>
 
 								<div className="benefits">
 									<Link href="https://linktr.ee/felixfigurepm" target="_blank" rel="noopener noreferrer" className="btn secondary">
-										Check the socials
+										{t.socialsCTA}
 									</Link>
 								</div>
 							</div>
 
 							<aside className="goalStats" id="community">
-								<h3>Community QA Stats</h3>
+								<h3>{t.communityQAStats}</h3>
 
 								<div className="warning" role="note" aria-live="polite">
-									<span className="warningLabel">Notice:</span>
-									<span>Information is community sourced please take information with a grain of salt and do
-										not take information collected here as truth.</span>
+									<span className="warningLabel">{t.warningNotice}</span>
+									<span>{t.warningText}</span>
 								</div>
 
 								<ul className="statsList" aria-live="polite">
 									<li>
 										<div className="statsMeta">
-											<span>Test Data Poll</span>
+											<span>{t.testDataPoll}</span>
 											<span className="statValue">100%</span>
 										</div>
 										<div className="statBar">
@@ -104,7 +92,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 									</li>
 									<li>
 										<div className="statsMeta">
-											<span>Test Data Poll 2</span>
+											<span>{t.testDataPoll2}</span>
 											<span className="statValue">75%</span>
 										</div>
 										<div className="statBar">
@@ -113,7 +101,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 									</li>
 									<li>
 										<div className="statsMeta">
-											<span>Test Data Poll 3</span>
+											<span>{t.testDataPoll3}</span>
 											<span className="statValue">50%</span>
 										</div>
 										<div className="statBar">
@@ -122,7 +110,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 									</li>
 									<li>
 										<div className="statsMeta">
-											<span>Test Data Poll 4</span>
+											<span>{t.testDataPoll4}</span>
 											<span className="statValue">25%</span>
 										</div>
 										<div className="statBar">
@@ -131,7 +119,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 									</li>
 									<li>
 										<div className="statsMeta">
-											<span>Test Data Poll 5</span>
+											<span>{t.testDataPoll5}</span>
 											<span className="statValue">0%</span>
 										</div>
 										<div className="statBar">
@@ -141,7 +129,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 								</ul>
 
 								<Link href={`/${lang}/contact`} className="btn outline small">
-									Report Issues
+									{t.reportIssuesCTA}
 								</Link>
 							</aside>
 						</div>
@@ -151,24 +139,24 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 				{/* Featured Guides Section */}
 				<section id="guides" className="featuredGuides">
 					<div className="container">
-						<h3>Most Collected Data for...</h3>
+						<h3>{t.mostCollectedDataTitle}</h3>
 						<div className="cards">
 							<article className="card">
-								<h4>Common Issues for Amazing Yamaguchi</h4>
-								<p className="cardDesc">sample text sample text sample text sample text</p>
-								<a className="cardLink" href="#">Peek at the stats →</a>
+								<h4>{t.amazingYamaguchiBrand}</h4>
+								<p className="cardDesc">{t.amazingYamaguchiDesc}</p>
+								<a className="cardLink" href="#">{t.peekAtStatsLink}</a>
 							</article>
 
 							<article className="card">
-								<h4>Top 5 figures being collected</h4>
-								<p className="cardDesc">sample text sample text sample text sample text</p>
-								<a className="cardLink" href="#">Peek at the stats →</a>
+								<h4>{t.top5FiguresTitle}</h4>
+								<p className="cardDesc">{t.top5FiguresDesc}</p>
+								<a className="cardLink" href="#">{t.peekAtStatsLink}</a>
 							</article>
 
 							<article className="card">
-								<h4>Most reliable brands</h4>
-								<p className="cardDesc">sample text sample text sample text sample text</p>
-								<a className="cardLink" href="#">Peek at the stats →</a>
+								<h4>{t.reliableBrandsTitle}</h4>
+								<p className="cardDesc">{t.reliableBrandsDesc}</p>
+								<a className="cardLink" href="#">{t.peekAtStatsLink}</a>
 							</article>
 						</div>
 					</div>
@@ -178,16 +166,15 @@ export default function HomePage({ params }: { params: { lang: string } }) {
 				<section>
 					<div className="container">
 						<div className="warning" role="note" aria-live="polite">
-							<span className="warningLabel">Notice:</span>
+							<span className="warningLabel">{t.warningTitle}</span>
 							<span>
-								Information is community sourced and might be:
+								{t.warningContent}
 								<ul>
-									<li>Incorrect</li>
-									<li>Out Dated</li>
-									<li>Incomplete</li>
+									<li>{t.warningIncorrect}</li>
+									<li>{t.warningOutdated}</li>
+									<li>{t.warningIncomplete}</li>
 								</ul>
-								We strive for accuracy and will attempt to minimize as much misinformation possible but please do
-								take information with a grain of salt.
+								{t.warningDisclaimer}
 							</span>
 						</div>
 					</div>

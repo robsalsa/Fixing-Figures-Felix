@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import translations from '@/lib/translations/headfoot.json';
 
 interface NavigationProps {
   lang: string;
@@ -11,6 +12,8 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = translations[lang as keyof typeof translations] || translations.en;
+  const navT = t.navigation;
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -28,15 +31,15 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
         <Link href={`/${lang}`} className="brand">
           <Image
             src="/assets/kat.jpg"
-            alt="Figure Fixing Felix logo"
+            alt={navT.brandAlt}
             width={44}
             height={44}
             className="brandIcon"
           />
-          <span className="brandTitle">Figure Fixing Felix</span>
+          <span className="brandTitle">{navT.brandTitle}</span>
         </Link>
 
-        <nav role="navigation" aria-label="Main">
+        <nav role="navigation" aria-label={navT.mainNavAriaLabel}>
           <ul className={`burgerMenu ${isMobileMenuOpen ? 'active' : ''}`}>
             <li>
               <Link 
@@ -44,7 +47,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 className={`burgerItem ${isActive('home')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
-                Home
+                {navT.home}
               </Link>
             </li>
             <li>
@@ -53,7 +56,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 className={`burgerItem ${isActive('about')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
-                About
+                {navT.about}
               </Link>
             </li>
             <li>
@@ -62,7 +65,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 className={`burgerItem ${isActive('questionnaire')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
-                Fix Your Figures
+                {navT.fixYourFigures}
               </Link>
             </li>
             <li>
@@ -71,7 +74,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 className={`burgerItem ${isActive('contact')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
-                Contact Us
+                {navT.contactUs}
               </Link>
             </li>
           </ul>
@@ -80,7 +83,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
         <button 
           className="burger" 
           type="button" 
-          aria-label="Toggle navigation"
+          aria-label={navT.toggleNavigation}
           aria-expanded={isMobileMenuOpen}
           onClick={toggleMobileMenu}
         >
