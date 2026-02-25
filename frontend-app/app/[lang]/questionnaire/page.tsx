@@ -226,7 +226,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 
 		return (
 			<div className="step-panel fade-in-up">
-				{intro && <p className="lead">{intro}</p>}
+				{intro && <p className="lead" style={{color:"black"}}>{intro}</p>}
 
 				{type === 'text' && currentStepDef.text && (
 					<p>{currentStepDef.text}</p>
@@ -237,6 +237,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 						{options?.map((option: any, idx: number) => (
 							<button
 								key={idx}
+								style={{color:"black"}}
 								className={`choice ${keyValue === option.value ? 'selected' : ''}`}
 								onClick={() => {
 									handleStateChange(key, option.value);
@@ -342,7 +343,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 				<div id="card" className="card">
 					<header className="card-header">
 						<div className="step-label">{route + 1} / {totalSteps}</div>
-						<div className="card-title" id="cardTitle">{currentStepDef?.title}</div>
+						<div className="card-title" style={{color:"black"}} id="cardTitle">{currentStepDef?.title}</div>
 					</header>
 
 					<section className="card-body" id="cardBody" onKeyPress={handleKeyPress}>
@@ -365,7 +366,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 							className="btn primary"
 							onClick={handleNext}
 							disabled={!navState.nextEnabled}
-							style={{ opacity: navState.nextEnabled ? 1 : 0.5, pointerEvents: navState.nextEnabled ? 'auto' : 'none' }}
+							style={{ color:"white", opacity: navState.nextEnabled ? 1 : 0.5, pointerEvents: navState.nextEnabled ? 'auto' : 'none' }}
 						>
 							{route === steps.length - 1 ? 'Finish' : 'Next'}
 						</button>
@@ -374,7 +375,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 
 				<div id="splash" className={`splash ${showSplash ? '' : 'hidden'}`} aria-hidden={!showSplash}>
 					<div className="splash-inner">
-						<h2>Your Personal Plan</h2>
+						<h2>Submitted</h2>
 						<p id="splashGoal">{computeGoalText()}</p>
 						<div id="viz" className="viz">{visualizeProgress()}</div>
 						<button id="finishBtn" className="btn primary" onClick={handleFinish}>
