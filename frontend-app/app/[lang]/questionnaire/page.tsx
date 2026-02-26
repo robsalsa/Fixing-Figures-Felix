@@ -5,6 +5,8 @@ import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import stepConfigData from '@/public/questions/questionnaire-steps.json';
 
+import { saveFigureDataToSupabase } from '@/lib/supabase/figure-data/figureFunctions';
+
 export default function QuestionnairePage({ params }: { params: { lang: string } }) {
 	const lang = params?.lang ?? 'en';
 
@@ -182,20 +184,44 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 		}
 	};
 
-	const handleFinish = () => {
-		// If mode is 'data', save to Supabase
-		if (state.mode === 'data') {
-			// TODO: Implement Supabase save logic
-			console.log('Saving data to Supabase:', state);
-			// await saveFigureDataToDatabase(state);
+	// const handleFinish = () => {
+	// 	// If mode is 'data', save to Supabase
+	// 	if (state.mode === 'data') {
+	// 		// TODO: Implement Supabase save logic
+	// 		console.log('Saving data to Supabase:', state);
+	// 		// await saveFigureDataToDatabase(state);
+	// 	}
+	// 	// If mode is 'fix', redirect to results/solutions page
+	// 	if (state.mode === 'fix') {
+	// 		// TODO: Implement search/fetch logic for solutions
+	// 		console.log('Fetching solutions for figure:', state);
+	// 		// window.location.href = `/${lang}/solutions?brand=${state.brand}&name=${state.figure_name}`;
+	// 	}
+	// 	window.location.href = `/${lang}/home`;
+	// };
+	const handleFinish = async () => {
+		try {
+			// Save data to Supabase regardless of mode
+			const { saveFigureDataToSupabase } = await import('@/lib/supabase/figure-data/figureFunctions');
+			const result = await saveFigureDataToSupabase(state);
+
+			if (!result.success) {
+				console.error('Failed to save data:', result.error);
+				// Still navigate but log the error
+			}
+
+			// Handle different modes after saving
+			if (state.mode === 'fix') {
+				// Redirect to solutions page with filters
+				window.location.href = `/${lang}/solutions?brand=${encodeURIComponent(state.brand || '')}&figure=${encodeURIComponent(state.figure_name || '')}&series=${encodeURIComponent(state.series_title || '')}`;
+			} else {
+				// Data submission or home navigation
+				window.location.href = `/${lang}/home`;
+			}
+		} catch (error) {
+			console.error('Error in handleFinish:', error);
+			window.location.href = `/${lang}/home`;
 		}
-		// If mode is 'fix', redirect to results/solutions page
-		if (state.mode === 'fix') {
-			// TODO: Implement search/fetch logic for solutions
-			console.log('Fetching solutions for figure:', state);
-			// window.location.href = `/${lang}/solutions?brand=${state.brand}&name=${state.figure_name}`;
-		}
-		window.location.href = `/${lang}/home`;
 	};
 
 	const computeGoalText = (): string => {
@@ -226,7 +252,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 
 		return (
 			<div className="step-panel fade-in-up">
-				{intro && <p className="lead" style={{color:"black"}}>{intro}</p>}
+				{intro && <p className="lead" style={{ color: "black" }}>{intro}</p>}
 
 				{type === 'text' && currentStepDef.text && (
 					<p>{currentStepDef.text}</p>
@@ -237,7 +263,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 						{options?.map((option: any, idx: number) => (
 							<button
 								key={idx}
-								style={{color:"black"}}
+								style={{ color: "black" }}
 								className={`choice ${keyValue === option.value ? 'selected' : ''}`}
 								onClick={() => {
 									handleStateChange(key, option.value);
@@ -343,7 +369,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 				<div id="card" className="card">
 					<header className="card-header">
 						<div className="step-label">{route + 1} / {totalSteps}</div>
-						<div className="card-title" style={{color:"black"}} id="cardTitle">{currentStepDef?.title}</div>
+						<div className="card-title" style={{ color: "black" }} id="cardTitle">{currentStepDef?.title}</div>
 					</header>
 
 					<section className="card-body" id="cardBody" onKeyPress={handleKeyPress}>
@@ -366,7 +392,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 							className="btn primary"
 							onClick={handleNext}
 							disabled={!navState.nextEnabled}
-							style={{ color:"white", opacity: navState.nextEnabled ? 1 : 0.5, pointerEvents: navState.nextEnabled ? 'auto' : 'none' }}
+							style={{ color: "white", opacity: navState.nextEnabled ? 1 : 0.5, pointerEvents: navState.nextEnabled ? 'auto' : 'none' }}
 						>
 							{route === steps.length - 1 ? 'Finish' : 'Next'}
 						</button>
