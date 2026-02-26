@@ -101,7 +101,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 	};
 
 	const hasAnySelection = (): boolean => {
-		return (
+		return !!(
 			state.mode ||
 			state.figure_name ||
 			state.brand ||
