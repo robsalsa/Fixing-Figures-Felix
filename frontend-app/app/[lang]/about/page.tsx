@@ -79,7 +79,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 							</div>
 
 							<aside className="goalStats" id="community">
-								<h3>{t.contactUsTitle}</h3>
+								<h3 style={{color:"black"}}>{t.contactUsTitle}</h3>
 								<p>
 									{t.contactUsContent}
 								</p>
@@ -92,18 +92,20 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 										style={{ borderRadius: '8px', flex: '0 0 56px' }}
 									/>
 									<div>
-										<div style={{ fontWeight: '800' }}>{t.pilkProfile}</div>
-										<div className="muted small">{t.allowTimeNote}</div>
+										<div style={{ fontWeight: '800' }}>felixfigurepm@gmail.com</div>
+										{/* <div className="muted small">{t.allowTimeNote}</div> */}
+										<div className="muted small">{t.pilkProfile}</div>
 									</div>
 								</div>
-								<div style={{ display: 'flex', gap: '8px', marginTop: '6px' }}>
+								{/* <div style={{ display: 'flex', gap: '8px', marginTop: '6px' }}>
 									<a 
 										href="mailto:felixfigurepm@gmail.com" 
 										className="btn primary"
 									>
-										{t.emailMeCTA}
+										//{t.emailMeCTA}
+										felixfigurepm@gmail.com
 									</a>
-								</div>
+								</div> */}
 							</aside>
 						</div>
 					</div>
@@ -132,3 +134,4 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 	</>
 );
 }
+

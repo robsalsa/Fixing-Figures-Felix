@@ -68,6 +68,7 @@ header {
   padding: 14px 0;
   position: relative;
   min-width: 0;
+  background-color: white;
 }
 
 .brand {
@@ -479,6 +480,7 @@ footer {
   gap: 20px;
   align-items: center;
   justify-content: space-between;
+  /* background-color; */
 }
 
 .footerLeft {
@@ -1059,6 +1061,7 @@ textarea {
   }
   .headerInner {
     flex-wrap: wrap;
+    background-color: white;
   }
   .hero {
     padding: 28px 0 6px;

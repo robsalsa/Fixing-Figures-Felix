@@ -139,7 +139,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 				{/* Featured Guides Section */}
 				<section id="guides" className="featuredGuides">
 					<div className="container">
-						<h3>{t.mostCollectedDataTitle}</h3>
+						{/* <h3>{t.mostCollectedDataTitle}</h3> */}
 						<div className="cards">
 							<article className="card">
 								<h4>{t.amazingYamaguchiBrand}</h4>

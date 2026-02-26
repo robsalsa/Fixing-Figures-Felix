@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               <li><Link href={`/${lang}/home`} style={{color:"black"}}>{footerT.footerLinksHome}</Link></li>
               <li><Link href={`/${lang}/about`} style={{color:"black"}}>{footerT.footerLinksAbout}</Link></li>
               <li><Link href={`/${lang}/questionnaire`} style={{color:"black"}}>{footerT.footerLinksFixYourFigures}</Link></li>
-              <li><Link href={`/${lang}/contact`} style={{color:"black"}}>{footerT.footerLinksContactUs}</Link></li>
+              {/* <li><Link href={`/${lang}/contact`} style={{color:"black"}}>{footerT.footerLinksContactUs}</Link></li> */}
             </ul>
           </nav>
           <p className="small muted">

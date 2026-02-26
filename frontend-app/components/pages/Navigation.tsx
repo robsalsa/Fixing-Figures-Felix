@@ -90,7 +90,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 {navT.fixYourFigures}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link 
                 href={`/${lang}/contact`} 
                 className={`burgerItem ${isActive('contact')}`}
@@ -98,7 +98,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
               style={{color:"black"}}>
                 {navT.contactUs}
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
