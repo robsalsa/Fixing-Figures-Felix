@@ -132,7 +132,8 @@
       "options": [
         { "label": "Broken Joint", "value": "broken_joint" },
         { "label": "Missing Part", "value": "missing_part" },
-        { "label": "Loose Joint", "value": "loose_joint" }
+        { "label": "Loose Joint", "value": "loose_joint" },
+        { "label": "Other", "value":"other"}
       ],
       "note": "Please select all that apply to your figure's issues."
     },
