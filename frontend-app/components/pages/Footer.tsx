@@ -1,12 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import translations from '@/lib/translations/headfoot.json';
 
 interface FooterProps {
   lang: string;
 }
 
 export const Footer: React.FC<FooterProps> = ({ lang }) => {
+  const t = translations[lang as keyof typeof translations] || translations.en;
+  const footerT = t.footer;
+
   return (
     <footer role="contentinfo">
       <div className="container footerInner">
@@ -14,30 +18,29 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           <Link href={`/${lang}`} className="footerBrand">
             <Image
               src="/assets/kat.jpg"
-              alt="Figure Fixing Felix logo"
+              alt={footerT.brandAlt}
               width={44}
               height={44}
               className="brandIcon"
             />
           </Link>
-          <p className="muted small">Community sourced fixes and stats.</p>
+          <p className="muted small">{footerT.communityDescription}</p>
         </div>
 
         <div className="footerRight">
-          <nav className="footerNav" aria-label="Footer">
+          <nav className="footerNav" aria-label={footerT.footerNavAriaLabel}>
             <ul>
-              <li><Link href={`/${lang}/home`} style={{color:"black"}}>Home</Link></li>
-              <li><Link href={`/${lang}/about`} style={{color:"black"}}>About</Link></li>
-              <li><Link href={`/${lang}/questionnaire`} style={{color:"black"}}>Fix Your Figures</Link></li>
-              <li><Link href={`/${lang}/contact`} style={{color:"black"}}>Contact Us</Link></li>
+              <li><Link href={`/${lang}/home`} style={{color:"black"}}>{footerT.footerLinksHome}</Link></li>
+              <li><Link href={`/${lang}/about`} style={{color:"black"}}>{footerT.footerLinksAbout}</Link></li>
+              <li><Link href={`/${lang}/questionnaire`} style={{color:"black"}}>{footerT.footerLinksFixYourFigures}</Link></li>
+              {/* <li><Link href={`/${lang}/contact`} style={{color:"black"}}>{footerT.footerLinksContactUs}</Link></li> */}
             </ul>
           </nav>
           <p className="small muted">
-            This is a passion project,{' '}
+            {footerT.passionProject}{' '}
             <a href="https://operation-null-trace.vercel.app/" target="_blank" rel="noopener noreferrer" style={{color: "blue"}}>
-              check out my website :)
+              {footerT.devBackground}
             </a>
-            {' '}for more dev background.
           </p>
         </div>
       </div>

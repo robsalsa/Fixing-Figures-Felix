@@ -1,0 +1,159 @@
+{
+  "steps": {
+    "choose-track": {
+      "title": "What would you like to do?",
+      "type": "choice",
+      "intro": "Would you kindly choose a path to proceed with, please.",
+      "key": "mode",
+      "options": [
+        { "label": "I'm looking for a fix", "value": "fix" },
+        { "label": "I'm looking to help others", "value": "data" },
+        { "label": "I'm just looking around", "value": "home" }
+      ]
+    },
+    "name-question": {
+      "title": "Name of the Figure",
+      "intro": "Please enter the name of the figure.",
+      "type": "input",
+      "key": "figure_name",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: \"Marvel Amazing Yamaguchi Revoltech Deadpool (Ver. 2.5)\""
+      },
+      "note": "Please use the full name of the figure for more accuracy. If you do not know the full name please refer to your items listing on your sellers website."
+    },
+    "brand-question": {
+      "title": "Brand Name",
+      "intro": "Would you kindly enter the name of the brand this figure is from.",
+      "type": "input",
+      "key": "brand",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: Kaiyodo, Medicom Toy, Max Factory, or e.t.c"
+      },
+      "note": "If you do not know what is the brand of your figure we recommend you to please look it up.",
+      "extranote": "Reason we would like the Brand is because it would exponentially help the search function."
+    },
+    "product-question": {
+      "title": "Product Line Name",
+      "intro": "Would you kindly enter the name of the Product Line of this figure.",
+      "type": "input",
+      "key": "product_line",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: figma, MAFEX, Revoltech, Amazing Yamaguchi, or e.t.c"
+      },
+      "note": "If you do know what is the product line this figure originates from please consult the box this figure is from.",
+      "extranote": "If unfortunately you do not own the box anymore or never had it we recomend you to look it up."
+    },
+    "series-question": {
+      "title": "Series Line Name",
+      "intro": "What is the name of the Series Line this figure is from?",
+      "type": "input",
+      "key": "series_title",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: \"Spider-Man\", Marvel Comics, Batman Hush, \"Batman\" Series, DC Comics, SEKIRO or e.t.c"
+      },
+      "note": "Please use the series name for this figure. We recommend to be as specific as you possibly can to ensure the accuracy of information and data"
+    },
+    "sculpture-question": {
+      "title": "Sculptor Name",
+      "intro": "What is the Sculptor of this figure?",
+      "type": "input",
+      "key": "sculptor",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: Katsuhisa Yamaguchi (sculptor of the Revoltech Amazing Yamaguchi Symbiote Spider-Man (Purple Ver.)), or e.t.c"
+      },
+      "note": "If in the case the sculptor is unknown, please do not hesitate to enter \"UNKNOWN\""
+    },
+    "scale-question": {
+      "title": "Figure Scale",
+      "intro": "What is the scale of the figure?",
+      "type": "input",
+      "key": "scale",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: 1/6, 1/8, 1/12, or e.t.c"
+      },
+      "note": "If you would be so kind to enter the scale your figure is according to."
+    },
+    "material-question": {
+      "title": "Figure Materials",
+      "intro": "What are the materials used for this figure?",
+      "type": "input",
+      "key": "materials",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: PVC, ABS, Diecast, Cloth, or e.t.c"
+      },
+      "note": "Please enter the materials if known. If unknown, enter \"UNKNOWN\"."
+    },
+    "seller-question": {
+      "title": "Place of Purchase",
+      "intro": "Where did you purchase this figure?",
+      "type": "input",
+      "key": "seller",
+      "input": {
+        "type": "text",
+        "placeholder": "Example: Amazon, eBay, BigBadToyStore, Hobby Link Japan, or e.t.c"
+      },
+      "note": "Please enter the seller or place of purchase."
+    },
+    "age-question": {
+      "title": "Figure Age",
+      "intro": "How old is this figure?",
+      "type": "choice",
+      "key": "age",
+      "options": [
+        { "label": "Less than 1 year", "value": "less_than_1_year" },
+        { "label": "1 year", "value": "1_year" },
+        { "label": "More than 1 year", "value": "more_than_1_year" },
+        { "label": "Unknown", "value": "unknown" }
+      ],
+      "note": "Please select the approximate age of your figure since purchase."
+    },
+    "auth-question": {
+      "title": "Figure Authenticity",
+      "intro": "Is this figure authentic or a bootleg?",
+      "type": "choice",
+      "key": "auth",
+      "options": [
+        { "label": "Authentic", "value": true },
+        { "label": "Bootleg/CT", "value": false },
+        { "label": "Unknown", "value": null }
+      ],
+      "note": "Please select whether your figure is an authentic product or a bootleg copy."
+    },
+    "issue-question": {
+      "title": "Figure Issues",
+      "intro": "What type of issue does your figure have?",
+      "type": "multiselect",
+      "key": "issue",
+      "options": [
+        { "label": "Broken Joint", "value": "broken_joint" },
+        { "label": "Missing Part", "value": "missing_part" },
+        { "label": "Loose Joint", "value": "loose_joint" },
+        { "label": "Other", "value":"other"}
+      ],
+      "note": "Please select all that apply to your figure's issues."
+    },
+    "issue-description-question": {
+      "title": "Issue Description",
+      "intro": "Please describe the issue in detail.",
+      "type": "textarea",
+      "key": "issue_description",
+      "input": {
+        "type": "textarea",
+        "placeholder": "Please provide a detailed description of the problem with your figure..."
+      },
+      "note": "The more detail you provide, the better we can help you find a solution."
+    },
+    "splash": {
+      "title": "Summary",
+      "type": "text",
+      "text": "Thank you for providing all the information!"
+    }
+  }
+}

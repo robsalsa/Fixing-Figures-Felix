@@ -1,0 +1,71 @@
+{
+  "en": {
+    "navigation": {
+      "brandTitle": "Figure Fixing Felix",
+      "brandAlt": "Figure Fixing Felix logo",
+      "home": "Home",
+      "about": "About",
+      "fixYourFigures": "Fix Your Figures",
+      "contactUs": "Contact Us",
+      "toggleNavigation": "Toggle navigation",
+      "mainNavAriaLabel": "Main"
+    },
+    "footer": {
+      "brandAlt": "Figure Fixing Felix logo",
+      "communityDescription": "Community sourced fixes and stats.",
+      "footerNavAriaLabel": "Footer",
+      "footerLinksHome": "Home",
+      "footerLinksAbout": "About",
+      "footerLinksFixYourFigures": "Fix Your Figures",
+      "footerLinksContactUs": "Contact Us",
+      "passionProject": "This is a passion project,",
+      "devBackground": "check out my website :)"
+    }
+  },
+  "es": {
+    "navigation": {
+      "brandTitle": "Figure Fixing Felix",
+      "brandAlt": "Logo de Figure Fixing Felix",
+      "home": "Inicio",
+      "about": "Acerca de",
+      "fixYourFigures": "Arregla Tus Figuras",
+      "contactUs": "Contáctanos",
+      "toggleNavigation": "Alternar navegación",
+      "mainNavAriaLabel": "Principal"
+    },
+    "footer": {
+      "brandAlt": "Logo de Figure Fixing Felix",
+      "communityDescription": "Arreglos y estadísticas proporcionadas por la comunidad.",
+      "footerNavAriaLabel": "Pie de página",
+      "footerLinksHome": "Inicio",
+      "footerLinksAbout": "Acerca de",
+      "footerLinksFixYourFigures": "Arregla Tus Figuras",
+      "footerLinksContactUs": "Contáctanos",
+      "passionProject": "Este es un proyecto apasionante,",
+      "devBackground": "consulta mi sitio web :)"
+    }
+  },
+  "ja": {
+    "navigation": {
+      "brandTitle": "Figure Fixing Felix",
+      "brandAlt": "Figure Fixing Felix ロゴ",
+      "home": "ホーム",
+      "about": "について",
+      "fixYourFigures": "あなたのフィギュアを修理してください",
+      "contactUs": "お問い合わせ",
+      "toggleNavigation": "ナビゲーションの切り替え",
+      "mainNavAriaLabel": "メイン"
+    },
+    "footer": {
+      "brandAlt": "Figure Fixing Felix ロゴ",
+      "communityDescription": "コミュニティから提供された修理と統計。",
+      "footerNavAriaLabel": "フッター",
+      "footerLinksHome": "ホーム",
+      "footerLinksAbout": "について",
+      "footerLinksFixYourFigures": "あなたのフィギュアを修理してください",
+      "footerLinksContactUs": "お問い合わせ",
+      "passionProject": "これは情熱的なプロジェクトです。",
+      "devBackground": "私のウェブサイトをチェックしてください :)"
+    }
+  }
+}
