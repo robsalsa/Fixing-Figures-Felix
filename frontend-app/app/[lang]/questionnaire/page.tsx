@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
+import { usePathname } from 'next/navigation';
 import stepConfigData from '@/public/questions/questionnaire-steps.json';
 
 import { saveFigureDataToSupabase } from '@/lib/supabase/figure-data/figureFunctions';
 
-export default function QuestionnairePage({ params }: { params: { lang: string } }) {
-	const lang = params?.lang ?? 'en';
+export default function QuestionnairePage() {
+	const pathname = usePathname();
+	const lang = pathname?.split('/')[1] || 'en';
 
 	const [state, setState] = useState({
 		mode: null as string | null,

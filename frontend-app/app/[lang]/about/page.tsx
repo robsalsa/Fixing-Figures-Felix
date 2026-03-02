@@ -21,8 +21,20 @@ function FooterSkeleton() {
 	);
 }
 
-export default function AboutPage({ params }: { params: { lang: string } }) {
-	const { lang } = params;
+type AboutPageProps = {
+	params: Promise<{ lang: string }>;
+};
+
+export default function AboutPage({ params }: AboutPageProps) {
+	return (
+		<Suspense fallback={<main />}>
+			<AboutPageContent params={params} />
+		</Suspense>
+	);
+}
+
+async function AboutPageContent({ params }: AboutPageProps) {
+	const { lang } = await params;
 	const t = aboutTranslations[lang as keyof typeof aboutTranslations] || aboutTranslations.en;
 
 	return (
