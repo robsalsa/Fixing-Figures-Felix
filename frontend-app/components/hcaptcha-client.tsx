@@ -24,7 +24,7 @@ const HCaptchaClient = forwardRef<HCaptchaRef, Props>(function HCaptchaClient(
 
   return (
     <HCaptcha
-      sitekey={(siteKey ?? process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY) as string}
+      sitekey={siteKey ?? process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY ?? ""}
       ref={captchaRef}
       onVerify={(token: string) => onVerify(token)}
     />
