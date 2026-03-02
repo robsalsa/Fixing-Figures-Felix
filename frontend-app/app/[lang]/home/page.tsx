@@ -21,8 +21,8 @@ function FooterSkeleton() {
 	);
 }
 
-export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
-	const { lang } = await params;
+export default function HomePage({ params }: { params: { lang: string } }) {
+	const { lang } = params;
 	const t = homeTranslations[lang as keyof typeof homeTranslations] || homeTranslations.en;
 
 	return (

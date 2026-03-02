@@ -21,8 +21,8 @@ function FooterSkeleton() {
 	);
 }
 
-export default async function AboutPage({ params }: { params: Promise<{ lang: string }> }) {
-	const { lang } = await params;
+export default function AboutPage({ params }: { params: { lang: string } }) {
+	const { lang } = params;
 	const t = aboutTranslations[lang as keyof typeof aboutTranslations] || aboutTranslations.en;
 
 	return (

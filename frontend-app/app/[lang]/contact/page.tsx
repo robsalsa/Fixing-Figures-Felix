@@ -1,10 +1,10 @@
 import { redirect } from 'next/navigation';
 
 type ContactPageProps = {
-	params: Promise<{ lang: string }>;
+	params: { lang: string };
 };
 
-export default async function ContactPage({ params }: ContactPageProps) {
-	const { lang } = await params;
+export default function ContactPage({ params }: ContactPageProps) {
+	const { lang } = params;
 	redirect(`/${lang}/home`);
 }
