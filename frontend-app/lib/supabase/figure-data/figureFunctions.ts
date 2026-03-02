@@ -11,7 +11,7 @@ export interface FigureData {
   materials: string | null;
 //   height: string;
   seller: string | null;
-  age: string;
+  age: string | null;
   auth: boolean | null;
   issue: Set<string>;
   issue_description: string | null;
@@ -32,7 +32,7 @@ export async function saveFigureDataToSupabase(data: FigureData) {
     sculptor: data.sculptor,
     scale: data.scale,
     materials: data.materials,
-    height: data.height || null,
+    // height: data.height || null,
     seller: data.seller,
     age: data.age || null,
     authenticity: data.auth,

@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import aboutTranslations from '@/lib/translations/about.json';
+
+function NavigationSkeleton() {
+	return (
+		<header style={{ background: '#f0f0f0', height: '60px', animation: 'pulse 2s infinite' }}>
+			<div style={{ opacity: 0.5 }}>Loading navigation...</div>
+		</header>
+	);
+}
+
+function FooterSkeleton() {
+	return (
+		<footer style={{ background: '#f0f0f0', height: '100px', animation: 'pulse 2s infinite' }}>
+			<div style={{ opacity: 0.5 }}>Loading footer...</div>
+		</footer>
+	);
+}
 
 export default async function AboutPage({ params }: { params: Promise<{ lang: string }> }) {
 	const { lang } = await params;
@@ -11,7 +27,9 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 
 	return (
 		<>
-			<Navigation lang={lang} currentPage="about" />
+			<Suspense fallback={<NavigationSkeleton />}>
+				<Navigation lang={lang} currentPage="about" />
+			</Suspense>
 		<main>
 			{/* Hero Section */}
 			<section className="hero">
@@ -130,7 +148,9 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 			</section>
 		</main>
 
-		<Footer lang={lang} />
+		<Suspense fallback={<FooterSkeleton />}>
+			<Footer lang={lang} />
+		</Suspense>
 	</>
 );
 }

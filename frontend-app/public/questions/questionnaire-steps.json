@@ -104,13 +104,15 @@
     "age-question": {
       "title": "Figure Age",
       "intro": "How old is this figure?",
-      "type": "input",
+      "type": "choice",
       "key": "age",
-      "input": {
-        "type": "text",
-        "placeholder": "Example: 2 years, 6 months, or e.t.c"
-      },
-      "note": "Please provide an approximate age of the figure since purchase."
+      "options": [
+        { "label": "Less than 1 year", "value": "less_than_1_year" },
+        { "label": "1 year", "value": "1_year" },
+        { "label": "More than 1 year", "value": "more_than_1_year" },
+        { "label": "Unknown", "value": "unknown" }
+      ],
+      "note": "Please select the approximate age of your figure since purchase."
     },
     "auth-question": {
       "title": "Figure Authenticity",
@@ -132,7 +134,8 @@
       "options": [
         { "label": "Broken Joint", "value": "broken_joint" },
         { "label": "Missing Part", "value": "missing_part" },
-        { "label": "Loose Joint", "value": "loose_joint" }
+        { "label": "Loose Joint", "value": "loose_joint" },
+        { "label": "Other", "value":"other"}
       ],
       "note": "Please select all that apply to your figure's issues."
     },

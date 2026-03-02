@@ -23,7 +23,7 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 		materials: null as string | null,
 		height: '',
 		seller: null as string | null,
-		age: '',
+		age: null as string | null,
 		auth: null as boolean | null,
 		issue: new Set() as Set<string>,
 		issue_description: null as string | null
@@ -33,6 +33,19 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 	const [steps, setSteps] = useState<any[]>([]);
 	const [showSplash, setShowSplash] = useState(false);
 	const [navState, setNavState] = useState({ backVisible: false, nextEnabled: false });
+
+	// Autocomplete state
+	const [autocomplete, setAutocomplete] = useState({
+		figure_name: [] as string[],
+		series_title: [] as string[],
+		product_line: [] as string[],
+		scale:[] as string[],
+		materials:[] as string[],
+		brand:[] as string[],
+		seller:[] as string[],
+		sculptor: [] as string[]
+	});
+	const [activeAutocomplete, setActiveAutocomplete] = useState<string | null>(null);
 
 	const updateStepsList = () => {
 		const flow = [
@@ -84,6 +97,61 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 		setSteps(newSteps);
 		if (route >= newSteps.length) {
 			setRoute(newSteps.length - 1);
+		}
+	};
+
+	// Fetch autocomplete suggestions from Supabase
+	const fetchAutocompleteSuggestions = async (field: string, query: string) => {
+		if (!query || query.length < 1) {
+			setAutocomplete((prev) => ({
+				...prev,
+				[field]: []
+			}));
+			return;
+		}
+
+		try {
+			const { createClient } = await import('@/lib/supabase/client');
+			const supabase = createClient();
+
+			// Map field names to database columns
+			const fieldMap: { [key: string]: string } = {
+				figure_name: 'figure_name',
+				series_title: 'series_title',
+				product_line:'product_line',
+				brand:'brand',
+				scale:'scale',
+				materials:'materials',
+				seller:'seller',
+				sculptor: 'sculptor'
+			};
+
+			const dbField = fieldMap[field];
+			if (!dbField) return;
+
+			// Query Supabase for matching values
+			const { data, error } = await supabase
+				.from('figures')
+				.select(dbField)
+				.ilike(dbField, `%${query}%`)
+				.limit(5);
+
+			if (error) {
+				console.error(`Error fetching autocomplete for ${field}:`, error);
+				return;
+			}
+
+			// Extract unique values
+			const suggestions = Array.from(new Set(
+				data?.map((row: any) => row[dbField]).filter((val: any) => val)
+			));
+
+			setAutocomplete((prev) => ({
+				...prev,
+				[field]: suggestions as string[]
+			}));
+		} catch (error) {
+			console.error('Error in fetchAutocompleteSuggestions:', error);
 		}
 	};
 
@@ -316,10 +384,27 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 							placeholder={input?.placeholder || ''}
 							value={keyValue || ''}
 							onChange={(e) => {
-								handleStateChange(key, e.target.value);
-								if (currentStepDef.onChange) {
-									currentStepDef.onChange(e.target.value);
+								const newValue = e.target.value;
+								handleStateChange(key, newValue);
+								
+								// Trigger autocomplete for specific fields
+								if (['figure_name', 'series_title', 'sculptor', 'brand', 'product_line', 'scale', 'materials', 'seller'].includes(key)) {
+									fetchAutocompleteSuggestions(key, newValue);
+									setActiveAutocomplete(key);
 								}
+								
+								if (currentStepDef.onChange) {
+									currentStepDef.onChange(newValue);
+								}
+							}}
+							onFocus={() => {
+								if (['figure_name', 'series_title', 'sculptor', 'brand', 'product_line', 'scale', 'materials', 'seller'].includes(key) && keyValue) {
+									setActiveAutocomplete(key);
+								}
+							}}
+							onBlur={() => {
+								// Delay to allow clicking autocomplete suggestions
+								setTimeout(() => setActiveAutocomplete(null), 200);
 							}}
 							onKeyPress={(e) => {
 								if (e.key === 'Enter' && navState.nextEnabled) {
@@ -327,6 +412,24 @@ export default function QuestionnairePage({ params }: { params: { lang: string }
 								}
 							}}
 						/>
+						
+						{/* Autocomplete dropdown */}
+						{activeAutocomplete === key && (autocomplete as any)[key]?.length > 0 && (
+							<div className="autocomplete-dropdown">
+								{(autocomplete as any)[key].map((suggestion: string, idx: number) => (
+									<div
+										key={idx}
+										className="autocomplete-item"
+										onClick={() => {
+											handleStateChange(key, suggestion);
+											setActiveAutocomplete(null);
+										}}
+									>
+										{suggestion}
+									</div>
+								))}
+							</div>
+						)}
 					</div>
 				)}
 
