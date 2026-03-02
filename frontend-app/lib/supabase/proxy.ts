@@ -53,7 +53,8 @@ export async function updateSession(request: NextRequest) {
     !skipAuth
   ) {
     const url = request.nextUrl.clone();
-    url.pathname = "/auth/login";
+    // url.pathname = "/auth/login";
+    url.pathname = "/en";
     return NextResponse.redirect(url);
   }
 
