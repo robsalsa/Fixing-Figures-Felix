@@ -12,7 +12,7 @@ export default function Page() {
           <Link href="/auth/skip" className="underline font-medium text-primary">
             press here
           </Link>
-          {' '}to continue as a guest.
+          {' '}to continue as a guest
       </div>
     </div>
   );
