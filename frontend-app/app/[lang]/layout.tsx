@@ -9,8 +9,6 @@ export function generateStaticParams() {
 	return supportedLanguages.map((lang) => ({ lang }));
 }
 
-export const dynamicParams = false;
-
 type LangLayoutProps = {
 	children: ReactNode;
 	params: { lang: string };
