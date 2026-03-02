@@ -1,18 +1,16 @@
 'use client';
 
-import React, { useState, use } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import contactTranslations from '@/lib/translations/contact.json';
 
-type ContactPageProps = {
-	params: Promise<{ lang: string }>;
-};
-
-export default function ContactPage({ params }: ContactPageProps) {
-	const { lang } = use(params);
+export default function ContactPage() {
+	const params = useParams<{ lang: string }>();
+	const lang = params?.lang ?? 'en';
 	const t = contactTranslations[lang as keyof typeof contactTranslations] || contactTranslations.en;
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [formData, setFormData] = useState({
