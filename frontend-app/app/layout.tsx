@@ -6,7 +6,7 @@ import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+  : "https://fixing-figures-felix-pilk.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
