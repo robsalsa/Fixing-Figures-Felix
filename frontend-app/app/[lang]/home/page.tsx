@@ -146,7 +146,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 									</li>
 								</ul>
 
-								<Link href={`/${lang}/contact`} className="btn outline small">
+								<Link href={`/${lang}/about#emailContact`} className="btn outline small">
 									{t.reportIssuesCTA}
 								</Link>
 							</aside>

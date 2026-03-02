@@ -110,20 +110,11 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 										style={{ borderRadius: '8px', flex: '0 0 56px' }}
 									/>
 									<div>
-										<div style={{ fontWeight: '800' }}>felixfigurepm@gmail.com</div>
-										{/* <div className="muted small">{t.allowTimeNote}</div> */}
+										<div id="emailContact" className="emailContact" style={{ fontWeight: '800' }}>felixfigurepm@gmail.com</div>
 										<div className="muted small">{t.pilkProfile}</div>
 									</div>
 								</div>
-								{/* <div style={{ display: 'flex', gap: '8px', marginTop: '6px' }}>
-									<a 
-										href="mailto:felixfigurepm@gmail.com" 
-										className="btn primary"
-									>
-										//{t.emailMeCTA}
-										felixfigurepm@gmail.com
-									</a>
-								</div> */}
+								
 							</aside>
 						</div>
 					</div>
