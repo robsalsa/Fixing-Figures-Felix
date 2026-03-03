@@ -121,8 +121,7 @@
       "key": "auth",
       "options": [
         { "label": "Authentic", "value": true },
-        { "label": "Bootleg/CT", "value": false },
-        { "label": "Unknown", "value": null }
+        { "label": "Bootleg/CT", "value": false }
       ],
       "note": "Please select whether your figure is an authentic product or a bootleg copy."
     },

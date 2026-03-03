@@ -58,3 +58,55 @@ export async function saveFigureDataToSupabase(data: FigureData) {
     return { success: false, error };
   }
 }
+
+export interface TopFigure {
+  figure_name: string;
+  mention_count: number;
+}
+
+/**
+ * Fetches the top 5 most mentioned figures from the database.
+ * Returns figures ordered by mention count (descending).
+ * Excludes records with null or empty figure_name.
+ */
+export async function getTopFiguresByMentions(limit: number = 5): Promise<TopFigure[]> {
+  const supabase = createClient();
+
+  try {
+    // Query all figures with valid names
+    const { data: figures, error } = await supabase
+      .from('figures')
+      .select('figure_name')
+      .not('figure_name', 'is', null)
+      .neq('figure_name', '');
+
+    if (error) {
+      console.error('Error fetching figures:', error);
+      throw new Error(`Failed to fetch figures: ${error.message}`);
+    }
+
+    // Count occurrences manually (since Supabase doesn't support GROUP BY directly in JS client)
+    const mentionMap = new Map<string, number>();
+    
+    figures?.forEach((figure) => {
+      const name = figure.figure_name?.trim();
+      if (name) {
+        mentionMap.set(name, (mentionMap.get(name) || 0) + 1);
+      }
+    });
+
+    // Convert to array and sort by count descending
+    const topFigures = Array.from(mentionMap.entries())
+      .map(([figure_name, mention_count]) => ({
+        figure_name,
+        mention_count,
+      }))
+      .sort((a, b) => b.mention_count - a.mention_count)
+      .slice(0, limit);
+
+    return topFigures;
+  } catch (error) {
+    console.error('Exception while fetching top figures:', error);
+    return [];
+  }
+}
