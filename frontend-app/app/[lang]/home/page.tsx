@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import DynamicFigureStats from '@/components/pages/DynamicFigureStats';
-import { getTopFiguresByMentions } from '@/lib/supabase/figure-data/figureFunctions';
+import RankingCard from '@/components/pages/RankingCard';
+import { getTopFiguresByMentions, getTopBrandsByQCIssues, getTopIssues } from '@/lib/supabase/figure-data/figureFunctions';
 import homeTranslations from '@/lib/translations/home.json';
 
 function NavigationSkeleton() {
@@ -41,6 +42,14 @@ async function HomePageContent({ params }: HomePageProps) {
 
 	// Fetch top X figures from Supabase
 	const topFigures = await getTopFiguresByMentions(10);
+	
+	// Fetch all brands and issues for expandable cards
+	// We fetch all (1000 is practical max) and slice for preview
+	const allBrands = await getTopBrandsByQCIssues(1000);
+	const topBrands = allBrands.slice(0, 7); // First 7 for preview
+	
+	const allIssues = await getTopIssues(1000);
+	const topIssues = allIssues.slice(0, 4);
 
 	return (
 		<>
@@ -57,7 +66,7 @@ async function HomePageContent({ params }: HomePageProps) {
 								<Link href={`/${lang}/questionnaire`} className="btn primary">
 									{t.questionnaireCTA}
 								</Link>
-								<a href="#community" className="btn outline">
+								<a href="#guides" className="btn outline">
 									{t.communityStatsCTA}
 								</a>
 							</div>
@@ -126,23 +135,32 @@ async function HomePageContent({ params }: HomePageProps) {
 				<div className="container">
 					{/* <h3>{t.mostCollectedDataTitle}</h3> */}
 						<div className="cards">
-							<article className="card">
-								<h4>{t.amazingYamaguchiBrand}</h4>
-								<p className="cardDesc">{t.amazingYamaguchiDesc}</p>
-								<a className="cardLink" href="#">{t.peekAtStatsLink}</a>
-							</article>
+							<RankingCard
+								title={t.brandsWithQCTitle}
+								items={topBrands}
+								allItems={allBrands}
+								description={t.brandsWithQCDesc}
+								linkText={t.peekAtStatsLink}
+								noDataText="No brand data yet"
+							/>
 
-							<article className="card">
-								<h4>{t.top5FiguresTitle}</h4>
-								<p className="cardDesc">{t.top5FiguresDesc}</p>
-								<a className="cardLink" href="#">{t.peekAtStatsLink}</a>
-							</article>
+							<RankingCard
+								title={t.commonIssuesTitle}
+								items={topIssues}
+								allItems={allIssues}
+								description={t.commonIssuesDesc}
+								linkText={t.peekAtStatsLink}
+								noDataText="No issue data yet"
+							/>
 
-							<article className="card">
-								<h4>{t.reliableBrandsTitle}</h4>
-								<p className="cardDesc">{t.reliableBrandsDesc}</p>
-								<a className="cardLink" href="#">{t.peekAtStatsLink}</a>
-							</article>
+							<RankingCard
+								title={t.viewedIssuesTitle}
+								items={[]}
+								allItems={[]}
+								description={t.viewedIssuesDesc}
+								linkText={t.peekAtStatsLink}
+								noDataText="Coming soon"
+							/>
 						</div>
 					</div>
 				</section>

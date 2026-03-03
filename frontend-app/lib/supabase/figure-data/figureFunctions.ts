@@ -110,3 +110,94 @@ export async function getTopFiguresByMentions(limit: number = 5): Promise<TopFig
     return [];
   }
 }
+
+export interface TopItem {
+  name: string;
+  count: number;
+}
+
+/**
+ * Fetches the top brands with the most QC issues.
+ * Returns brands ordered by mention count (descending).
+ * Excludes records with null or empty brand.
+ */
+export async function getTopBrandsByQCIssues(limit: number = 10): Promise<TopItem[]> {
+  const supabase = createClient();
+
+  try {
+    const { data: figures, error } = await supabase
+      .from('figures')
+      .select('brand')
+      .not('brand', 'is', null)
+      .neq('brand', '');
+
+    if (error) {
+      console.error('Error fetching brands:', error);
+      throw new Error(`Failed to fetch brands: ${error.message}`);
+    }
+
+    const brandMap = new Map<string, number>();
+    
+    figures?.forEach((figure) => {
+      const brand = figure.brand?.trim();
+      if (brand) {
+        brandMap.set(brand, (brandMap.get(brand) || 0) + 1);
+      }
+    });
+
+    const topBrands = Array.from(brandMap.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, limit);
+
+    return topBrands;
+  } catch (error) {
+    console.error('Exception while fetching top brands:', error);
+    return [];
+  }
+}
+
+/**
+ * Fetches the most common issues mentioned across all figures.
+ * Returns issues ordered by mention count (descending).
+ * Issues are stored as arrays, so we flatten and count all occurrences.
+ */
+export async function getTopIssues(limit: number = 10): Promise<TopItem[]> {
+  const supabase = createClient();
+
+  try {
+    const { data: figures, error } = await supabase
+      .from('figures')
+      .select('issues')
+      .not('issues', 'is', null);
+
+    if (error) {
+      console.error('Error fetching issues:', error);
+      throw new Error(`Failed to fetch issues: ${error.message}`);
+    }
+
+    const issueMap = new Map<string, number>();
+    
+    figures?.forEach((figure) => {
+      const issues = figure.issues;
+      if (Array.isArray(issues)) {
+        issues.forEach((issue: string) => {
+          const trimmedIssue = issue?.trim();
+          if (trimmedIssue) {
+            issueMap.set(trimmedIssue, (issueMap.get(trimmedIssue) || 0) + 1);
+          }
+        });
+      }
+    });
+
+    const topIssues = Array.from(issueMap.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, limit);
+
+    return topIssues;
+  } catch (error) {
+    console.error('Exception while fetching top issues:', error);
+    return [];
+  }
+}
