@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import translations from '@/lib/translations/headfoot.json';
 
 interface NavigationProps {
-  lang: string;
+  lang?: string;
   currentPage?: string;
 }
 
@@ -18,10 +18,11 @@ const languages = [
 ];
 
 export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => {
+  const safeLang = typeof lang === 'string' && lang.length > 0 ? lang : 'en';
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
-  const t = translations[lang as keyof typeof translations] || translations.en;
+  const t = translations[safeLang as keyof typeof translations] || translations.en;
   const navT = t.navigation;
 
   const toggleMobileMenu = () => {
@@ -44,13 +45,14 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
 
   // Get the new path with a different language code
   const getLanguagePath = (newLang: string) => {
-    return pathname.replace(`/${lang}`, `/${newLang}`);
+    if (!pathname) return `/${newLang}`;
+    return pathname.replace(`/${safeLang}`, `/${newLang}`);
   };
 
   return (
     <header>
       <div className="container headerInner">
-        <Link href={`/${lang}`} className="brand">
+        <Link href={`/${safeLang}`} className="brand">
           <Image
             src="/assets/kat.jpg"
             alt={navT.brandAlt}
@@ -65,7 +67,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
           <ul className={`burgerMenu ${isMobileMenuOpen ? 'active' : ''}`}>
             <li>
               <Link 
-                href={`/${lang}/home`} 
+                href={`/${safeLang}/home`} 
                 className={`burgerItem ${isActive('home')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
@@ -74,7 +76,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
             </li>
             <li>
               <Link 
-                href={`/${lang}/about`} 
+                href={`/${safeLang}/about`} 
                 className={`burgerItem ${isActive('about')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
@@ -83,7 +85,16 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
             </li>
             <li>
               <Link 
-                href={`/${lang}/questionnaire`} 
+                href={`/${safeLang}/guild`} 
+                className={`burgerItem ${isActive('guild')}`}
+                onClick={closeMobileMenu}
+              style={{color:"black"}}>
+                {navT.guild}
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href={`/${safeLang}/questionnaire`} 
                 className={`burgerItem ${isActive('questionnaire')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
@@ -125,7 +136,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
             </span>
             {/* Mobile: Language code */}
             <span className="langMobile">
-              {lang.toUpperCase()}
+              {safeLang.toUpperCase()}
             </span>
           </button>
 
@@ -152,7 +163,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 <li key={l.code}>
                   <Link
                     href={getLanguagePath(l.code)}
-                    className={lang === l.code ? 'active' : ''}
+                    className={safeLang === l.code ? 'active' : ''}
                     onClick={closeLanguageMenu}
                     style={{
                       display: 'block',
@@ -160,8 +171,8 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                       color: '#333',
                       textDecoration: 'none',
                       borderBottom: '1px solid #eee',
-                      background: lang === l.code ? '#f0f0f0' : 'white',
-                      fontWeight: lang === l.code ? 'bold' : 'normal'
+                      background: safeLang === l.code ? '#f0f0f0' : 'white',
+                      fontWeight: safeLang === l.code ? 'bold' : 'normal'
                     }}
                   >
                     {l.label}
