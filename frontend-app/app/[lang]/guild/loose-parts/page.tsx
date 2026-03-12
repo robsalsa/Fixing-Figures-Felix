@@ -41,22 +41,43 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const workflowSteps: WorkflowStep[] = [
     {
       id: 'diagnose',
-      title: 'Stage 1: Diagnose The Joint Type',
-      content: ['Identify whether the loose part is a peg, hinge, ball joint, or sliding rail.'],
+      title: 'Stage 1: Diagnose Where The Issue Is',
+      content: ['Identify what peices are loose for you to apply this glue.'],
       tips: [
-        'Check for side wobble vs full spin.',
-        'Mark friction points with a removable pencil dot.',
-        'Avoid force testing with accessories attached.',
+        'Figure out what part is loose because the location where the glue will go with be according to certain pieces. For instance pieces like the: ',
+        '------------------------------------------------------------------------------------',
+        'Ball Joint',
+        'Hinge Joint',
+        'Double Hinge',
+        'Swivel Joint',
+        'and so on...',
+        '------------------------------------------------------------------------------------',
+        'The reason that we place a lot of emphisis on this is becuase depending on what type of joint the location to apply this glue will vary.',
+        'Some you will apply directly on a joint piece such as the Ball Joint, but on something like Knee Hinge it would be better to apply the glue within the socket.',
+        '------------------------------------------------------------------------------------',
+        'I will be fixing both the Amazing Yamaguchi Arkham Knight and the Amazing Yamaguchi One Punch Man figures.',
+        'With the Arkham Knight I will show case how to apply the glue with Knee Hinges while with One Punch Man I will show case how to apply with a ball joint.',
+
+
+        'add images here!!!!!',
+
+
       ],
     },
     {
       id: 'tighten',
-      title: 'Stage 2: Apply Reversible Tightening',
-      content: ['Use reversible methods first before glue or replacement parts.'],
+      title: 'Stage 2: Spit Some Glue To It',
+      content: ['After isolating what piece(s) are loose the next thing to do is glue it.'],
       tips: [
-        'PTFE tape micro-wrap for pegs and neck stems.',
-        'Water-based floor polish micro-layer for hinge cups.',
-        'Let each layer cure fully, then re-test range.',
+        'Beginning with the Arkham Kinght, since with this figure it\'s knee hinge is loose the best way to apply the glue will be through poping off the upper leg from lower leg.',
+        'This might be different on non-Amazing Yamaguchi figures but when it comes to hinge-like peices the part that has this socket: (IMAGE HERE OF THE SOCKET ON ARKHAM KNIGHT) Will be the part were the glue will be applied in.',
+        'Apply a few drops into the socket, then reassemble parts together, move them a bit to ensure that both male and female peices are completely coated, and let it settle for a few minutes.',
+        'ADD THREE IMAGES LIKE IFIXIT TO BETTER SHOW WHATS GOING ON THROUGH TEXT',
+        '------------------------------------------------------------------------------------',
+        '*!*',
+        'Something important to keep in mind is that if the hinge seems to still be loose apply a little more through the gap inside the knee. Move the figure again to coat and let it rest until the glue solidifies.',
+        '*!*',
+        '------------------------------------------------------------------------------------',
       ],
     },
     {
@@ -120,12 +141,11 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   ];
 
   const prepChecklist = [
-    'Wash hands and clear dust from joints',
-    'Capture before-photos of current posing range',
-    'Test movement dry before adding any material',
-    'Prepare cotton swabs and microfiber cloth',
-    'Decide whether you need reversible or permanent fix',
-    'Test equipment and clear workspace',
+    'Check and ensure, that the figure in question is not broken.',
+    'Purchase glue. In this case there is multiple glues to use but for the purposes of this tutorial I will be using "MPS Fix Loose Joints"',
+    'Have a clean and orginized location to apply glue. Note that the glue flakes after application so be mindful after application.',
+    'Prepare glue. In this case the glue in question should have a tube to directly apply in locations needed. Ensure that the tube is clear from harden glue.',
+    'Although this fix is not permenent it will make it a bit difficult to seperate parts next time. Ensure that the part that is loose is not an interchangable piece.',
   ];
 
   const statsData: Stat[] = [
@@ -163,34 +183,39 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="guide-hero" id="top">
           <div className="container hero-grid">
             <div className="hero-copy-block">
-              <p className="eyebrow">Community Guild: Loose Parts</p>
-              <h1>Build tighter joints, safer poses, and longer figure life.</h1>
+              <p className="eyebrow">Generic Guild: Loose Parts</p>
+              <h1>Let's tighten up figures through easy fixes.</h1>
               <p className="hero-lead">
-                This guild is a full learning path for collectors: diagnosis, tool prep, quick fixes,
-                long-term methods, and embedded videos to follow step-by-step.
+                In this guild we will show you how to apply a "Special Glue" that will tighten loose joints. Note that there is many of these types of glues for example: 
+                <a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>MPS Fix Loose Joints</a>, 
+                <a href="https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" style={{color:"blue"}}> Kiki Fix Loose Joints Solution</a>,
+                and many others, but for the purposes of this guild we will be using <a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>MPS Fix Loose Joints</a>.
+
               </p>
               <div className="hero-cta-row">
                 <a href="#workflow" className="btn primary">
-                  Start The Guild
+                  Jump To The Guild
                 </a>
                 <a href="#watch" className="btn outline">
-                  Jump To Videos
+                  Jump To Video Tutorial
                 </a>
               </div>
+
               <ul className="hero-pill-list" aria-label="Guild highlights">
                 <li>Beginner friendly</li>
-                <li>No teardown required first</li>
-                <li>Free and paid pathways</li>
+                {/* <li>No teardown required first</li> */}
+                <li>Multiple methods</li>
+                <li>No perminent figure alterations</li>
               </ul>
             </div>
 
             <aside className="hero-side-card" aria-label="Quick navigation">
               <h2>Guild Map</h2>
               <a href="#prep">1. Pre-Fix Checklist</a>
-              <a href="#workflow">2. Repair Workflow</a>
-              <a href="#watch">3. Video Learning Bay</a>
-              <a href="#method-library">4. Method Library</a>
-              <a href="#stats">5. Collector Benchmarks</a>
+              <a href="#workflow">2. Step-By-Step Guild</a>
+              <a href="#watch">3. Video Tutorial</a>
+              <a href="#method-library">4. Other Methods</a>
+              <a href="#stats">5. Figure Guild Stats</a>
             </aside>
           </div>
         </section>
@@ -199,10 +224,14 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="prep-section" id="prep">
           <div className="container prep-grid">
             <div>
-              <h2>Pre-Fix Checklist</h2>
-              <p className="muted">
-                Check these first to reduce risk. This tracker updates as you mark items complete.
+              <h2 style={{color:"black", fontSize:"30px"}}>Pre-Fix Checklist</h2>
+              <p className="muted" style={{color:"black"}}>
+                This guild will show you how to use the most effective fix for Loose Parts.
+                Which is to use special glue made specifically for figures.
               </p>
+              {/* <p className="muted">
+                Check these first to reduce risk. This tracker updates as you mark items complete.
+              </p> */}
 
               <ChecklistItems
                 items={prepChecklist}
@@ -232,7 +261,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Workflow Section */}
         <section className="workflow-section" id="workflow">
           <div className="container">
-            <h2>Repair Workflow: From Loose To Locked In</h2>
+            <h2 style={{color:"black", fontSize:"30px"}}>Repair Workflow: Using MPS Glue </h2>
             <p className="muted workflow-intro">
               Expand each stage for exact actions, timing, and stop signs.
             </p>
@@ -271,7 +300,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Video Section */}
         <section className="video-section" id="watch">
           <div className="container">
-            <h2>Video Bay</h2>
+            <h2 style={{color:"black", fontSize:"30px"}}>Video Bay</h2>
             <p className="muted">
               Follow the local breakdown first, then continue with curated external walk-throughs.
             </p>
