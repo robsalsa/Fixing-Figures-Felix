@@ -72,71 +72,70 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         'Beginning with the Arkham Kinght, since with this figure it\'s knee hinge is loose the best way to apply the glue will be through poping off the upper leg from lower leg.',
         'This might be different on non-Amazing Yamaguchi figures but when it comes to hinge-like peices the part that has this socket: (IMAGE HERE OF THE SOCKET ON ARKHAM KNIGHT) Will be the part were the glue will be applied in.',
         'Apply a few drops into the socket, then reassemble parts together, move them a bit to ensure that both male and female peices are completely coated, and let it settle for a few minutes.',
+        '*!*',
         'ADD THREE IMAGES LIKE IFIXIT TO BETTER SHOW WHATS GOING ON THROUGH TEXT',
+        '*!*',
         '------------------------------------------------------------------------------------',
         '*!*',
         'Something important to keep in mind is that if the hinge seems to still be loose apply a little more through the gap inside the knee. Move the figure again to coat and let it rest until the glue solidifies.',
         '*!*',
         '------------------------------------------------------------------------------------',
+        'Now it\'s time for ball joint-like parts. This one should be pretty easy since a direct application of the glue will sufice.',
+        'Note that depending on the type of ball joint the method should be very similar to one another.',
+        '*!*',
+        'SHOW IMAGES OF THE ONE PUNCH MAN BALL JOINT BEING STIFFENED UP',
+        '*!*',
       ],
     },
     {
       id: 'lock',
-      title: 'Stage 3: Escalate To Semi-Permanent Methods',
-      content: ['Only escalate when reversible fixes fail after repeated testing.'],
+      title: 'Stage 3: Check and Clean Up',
+      content: ['Since this is the most effective method to solve these type of loose part problems. That pretty much it.'],
       tips: [
-        'Micro-shim sleeves for neck and wrist pegs.',
-        'Specialized tack formulas for intermittent slip.',
-        'Track cure times and avoid movement while setting.',
+        'For whatever excess of glue was used simply use a paper towel to clean it off.',
+        'Note that some spill over is perfectly fine when it only spill onto the same piece',
+        'In the other hand if the spill of glue is reaching another unrelated piece, it\'s recommended to clean up before the glue settles.',
       ],
     },
-    {
-      id: 'maintain',
-      title: 'Stage 4: Maintenance Protocol',
-      content: ['Maintenance keeps your fix effective and reduces rework frequency.'],
-      tips: [
-        'Monthly range-of-motion checks.',
-        'De-pose heavy one-leg stances during storage.',
-        'Reapply friction enhancer at first sign of drift.',
-      ],
-    },
+    // {
+    //   id: 'maintain',
+    //   title: 'Stage 4: Maintenance Protocol',
+    //   content: ['Maintenance keeps your fix effective and reduces rework frequency.'],
+    //   tips: [
+    //     'Monthly range-of-motion checks.',
+    //     'De-pose heavy one-leg stances during storage.',
+    //     'Reapply friction enhancer at first sign of drift.',
+    //   ],
+    // },
   ];
 
   const methods: Method[] = [
     {
       id: 'warm-water',
-      title: 'Warm Water Reset + Movement Cycling',
-      description: 'A zero-cost baseline method for stiffness and micro-looseness.',
+      title: 'Using a Wet Paper Towel',
+      description: 'Stuffing a wet paper towel piece into a socked to apply friction. Due to this added friction the pieces should now "stick" onto each other.',
       cost: 'Free',
+      effectiveness:'Somewhat',
+      best_for:'Hinge-like Parts',
       category: 'free fix',
     },
     {
       id: 'micro-tack',
-      title: 'Micro Tack Dot Strategy',
-      description: 'Controlled tack points for joints that slip during dynamic posing.',
+      title: 'Using a Dot of Sticky Tack',
+      description: 'Applying a well placed dot of sticky tack or sticky putty can go a long way. Best used for smaller pieces such as loose accesories, hand pieces, and other smaller parts on figures.',
       cost: 'Low',
+      effectiveness:'Very Effective!',
+      best_for:'Hand-Swaps, Small Accesories, Small Joints, Small Hinges',
       category: 'special glue',
     },
     {
       id: 'ptfe-tape',
-      title: 'PTFE Tape Micro-Wrap',
-      description: 'Reliable friction boost for loose pegs without permanent changes.',
+      title: 'Taking Up Space With Saran Wrap',
+      description: 'Similar to the Wet Paper Towel method\'s goal is to do the same thing. Take up space and cause more friction for loose parts to "stick together".',
       cost: 'Low',
+      effectiveness:'Somewhat',
+      best_for:'Hinge-like Parts',
       category: 'friction',
-    },
-    {
-      id: 'replacement-peg',
-      title: 'Replacement Peg + Sleeve Kit',
-      description: 'Best for severe wear where friction methods no longer hold poses.',
-      cost: 'Medium',
-      category: 'paid fix',
-    },
-    {
-      id: 'custom-shim',
-      title: 'Custom Shim Lock-In',
-      description: 'A long-term option for display pieces that need maximum stability.',
-      cost: 'Medium',
-      category: 'permanent',
     },
   ];
 
@@ -300,20 +299,20 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Video Section */}
         <section className="video-section" id="watch">
           <div className="container">
-            <h2 style={{color:"black", fontSize:"30px"}}>Video Bay</h2>
+            <h2 style={{color:"black", fontSize:"30px"}}>Video Tutorial</h2>
             <p className="muted">
-              Follow the local breakdown first, then continue with curated external walk-throughs.
+              This is the visual version of the tutorial. Both have the same set of information only in a visual method. Please feel free to follow our YouTube channel. <a href="https://www.youtube.com/@PilkMilkFactory" style={{color:"blue"}}>Pilk Milk Factory</a>
             </p>
 
             <div className="video-grid">
               <article className="video-card">
-                <h3>Hands-On Local Demo</h3>
+                <h3>Using MPS Glue to Solve Loose Joints on Figures</h3>
                 <div
                   style={{
                     width: '100%',
                     paddingBottom: '56.25%',
                     position: 'relative',
-                    backgroundColor: '#000',
+                    backgroundColor: 'black',
                     borderRadius: '12px',
                   }}
                 >
@@ -339,11 +338,14 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           </div>
         </section>
 
-        {/* Method Library */}
+        {/* Directory for other fixes */}
         <section className="content-section" id="method-library">
           <div className="container">
-            <h2 className="section-title">Method Library</h2>
-            <p className="muted">Filter by cost and permanence to pick your best path quickly.</p>
+            <h2 className="section-title">Other Fixes for Loose Parts</h2>
+            <p className="muted">
+              This is a directory for other fixes that very in effectiveness. 
+              Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.
+            </p>
 
             <div className="services-container" id="servicesContainer">
               {methods.map((method) => (
