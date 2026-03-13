@@ -1,14 +1,13 @@
 import React, { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { connection } from 'next/server';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import DynamicFigureStats from '@/components/pages/DynamicFigureStats';
 import RankingCard from '@/components/pages/RankingCard';
 import { getTopFiguresByMentions, getTopBrandsByQCIssues, getTopIssues } from '@/lib/supabase/figure-data/figureFunctions';
 import homeTranslations from '@/lib/translations/home.json';
-
-export const dynamic = 'force-dynamic';
 
 function NavigationSkeleton() {
 	return (
@@ -39,6 +38,7 @@ export default function HomePage({ params }: HomePageProps) {
 }
 
 async function HomePageContent({ params }: HomePageProps) {
+	await connection();
 	const { lang } = await params;
 	const t = homeTranslations[lang as keyof typeof homeTranslations] || homeTranslations.en;
 
