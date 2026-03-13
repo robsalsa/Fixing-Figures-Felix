@@ -201,3 +201,55 @@ export async function getTopIssues(limit: number = 10): Promise<TopItem[]> {
     return [];
   }
 }
+
+// --- Tutorial View Tracking ---
+
+export interface TutorialViewItem {
+  name: string;
+  count: number;
+}
+
+/**
+ * Records a single page-view for a tutorial.
+ * Call client-side on page mount inside a useEffect.
+ * The tutorial_slug must exist in the `tutorials` lookup table.
+ */
+export async function recordTutorialView(tutorialSlug: string): Promise<void> {
+  const supabase = createClient();
+  const { error } = await supabase
+    .from('tutorial_views')
+    .insert([{ tutorial_slug: tutorialSlug }]);
+  if (error) {
+    console.error('Error recording tutorial view:', error);
+  }
+}
+
+/**
+ * Fetches the most-viewed tutorials ordered by view count descending.
+ * Queries the `tutorial_view_counts` view which joins tutorials + tutorial_views.
+ */
+export async function getTopTutorialViews(limit: number = 10): Promise<TutorialViewItem[]> {
+  const supabase = createClient();
+  try {
+    const { data, error } = await supabase
+      .from('tutorial_view_counts')
+      .select('tutorial_name, view_count')
+      .order('view_count', { ascending: false })
+      .limit(limit);
+
+    if (error) {
+      console.error('Error fetching tutorial views:', error);
+      return [];
+    }
+
+    return (data ?? []).map(
+      ({ tutorial_name, view_count }: { tutorial_name: string; view_count: number }) => ({
+        name: tutorial_name,
+        count: view_count,
+      })
+    );
+  } catch (error) {
+    console.error('Exception while fetching tutorial views:', error);
+    return [];
+  }
+}

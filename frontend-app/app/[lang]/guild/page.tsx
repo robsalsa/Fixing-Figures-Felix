@@ -1,10 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navigation } from '@/components/pages/Navigation';
 import { Footer } from '@/components/pages/Footer';
+import TutorialStats from '@/components/pages/TutorialStats';
 
 interface GuildRouterPageProps {
   params: Promise<{ lang: string }>;
@@ -48,27 +49,23 @@ const guilds = [
   }
 ];
 
-const mockStats = [
-  { title: 'Test Data Poll', value: 100 },
-  { title: 'Test Data Poll 2', value: 75 },
-  { title: 'Test Data Poll 3', value: 50 },
-  { title: 'Test Data Poll 4', value: 25 },
-  { title: 'Test Data Poll 5', value: 0 }
-];
+export default function GuildRouterPage({ params }: GuildRouterPageProps) {
+  const [lang, setLang] = useState('en');
 
-export default async function GuildRouterPage({ params }: GuildRouterPageProps) {
-  const { lang } = await params;
+  useEffect(() => {
+    params.then((p) => setLang(p.lang));
+  }, [params]);
 
   return (
     <div className="guild-guide-page">
       <Navigation lang={lang} currentPage="guild-router" />
 
 
-      <nav className="guild-trace-strip" aria-label="Guild path">
+      <nav className="guild-trace-strip" aria-label="Tutorial path">
         <div className="container guild-trace-inner">
           <Link href={`/${lang}`}>Home</Link>
           <span aria-hidden="true">/</span>
-          <span className="current">Guilds</span>
+          <span className="current">Tutorials</span>
         </div>
       </nav>
 
@@ -76,12 +73,12 @@ export default async function GuildRouterPage({ params }: GuildRouterPageProps) 
         {/* Hero Section */}
         <section className="loose-container" style={{ padding: '36px 0 28px' }}>
           <div className="container">
-            <h1 style={{ fontSize: '30px', margin: '0 0 12px' }}>General Guilds</h1>
+            <h1 style={{ fontSize: '30px', margin: '0 0 12px' }}>General Tutorials</h1>
 
             <div className="card" style={{ maxWidth: '800px', margin: '0 auto' }}>
               <h3 style={{ margin: '0 0 12px' }}>Let's Get To Fixing This!</h3>
               <p className="muted" style={{ margin: '0' }}>
-                This guild centralizes community reports about loose, stiff or broken parts on figures. Note that
+                This tutorial hub centralizes community reports about loose, stiff or broken parts on figures. Note that
                 these issues can appear on any figures outside of Amazing Yamaguchi and Revoltech figures. While
                 unfortunate that this issue is not so uncommon, fixes for this is very common and easy to do.
               </p>
@@ -93,7 +90,7 @@ export default async function GuildRouterPage({ params }: GuildRouterPageProps) 
         <section className="content-section" style={{ padding: '24px 0' }}>
           <div className="container">
             <h2 className="section-title" style={{ textAlign: 'center', margin: '0 0 20px' }}>
-              Please Select What Guild You Wish to Follow!
+              Please Select What Tutorial You Wish to Follow!
             </h2>
 
             <div className="services-container" id="servicesContainer" style={{ marginTop: '24px' }}>
@@ -118,41 +115,10 @@ export default async function GuildRouterPage({ params }: GuildRouterPageProps) 
         {/* Stats Section */}
         <section className="goal-section" style={{ padding: '36px 0 54px' }}>
           <div className="container">
-            <div className="goal-grid">
-              <div className="goal-content">
-                <h3 style={{ margin: '0 0 16px' }}>Most Viewed Guilds</h3>
-                <ul className="stats-list" aria-live="polite">
-                  {mockStats.map((stat, index) => (
-                    <li key={index}>
-                      <div className="stat-meta">
-                        <span className="stat-title">{stat.title}</span>
-                        <span className="stat-value">{stat.value}%</span>
-                      </div>
-                      <div className="stat-bar">
-                        <div style={{ width: `${stat.value}%` }}></div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <aside className="goal-stats">
-                <h3 style={{ margin: '0 0 16px' }}>Most Common Issues</h3>
-                <ul className="stats-list" aria-live="polite">
-                  {mockStats.map((stat, index) => (
-                    <li key={index}>
-                      <div className="stat-meta">
-                        <span className="stat-title">{stat.title}</span>
-                        <span className="stat-value">{stat.value}%</span>
-                      </div>
-                      <div className="stat-bar">
-                        <div style={{ width: `${stat.value}%` }}></div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            </div>
+            <TutorialStats
+              viewsTitle="Most Viewed Tutorials"
+              issuesTitle="Most Common Issues"
+            />
           </div>
         </section>
 
@@ -161,6 +127,7 @@ export default async function GuildRouterPage({ params }: GuildRouterPageProps) 
             Back Home
           </Link>
         </div>
+        {/* (URL paths intentionally keep /guild/ — only visible labels say Tutorial) */}
       </main>
 
       <Footer lang={lang} />

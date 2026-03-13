@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
+import TutorialStats from '@/components/pages/TutorialStats';
 
 interface LoosePartsPageProps {
   params: Promise<{ lang: string }>;
@@ -22,11 +23,6 @@ interface Method {
   description: string;
   cost: string;
   category: string;
-}
-
-interface Stat {
-  label: string;
-  value: number;
 }
 
 export default function LoosePartsPage({ params }: LoosePartsPageProps) {
@@ -97,16 +93,17 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         'In the other hand if the spill of glue is reaching another unrelated piece, it\'s recommended to clean up before the glue settles.',
       ],
     },
-    // {
-    //   id: 'maintain',
-    //   title: 'Stage 4: Maintenance Protocol',
-    //   content: ['Maintenance keeps your fix effective and reduces rework frequency.'],
-    //   tips: [
-    //     'Monthly range-of-motion checks.',
-    //     'De-pose heavy one-leg stances during storage.',
-    //     'Reapply friction enhancer at first sign of drift.',
-    //   ],
-    // },
+    {
+      id: 'other-options',
+      title: 'Other Options for Figure Glue',
+      content: ['While in this tutorial the use of the MPS Fix Loose Joint glue this is not the only glue of this type. Luckily, there is multiple glues for you to use.'],
+      tips: [
+        'MPS Fix Loose Joints (Amazon)',
+        'Kiki Fix Loose Joints Solution (Amazon)',
+        '43ml Fix Loose Joints Solution (Amazon)',
+        '*!* Note that unfortunately MPS Fix Loose Joints is the ONLY glue we can vouch for. Simple because we own and use this glue specifically *!*',
+      ],
+    },
   ];
 
   const methods: Method[] = [
@@ -147,14 +144,6 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
     'Although this fix is not permenent it will make it a bit difficult to seperate parts next time. Ensure that the part that is loose is not an interchangable piece.',
   ];
 
-  const statsData: Stat[] = [
-    { label: 'Test Data Poll', value: 100 },
-    { label: 'Test Data Poll 2', value: 75 },
-    { label: 'Test Data Poll 3', value: 50 },
-    { label: 'Test Data Poll 4', value: 25 },
-    { label: 'Test Data Poll 5', value: 0 },
-  ];
-
   const handleChecklistChange = (checkedCount: number) => {
     setPrepPercent(Math.round((checkedCount / prepChecklist.length) * 100));
   };
@@ -167,13 +156,13 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
     <div className="loose-guide-page">
       <Navigation lang={lang} currentPage="guild" />
 
-      <nav className="guild-trace-strip" aria-label="Guild path">
+      <nav className="guild-trace-strip" aria-label="Tutorial path">
         <div className="container guild-trace-inner">
           <Link href={`/${lang}`}>Home</Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/${lang}/guild`}>Guilds</Link>
+          <Link href={`/${lang}/guild`}>Tutorials</Link>
           <span aria-hidden="true">/</span>
-          <span className="current">Loose Parts Guild</span>
+          <span className="current">Loose Parts Tutorial</span>
         </div>
       </nav>
 
@@ -182,7 +171,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="guide-hero" id="top">
           <div className="container hero-grid">
             <div className="hero-copy-block">
-              <p className="eyebrow">Generic Guild: Loose Parts</p>
+              <p className="eyebrow">Generic Tutorial: Loose Parts</p>
               <h1>Let's tighten up figures through easy fixes.</h1>
               <p className="hero-lead">
                 In this guild we will show you how to apply a "Special Glue" that will tighten loose joints. Note that there is many of these types of glues for example: 
@@ -193,7 +182,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
               </p>
               <div className="hero-cta-row">
                 <a href="#workflow" className="btn primary">
-                  Jump To The Guild
+                  Jump To The Tutorial
                 </a>
                 <a href="#watch" className="btn outline">
                   Jump To Video Tutorial
@@ -209,12 +198,12 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
             </div>
 
             <aside className="hero-side-card" aria-label="Quick navigation">
-              <h2>Guild Map</h2>
+              <h2>Tutorial Map</h2>
               <a href="#prep">1. Pre-Fix Checklist</a>
-              <a href="#workflow">2. Step-By-Step Guild</a>
+              <a href="#workflow">2. Step-By-Step Tutorial</a>
               <a href="#watch">3. Video Tutorial</a>
               <a href="#method-library">4. Other Methods</a>
-              <a href="#stats">5. Figure Guild Stats</a>
+              <a href="#stats">5. Figure Tutorial Stats</a>
             </aside>
           </div>
         </section>
@@ -225,7 +214,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
             <div>
               <h2 style={{color:"black", fontSize:"30px"}}>Pre-Fix Checklist</h2>
               <p className="muted" style={{color:"black"}}>
-                This guild will show you how to use the most effective fix for Loose Parts.
+                This tutorial will show you how to use the most effective fix for Loose Parts.
                 Which is to use special glue made specifically for figures.
               </p>
               {/* <p className="muted">
@@ -370,48 +359,18 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Stats Section */}
         <section className="goal-section" id="stats">
           <div className="container">
-            <div className="goal-grid">
-              <div className="goal-content">
-                <h3>Most Viewed Guilds</h3>
-                <ul className="stats-list" aria-live="polite">
-                  {statsData.map((stat, idx) => (
-                    <li key={idx}>
-                      <div className="stat-meta">
-                        <span className="stat-title">{stat.label}</span>
-                        <span className="stat-value">{stat.value}%</span>
-                      </div>
-                      <div className="stat-bar">
-                        <div style={{ width: `${stat.value}%` }}></div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <aside className="goal-stats">
-                <h3>Most Common Issues</h3>
-                <ul className="stats-list" aria-live="polite">
-                  {statsData.map((stat, idx) => (
-                    <li key={idx}>
-                      <div className="stat-meta">
-                        <span className="stat-title">{stat.label}</span>
-                        <span className="stat-value">{stat.value}%</span>
-                      </div>
-                      <div className="stat-bar">
-                        <div style={{ width: `${stat.value}%` }}></div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            </div>
+            <TutorialStats
+              tutorialSlug="loose-parts"
+              viewsTitle="Most Viewed Tutorials"
+              issuesTitle="Most Common Issues"
+            />
           </div>
         </section>
 
-        {/* Guild Return Row */}
+        {/* Tutorial Return Row */}
         <div className="guild-return-row">
           <Link href={`/${lang}/guild`} className="btn outline small">
-            Back to Guilds
+            Back to Tutorials
           </Link>
           <Link href={`/${lang}`} className="btn secondary small">
             Back Home
