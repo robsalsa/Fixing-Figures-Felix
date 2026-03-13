@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -257,6 +259,7 @@ h1 {
   padding: 8px 10px;
   font-size: 0.9rem;
   min-height: 36px;
+  color:black;
 }
 
 .btn.ghost {
@@ -449,7 +452,14 @@ h1 {
 .card h4 {
   margin: 0 0 8px;
   font-size: 1.5rem;
+}
 
+.card h3 {
+  margin: 0 0 12px;
+}
+
+.card p {
+  margin: 0;
 }
 
 .cardDesc {
@@ -982,6 +992,9 @@ textarea {
   .goalGrid {
     grid-template-columns: minmax(0, 1fr) 300px;
   }
+  .goal-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -996,6 +1009,13 @@ textarea {
   }
   .card {
     min-width: 200px;
+  }
+  .guild-trace-strip {
+    top: 68px;
+    background: rgba(255, 139, 0, 0.78);
+  }
+  .services-container {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
   }
 }
 
@@ -1054,6 +1074,13 @@ textarea {
     padding: 12px 0;
     margin: 0;
   }
+  .goal-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -1094,6 +1121,15 @@ textarea {
   .choiceGrid {
     grid-template-columns: 1fr;
   }
+  .guild-trace-strip {
+    top: 64px;
+  }
+  .guild-trace-inner {
+    font-size: 0.86rem;
+  }
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
@@ -1120,6 +1156,15 @@ textarea {
     align-items: stretch;
   }
   .btn {
+    width: 100%;
+  }
+  .guild-trace-strip {
+    top: 64px;
+  }
+  .guild-trace-inner {
+    font-size: 0.86rem;
+  }
+  .card-actions .btn {
     width: 100%;
   }
 }
@@ -1195,5 +1240,789 @@ textarea {
 
 .autocomplete-item:last-child {
   border-bottom: none;
+}
+
+/* =========================
+  Guild Router Styles
+  ========================= */
+
+/* Guild Trace Breadcrumb Strip */
+.guild-trace-strip {
+  position: sticky;
+  top: 72px;
+  z-index: 18;
+  width: 100%;
+  background: rgba(255, 139, 0, 0.78);
+  border-bottom: 1px solid rgba(68, 68, 68, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.guild-trace-inner {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 0.92rem;
+  color: black;
+}
+
+.guild-trace-inner a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.guild-trace-inner a:hover {
+  color: white;
+}
+
+.guild-trace-inner .current {
+  color: black;
+  font-weight: 600;
+}
+
+/* Guild Guide Page */
+.guild-guide-page {
+  --guide-ink: var(--dark);
+  --guide-muted: var(--muted);
+  --guide-bg-1: #FFFFFF;
+  --guide-bg-2: var(--bg);
+  --guide-bg-3: #FFFFFF;
+  --guide-card: #fff;
+  --guide-accent: var(--accent-2);
+  --guide-accent-2: var(--accent);
+  --guide-border: rgba(68, 68, 68, 0.12);
+}
+
+.guild-guide-page h1,
+.guild-guide-page h2,
+.guild-guide-page h3,
+.guild-guide-page h4 {
+  font-family: "Chakra Petch", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.guild-guide-page .site-header {
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(68, 68, 68, 0.09);
+}
+
+.guild-guide-page .hero,
+.guild-guide-page .loose-container {
+  padding: 36px 0 28px;
+}
+
+.guild-guide-page .card {
+  background: var(--guide-card);
+  border-radius: 18px;
+  border: 1px solid var(--guide-border);
+  box-shadow: 0 18px 34px rgba(68, 68, 68, 0.1);
+  padding: 24px;
+}
+
+.guild-guide-page .card h3 {
+  margin: 0 0 12px;
+}
+
+.guild-guide-page .card p {
+  margin: 0;
+}
+
+.guild-guide-page .muted {
+  color: var(--guide-muted);
+}
+
+/* Content Section - Guild Pages */
+.content-section {
+  padding: 24px 0 54px;
+}
+
+.section-title {
+  font-family: "Chakra Petch", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.2px;
+  font-size: 1.8rem;
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+/* Services Container */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.service-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-column h4 {
+  margin: 0 0 8px;
+  font-family: "Chakra Petch", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.2px;
+  font-size: 1.1rem;
+}
+
+.service-column p {
+  margin: 0 0 12px;
+  flex-grow: 1;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card-actions .btn {
+  flex: 1;
+}
+
+/* Guild Goal Section */
+.goal-section {
+  padding: 36px 0 54px;
+}
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  padding: 32px;
+  background: linear-gradient(160deg, #FFFFFF, var(--bg));
+  border-radius: 18px;
+  border: 1px solid var(--guide-border);
+  box-shadow: 0 18px 34px rgba(68, 68, 68, 0.1);
+}
+
+.goal-content h3,
+.goal-stats h3 {
+  margin: 0 0 16px;
+  font-family: "Chakra Petch", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stats-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.stat-title {
+  font-weight: 600;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: var(--guide-accent-2);
+}
+
+.stat-bar {
+  height: 6px;
+  background: rgba(68, 68, 68, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.stat-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--guide-accent-2), var(--guide-accent));
+  transition: width 300ms ease;
+}
+
+/* Guild Return Row */
+.guild-return-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 8px 0 28px;
+}
+
+/* Site Main - Guild Pages */
+.guild-guide-page .site-main {
+  overflow-x: hidden;
+}
+
+.guild-guide-page .site-main section {
+  animation: reveal 480ms ease both;
+}
+
+.guild-guide-page .site-main section:nth-of-type(2) {
+  animation-delay: 70ms;
+}
+
+.guild-guide-page .site-main section:nth-of-type(3) {
+  animation-delay: 130ms;
+}
+
+.guild-guide-page .site-main section:nth-of-type(4) {
+  animation-delay: 190ms;
+}
+
+.guild-guide-page .guild-return-row {
+  animation-delay: 250ms;
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =========================
+  Loose Guide Page Styles
+  ========================= */
+body.loose-guide-page {
+  --guide-ink: var(--dark);
+  --guide-muted: var(--muted);
+  --guide-bg-1: #FFFFFF;
+  --guide-bg-2: var(--bg);
+  --guide-bg-3: #FFFFFF;
+  --guide-card: #fff;
+  --guide-accent: var(--accent-2);
+  --guide-accent-2: var(--accent);
+  --guide-border: rgba(68, 68, 68, 0.12);
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  color: var(--guide-ink);
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
+  background-attachment: fixed;
+}
+
+.loose-guide-page h1,
+.loose-guide-page h2,
+.loose-guide-page h3,
+.loose-guide-page h4,
+.loose-guide-page .brand-title {
+  font-family: "Chakra Petch", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.loose-guide-page .site-header {
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(68, 68, 68, 0.09);
+}
+
+.loose-guide-page .guild-trace-strip {
+  position: sticky;
+  top: 72px;
+  z-index: 18;
+  width: 100%;
+  background: rgba(255, 139, 0, 0.78);
+  border-bottom: 1px solid rgba(68, 68, 68, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.loose-guide-page .guild-trace-inner {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 0.92rem;
+  color: black;
+}
+
+.loose-guide-page .guild-trace-inner a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.loose-guide-page .guild-trace-inner a:hover {
+  color: white;
+}
+
+.loose-guide-page .guild-trace-inner .current {
+  color: black;
+  font-weight: 600;
+}
+
+.loose-guide-page .guide-hero {
+  padding: 42px 0 26px;
+}
+
+.loose-guide-page .hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.loose-guide-page .hero-copy-block,
+.loose-guide-page .hero-side-card {
+  background: var(--guide-card);
+  border-radius: 18px;
+  border: 1px solid var(--guide-border);
+  box-shadow: 0 18px 34px rgba(68, 68, 68, 0.1);
+}
+
+.loose-guide-page .hero-copy-block {
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loose-guide-page .hero-copy-block::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -40px;
+  bottom: -60px;
+  border-radius: 999px;
+  background: linear-gradient(145deg, rgba(255, 198, 11, 0.22), rgba(255, 139, 0, 0.24));
+}
+
+.loose-guide-page .eyebrow {
+  margin: 0 0 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--guide-accent-2);
+  letter-spacing: 0.8px;
+  font-size: 0.84rem;
+}
+
+.loose-guide-page h1 {
+  font-size: clamp(1.9rem, 2.8vw, 3.1rem);
+  margin: 0 0 10px;
+  max-width: 18ch;
+}
+
+.loose-guide-page .hero-lead {
+  margin: 0;
+  color: var(--guide-muted);
+  max-width: 58ch;
+}
+
+.loose-guide-page .hero-cta-row {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.loose-guide-page .btn.primary {
+  /* background: linear-gradient(120deg, var(--guide-accent), var(--accent)); */
+  color: white;
+  background: var(--accent);
+}
+
+.loose-guide-page .btn.outline {
+  /* border-color: rgba(68, 68, 68, 0.2); */
+  border-color:black;
+  color: black;
+  /* color: var(--guide-ink); */
+  background: white;
+  /* background: rgba(255, 198, 11, 0.14); */
+}
+
+.loose-guide-page .hero-pill-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.loose-guide-page .hero-pill-list li {
+  font-size: 0.86rem;
+  color: var(--guide-accent-2);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+
+.loose-guide-page .hero-side-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: start;
+  position: sticky;
+  top: 90px;
+}
+
+.loose-guide-page .hero-side-card h2 {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+}
+
+.loose-guide-page .hero-side-card a {
+  text-decoration: none;
+  color: var(--guide-ink);
+  border: 1px solid rgba(68, 68, 68, 0.08);
+  border-radius: 10px;
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0.9), rgba(255, 198, 11, 0.15));
+  padding: 10px 12px;
+  font-weight: 600;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.loose-guide-page .hero-side-card a:hover {
+  border-color: rgba(255, 139, 0, 0.5);
+  transform: translateX(2px);
+}
+
+.loose-guide-page .prep-section,
+.loose-guide-page .workflow-section,
+.loose-guide-page .video-section,
+.loose-guide-page #method-library,
+.loose-guide-page #stats {
+  padding: 30px 0;
+}
+
+.loose-guide-page .prep-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+}
+
+.loose-guide-page .prep-items {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.loose-guide-page .prep-items label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--guide-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.loose-guide-page .prep-items input {
+  inline-size: 18px;
+  block-size: 18px;
+  accent-color: var(--guide-accent-2);
+  cursor: pointer;
+}
+
+.loose-guide-page .prep-progress-card {
+  background: linear-gradient(145deg, #FFFFFF, var(--bg));
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(68, 68, 68, 0.12);
+  padding: 18px;
+  align-self: start;
+  color: black;
+}
+
+.loose-guide-page .small-label {
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--guide-accent-2);
+}
+
+.loose-guide-page .progress-value {
+  margin: 6px 0 14px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.loose-guide-page .prep-progress-bar {
+  height: 12px;
+  background: rgba(68, 68, 68, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loose-guide-page #prepFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--guide-accent-2), var(--guide-accent));
+  transition: width 260ms ease;
+  border-radius: 999px;
+}
+
+.loose-guide-page .small-note {
+  margin-top: 10px;
+}
+
+.loose-guide-page .workflow-intro {
+  margin: 8px 0 18px;
+}
+
+.loose-guide-page .workflow-list {
+  display: grid;
+  gap: 12px;
+}
+
+.loose-guide-page .workflow-item {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(68, 68, 68, 0.14);
+  background: #fff;
+}
+
+.loose-guide-page .workflow-trigger {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  color: white;
+  background: var(--accent-2);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.loose-guide-page .workflow-trigger:hover {
+  opacity: 0.9;
+}
+
+.loose-guide-page .workflow-icon {
+  inline-size: 22px;
+  block-size: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(68, 68, 68, 0.14);
+  transition: transform 0.3s ease;
+}
+
+.loose-guide-page .workflow-trigger[aria-expanded="true"] .workflow-icon {
+  transform: rotate(45deg);
+}
+
+.loose-guide-page .workflow-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 350ms ease;
+  color: var(--guide-muted);
+}
+
+.loose-guide-page .workflow-panel.open {
+  grid-template-rows: 1fr;
+}
+
+.loose-guide-page .workflow-panel-inner {
+  overflow: hidden;
+  padding: 0 16px;
+  transition: padding 350ms ease;
+}
+
+.loose-guide-page .workflow-panel.open .workflow-panel-inner {
+  padding: 16px;
+}
+
+.loose-guide-page .workflow-panel p {
+  margin: 0 0 8px;
+}
+
+.loose-guide-page .workflow-panel ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.loose-guide-page .tip-with-image {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 8px 0;
+}
+
+.loose-guide-page .tip-image {
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.loose-guide-page .video-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.loose-guide-page .video-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid var(--guide-border);
+  box-shadow: 0 12px 24px rgba(68, 68, 68, 0.08);
+}
+
+.loose-guide-page .video-card h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.loose-guide-page .video-card video,
+.loose-guide-page .video-card iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.loose-guide-page #method-library .method-tag {
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-grow: 0;
+  align-self: flex-start;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  margin: 6px 0;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  background: rgba(255, 139, 0, 0.16);
+  color: var(--guide-ink);
+  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 139, 0, 0.45);
+}
+
+.loose-guide-page #method-library .card-actions {
+  margin-top: 14px;
+}
+
+.loose-guide-page #stats .goal-grid {
+  background: linear-gradient(160deg, #FFFFFF, var(--bg));
+}
+
+.loose-guide-page .guild-return-row {
+  margin-top: 8px;
+  margin-bottom: 28px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.loose-guide-page .site-main section,
+.loose-guide-page .guild-return-row {
+  animation: reveal 480ms ease both;
+}
+
+.loose-guide-page .site-main section:nth-of-type(2) {
+  animation-delay: 70ms;
+}
+
+.loose-guide-page .site-main section:nth-of-type(3) {
+  animation-delay: 130ms;
+}
+
+.loose-guide-page .site-main section:nth-of-type(4) {
+  animation-delay: 190ms;
+}
+
+.loose-guide-page .site-main section:nth-of-type(5) {
+  animation-delay: 210ms;
+}
+
+.loose-guide-page .site-main section:nth-of-type(6) {
+  animation-delay: 250ms;
+}
+
+/* Loose Guide Page - Responsive */
+@media (max-width: 1080px) {
+  .loose-guide-page .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loose-guide-page .hero-side-card {
+    position: static;
+  }
+
+  .loose-guide-page .video-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .loose-guide-page .guild-trace-strip {
+    top: 68px;
+    background: rgba(255, 139, 0, 0.78);
+  }
+}
+
+@media (max-width: 860px) {
+  .loose-guide-page .prep-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loose-guide-page .hero-copy-block {
+    padding: 22px;
+  }
+
+  .loose-guide-page .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loose-guide-page .workflow-trigger {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .loose-guide-page .guild-trace-strip {
+    top: 64px;
+  }
+
+  .loose-guide-page .guild-trace-inner {
+    font-size: 0.86rem;
+  }
+
+  .loose-guide-page .hero-pill-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .loose-guide-page .hero-cta-row .btn {
+    width: 100%;
+  }
+
+  .loose-guide-page #method-library .method-tag {
+    font-size: 0.78rem;
+    padding: 4px 8px;
+  }
 }
 

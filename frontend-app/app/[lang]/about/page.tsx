@@ -141,7 +141,7 @@ async function AboutPageContent({ params }: AboutPageProps) {
 							{t.warningContent}
 							<ul>
 								<li>{t.warningIncorrect}</li>
-								<li>{t.warningOutdated}</li>
+								{/* <li>{t.warningOutdated}</li> */}
 								<li>{t.warningIncomplete}</li>
 							</ul>
 							{t.warningDisclaimer}

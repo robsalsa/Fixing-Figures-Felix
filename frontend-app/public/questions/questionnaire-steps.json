@@ -81,14 +81,24 @@
     },
     "material-question": {
       "title": "Figure Materials",
-      "intro": "What are the materials used for this figure?",
-      "type": "input",
+      "intro": "What are the materials used for this figure? Select all that apply.",
+      "type": "multiselect",
       "key": "materials",
-      "input": {
-        "type": "text",
-        "placeholder": "Example: PVC, ABS, Diecast, Cloth, or e.t.c"
-      },
-      "note": "Please enter the materials if known. If unknown, enter \"UNKNOWN\"."
+      "options": [
+        { "label": "PVC", "value": "PVC" },
+        { "label": "ABS", "value": "ABS" },
+        { "label": "POM", "value": "POM" },
+        { "label": "Diecast", "value": "Diecast" },
+        { "label": "Cloth / Fabric", "value": "Cloth" },
+        { "label": "Rubber", "value": "Rubber" },
+        { "label": "Resin", "value": "Resin" },
+        { "label": "Nylon", "value": "Nylon" },
+        { "label": "Other", "value": "other" }
+      ],
+      "note": "Select all materials that apply to your figure. Choose \"Other\" to add materials not listed.",
+      "hasOtherInput": true,
+      "otherKey": "other_materials",
+      "otherPlaceholder": "Enter other materials (e.g. Aluminum, Silicon, Metal)"
     },
     "seller-question": {
       "title": "Place of Purchase",
@@ -121,8 +131,7 @@
       "key": "auth",
       "options": [
         { "label": "Authentic", "value": true },
-        { "label": "Bootleg/CT", "value": false },
-        { "label": "Unknown", "value": null }
+        { "label": "Bootleg/CT", "value": false }
       ],
       "note": "Please select whether your figure is an authentic product or a bootleg copy."
     },

@@ -20,7 +20,8 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 		series_title: null as string | null,
 		sculptor: null as string | null,
 		scale: null as string | null,
-		materials: null as string | null,
+		materials: new Set() as Set<string>,
+		other_materials: null as string | null,
 		height: '',
 		seller: null as string | null,
 		age: null as string | null,
@@ -39,7 +40,6 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 		series_title: [] as string[],
 		product_line: [] as string[],
 		scale: [] as string[],
-		materials: [] as string[],
 		brand: [] as string[],
 		seller: [] as string[],
 		sculptor: [] as string[]
@@ -117,7 +117,6 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 				product_line: 'product_line',
 				brand: 'brand',
 				scale: 'scale',
-				materials: 'materials',
 				seller: 'seller',
 				sculptor: 'sculptor'
 			};
@@ -173,7 +172,8 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 			state.series_title ||
 			state.sculptor ||
 			state.scale ||
-			state.materials ||
+			state.materials.size > 0 ||
+			state.other_materials ||
 			state.height ||
 			state.seller ||
 			state.age ||
@@ -198,6 +198,15 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 		if (stepDef.type === 'input' || stepDef.type === 'textarea') {
 			const keyValue = (state as any)[stepDef.key];
 			return !!keyValue;
+		}
+		if (stepDef.type === 'multiselect' && stepDef.hasOtherInput) {
+			const keyValue = (state as any)[stepDef.key];
+			const hasOther = keyValue?.has('other');
+			if (hasOther) {
+				const otherValue = (state as any)[stepDef.otherKey];
+				return keyValue.size > 1 || !!otherValue;
+			}
+			return keyValue?.size > 0;
 		}
 		return true;
 	};
@@ -350,6 +359,25 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 					</div>
 				)}
 
+				{type === 'multiselect' && currentStepDef.hasOtherInput && keyValue?.has('other') && (
+					<div className="input-row" style={{ marginTop: '1rem' }}>
+						<input
+							type="text"
+							className="input"
+							placeholder={currentStepDef.otherPlaceholder || 'Enter other values...'}
+							value={(state as any)[currentStepDef.otherKey] || ''}
+							onChange={(e) => {
+								handleStateChange(currentStepDef.otherKey, e.target.value);
+							}}
+							onKeyPress={(e) => {
+								if (e.key === 'Enter' && navState.nextEnabled) {
+									handleNext();
+								}
+							}}
+						/>
+					</div>
+				)}
+
 				{type === 'input' && (
 					<div className="input-row">
 						<input
@@ -361,7 +389,7 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 								const newValue = e.target.value;
 								handleStateChange(key, newValue);
 
-								if (['figure_name', 'series_title', 'sculptor', 'brand', 'product_line', 'scale', 'materials', 'seller'].includes(key)) {
+										if (['figure_name', 'series_title', 'sculptor', 'brand', 'product_line', 'scale', 'seller'].includes(key)) {
 									fetchAutocompleteSuggestions(key, newValue);
 									setActiveAutocomplete(key);
 								}
@@ -371,7 +399,7 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 								}
 							}}
 							onFocus={() => {
-								if (['figure_name', 'series_title', 'sculptor', 'brand', 'product_line', 'scale', 'materials', 'seller'].includes(key) && keyValue) {
+								if (['figure_name', 'series_title', 'sculptor', 'brand', 'product_line', 'scale', 'seller'].includes(key) && keyValue) {
 									setActiveAutocomplete(key);
 								}
 							}}
