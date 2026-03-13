@@ -308,7 +308,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         </div>
       </main>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }
