@@ -1,0 +1,145 @@
+{
+    "en": {
+        "breadcrumb": {
+            "home": "Home",
+            "tutorials": "Tutorials",
+            "current": "Broken Parts Tutorial"
+        },
+        "hero": {
+            "eyebrow": "Generic Tutorial: Broken Parts",
+            "title": "If it's broke, let's fix it!",
+            "leadPart1": "DISCLAIMER: Luckily enough most broken figures can be fixed through using glue, such as crazy glue, poxy glue, or any other plastic friendly glue, and some light paint or sanding.",
+            "leadPart2": " So, to specify what our definition of broken parts we mean BROKEN BALL JOINTS. As shown here: ",
+            "leadPart3":"NOTE: This method can be a bit expensive.",
+            "jumpToTutorial": "Jump To The Tutorial",
+            "jumpToVideo": "Jump To Video Tutorial",
+            "pillBeginner": "NOT Beginner friendly",
+            "pillMethods": "SINGLE methodS",
+            "pillNoAlterations": "PERMINENT FIGURE ALTERATION!!!",
+            "highlightsLabel": "Guild highlights"
+        },
+        "tutorialMap": {
+            "title": "Tutorial Map",
+            "preFixChecklist": "1. Pre-Fix Checklist",
+            "stepByStep": "2. Step-By-Step Tutorial",
+            "videoTutorial": "3. Video Tutorial",
+            "otherMethods": "4. Other Methods",
+            "figureStats": "5. Figure Tutorial Stats"
+        },
+        "prep": {
+            "title": "Pre-Fix Checklist",
+            "description": "This tutorial will show you how to use the most effective fix for Loose Parts. Which is to use special glue made specifically for figures.",
+            "checklist": [
+                "Find a clean and orginized workbench or table to use a drill and make a mess.",
+                "Find all broken pieces. Depending on how severe and the difficulty to fish out the pieces stuck within the figure. The main piece you must find is broken off piece such as a hand and the leg of the ball joint.",
+                "A drill or screw driver that allow for very small drill bits or nails",
+                "A drill bit or nail that is smaller than the hole where the wedge ball joint leg is stuck in",
+                "Replacement ball joint piece for figure"
+            ],
+            "readiness": "Readiness",
+            "complete": "complete",
+            "statusStart": "Start with your first checklist item.",
+            "statusDone": "You are fully prepared to begin!",
+            "statusProgress": "You are {percent}% ready. Keep going!"
+        },
+        "workflow": {
+            "title": "Repair Workflow: Using a Drill to Fish Out Broken Parts",
+            "intro": "Expand each stage for exact actions, timing, and stop signs.",
+            "steps": [
+                {
+                    "id": "diagnose",
+                    "title": "Stage 0: Understand What The Goal Is",
+                    "content": [
+                        "Finding where the issue is is very obvious but what is not so obvious is understanding the goal of this fix."
+                    ],
+                    "tips": [
+                       "To further explain what you will be doing its to pretty much uncorking a wine bottle.",
+                       { "video": "https://www.shutterstock.com/shutterstock/videos/3547435695/preview/stock-footage-hands-of-man-opening-bottle-of-red-wine-with-a-corkscrew-in-park-at-sunset-close-up-vertical.webm", "text": "Uncorking a wine bottle — same concept applies here" },
+                       "" 
+                    ]
+                },
+                {
+                    "id": "tighten",
+                    "title": "Stage 1: Diagnose Where The Issue Is",
+                    "content": [
+                        "After isolating what piece(s) are broken the next thing to do is drill it out."
+                    ],
+                    "tips": [
+                       "Extream causion and pacients is required for this so, please take your time and be extreamly careful to not peirce through the figure and injuring yourself."                       
+                    ]
+                },
+                {
+                    "id": "lock",
+                    "title": "Stage 2: Prepare The Drill",
+                    "content": [
+                        "Unfortunately this type of fix is both the most effective and most difficult to preform. So, take your time to preform this step."
+                    ],
+                    "tips": [
+                        "In this guide I will be using an Electric Drill and a thin Screw.",
+                        "------------------------------------------------------------------------------------",
+                        "Now before attatching the screw to the drill we first recommend to mark the exact center of the broken piece. In this guide we will be marking the center by using the screw point to do so. As shown here: ",
+                        "After taking your time and creating a mark or slightly creating an entry point. It will be time to press further with the drill."
+                    ]
+                },
+                {
+                    "id": "other-options",
+                    "title": "Step 3: Drilling",
+                    "content": [
+                        "Now that there is a small impression on the center of the broken piece, it's time to uncork the wedge piece."
+                    ],
+                    "tips": [
+                        "NOTE: Try your best to apply enough pressure to continue peircing the piece, not peircing straight through, and obviously not hurting yourself.",
+                        "Since I am using a screw there is two outcomes: 1. Uncorking the piece or 2. Completely disintegrating the broken piece.",
+                        "------------------------------------------------------------------------------------",
+                        "1) Uncorking the Piece",
+                        "At this point you would have reached the middle of the broken piece and like the wine bottle you simply and gently pull back and uncork it.",
+                        "As shown below:",
+                        "------------------------------------------------------------------------------------",
+                        "2) Desintigrating the Piece",
+                        "At this point you relized that the screw is exactly or at least slightly smaller than the gap. You are unfortunately now ice drilling.",
+                        "Futanately or unfortuanately we can accedently stubled into the same situation. We have made peace with the fact we will replace this ball joint with another so, instead of pulling we will continue drilling without moving.",
+                        "The reason for this is to destroy most of the wedge piece and slowly pick out the rest with some sort of needle.",
+                        "As shown below:"
+
+                    ]
+                }
+            ]
+        },
+        "video": {
+            "title": "Video Tutorial",
+            "description": "This is the visual version of the tutorial. Both have the same set of information only in a visual method. Please feel free to follow our YouTube channel. ",
+            "channelName": "Pilk Milk Factory",
+            "videoTitle": "Using MPS Glue to Solve Loose Joints on Figures",
+            "videoFallback": "Your browser does not support embedded video playback."
+        },
+        "methods": {
+            "title": "Other Fixes for Loose Parts",
+            "description": "This is a directory for other fixes that very in effectiveness. Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.",
+            "costLabel": "Cost:",
+            "effectivenessLabel": "Effectiveness:",
+            "bestForLabel": "Best For:",
+            "viewGuide": "View Guide",
+            "videoBtn": "Video",
+            "items": [
+                {
+                    "id": "warm-water",
+                    "title": "Using a Wire",
+                    "description": "This method is extreamly similar to the most effective one. Only difference is that this method is best for more stationary figures. The piece that is broken is still wedged inside of figure but instead of fishing out the piece it instead you use that piece to plant a metal wire and use the piece sticking out as a replacement.",
+                    "cost": "Moderate",
+                    "effectiveness": "Very Effective",
+                    "best_for": "Broken Wedged Pieces",
+                    "category": "paid fix"
+                }
+            ]
+        },
+        "stats": {
+            "viewsTitle": "Most Viewed Tutorials",
+            "issuesTitle": "Most Common Issues"
+        },
+        "nav": {
+            "backToTutorials": "Back to Tutorials",
+            "backHome": "Back Home",
+            "backToTop": "Back To Top"
+        }
+    }
+}

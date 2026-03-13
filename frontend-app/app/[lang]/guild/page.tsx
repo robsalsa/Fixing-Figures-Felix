@@ -17,7 +17,8 @@ const guilds = [
     title: 'Loose Parts',
     description: 'When it comes to easy to pop-out hands or loose legs that constantly fall out. These things are not good by any means but we can fix it!',
     href: 'loose-parts',
-    category: 'free fix'
+    category: 'free fix',
+    video: '/assets/videos/loose(spider).mp4'
   },
   {
     id: 'stiff-parts',
@@ -98,13 +99,25 @@ export default function GuildRouterPage({ params }: GuildRouterPageProps) {
                 <article key={guild.id} className="service-column card" data-category={guild.category}>
                   <h4>{guild.title}</h4>
                   <p className="muted">{guild.description}</p>
+                  {guild.video && (
+                    <div style={{ display: 'flex', justifyContent: 'center', margin: '12px 0' }}>
+                      <video
+                        src={guild.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ maxWidth: '75%', borderRadius: '8px' }}
+                      />
+                    </div>
+                  )}
                   <div className="card-actions">
                     <Link href={`/${lang}/guild/${guild.href}`} className="btn primary" style={{ flex: '1' }}>
                       Let's Fix It!
                     </Link>
-                    <a href="#" className="btn outline" style={{ flex: '1' }} onClick={(e) => e.preventDefault()}>
+                    {/* <a href="#" className="btn outline" style={{ flex: '1' }} onClick={(e) => e.preventDefault()}>
                       Video Tutorial
-                    </a>
+                    </a> */}
                   </div>
                 </article>
               ))}

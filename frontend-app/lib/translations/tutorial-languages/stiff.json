@@ -1,0 +1,129 @@
+{
+  "en": {
+    "breadcrumb": {
+      "home": "Home",
+      "tutorials": "Tutorials",
+      "current": "Stiff Parts Tutorial"
+    },
+    "hero": {
+      "eyebrow": "Generic Tutorial: Stiff Parts",
+      "title": "A tightly wound figure leads to bad times so, let's loosen them up!",
+      "leadPart1": "In this guide we will sow you how to loosen up some figures. Unlike the other guides, this guide the recommended and the most common fix is not what you would expect. On top of this this guide we will show ONE of the TWO MOST POPULAR fix for tight parts. Warm to Hot Water!",
+      "mpsLinkText": "NOT IN USE",
+      "kikiLinkText": "NOT IN USE",
+      "leadPart2": "NOT IN USE",
+      "jumpToTutorial": "Jump To The Tutorial",
+      "jumpToVideo": "Jump To Video Tutorial",
+      "pillBeginner": "Beginner friendly",
+      "pillMethods": "Multiple methods",
+      "pillNoAlterations": "No perminent figure alterations",
+      "highlightsLabel": "Guild highlights"
+    },
+    "tutorialMap": {
+      "title": "Tutorial Map",
+      "preFixChecklist": "1. Pre-Fix Checklist",
+      "stepByStep": "2. Step-By-Step Tutorial",
+      "videoTutorial": "3. Video Tutorial",
+      "otherMethods": "4. Other Methods",
+      "figureStats": "5. Figure Tutorial Stats"
+    },
+    "prep": {
+      "title": "Pre-Fix Checklist",
+      "description": "This tutorial will show you how to use the most effictive fix for Stiff Parts on Figures. Which is simply submerging the figure in question into warm to hot water. ",
+      "checklist": [
+        "Find a container that can hold hot water and is slightly larger than the figure in question.",
+        "Fill the container with warm to hot water. Although the temperature of the water will vary depending on the figure in question. The goal is not to burn your figures due to the possibility of cracking your figure or burning yourself."
+      ],
+      "readiness": "Readiness",
+      "complete": "complete",
+      "statusStart": "Start with your first checklist item.",
+      "statusDone": "You are fully prepared to begin!",
+      "statusProgress": "You are {percent}% ready. Keep going!"
+    },
+    "workflow": {
+      "title": "Repair Workflow: Using Hot Water to Loosening Up Figures",
+      "intro": "Expand each stage for exact actions, timing, and stop signs.",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Stage 1: Diagnose Where The Issue Is",
+          "content": ["Identify what peices are stiff for you to submerge figure."],
+          "tips": [
+            "Fining the location of the stiff parts you whish to loosen up is fairly easy. Simply because you can not move it easily or because you hear an infernal creaking sound. These are indicators of stiff joints or pieces.",
+            "------------------------------------------------------------------------------------",
+            "*!* Note: Stiff joint can be caused by various reason but while this warm water method fixes a large majority of them there is a chance of it simply not working. *!*",
+            "------------------------------------------------------------------------------------"
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "Stage 2: Feed Them To The Fishes",
+          "content": ["After isolating what piece(s) are stiff the next thing to do is to submerge it."],
+          "tips": [
+            "Yep, that pretty much it. While the amount of time you will let the figure rest underwater changes from figure to figure, piece to piece, We recommend to let it be submerged until the warm water becomes rooms temperature."
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "Stage 3: Check and Clean Up",
+          "content": ["Since this is the most effective method to solve these type of stiff part(s). That pretty much it."],
+          "tips": [
+            "Like mentioned before this water method is not an 100% guarenteed solution. It is repeatable and eventually does work for some more suborn stiff joints.",
+            "------------------------------------------------------------------------------------",
+
+            "To assit this method to be a little more effective on the second attempt to loosen the figure rewarm the water, submerge the figure, and gently move the stiff part.",
+            "The reason that we recommend this for the subsequence attempts is because sometimes stiff joints are not soly due to parts such as a ball joints being built too close together to other parts. ",
+            "Sometimes water can simply lubricate from within this miniscule gap and allow the figure to loosen up. Other times forcing this to occure helps thus the second attempt implementing this gentle movement.",
+            "------------------------------------------------------------------------------------"
+
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "Video Tutorial",
+      "description": "This is the visual version of the tutorial. Both have the same set of information only in a visual method. Please feel free to follow our YouTube channel. ",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "Using Warm Water to Fix Stiff Joints",
+      "videoFallback": "Your browser does not support embedded video playback."
+    },
+    "methods": {
+      "title": "Other Fixes for Stiff Parts",
+      "description": "This is a directory for other fixes that very in effectiveness. Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.",
+      "costLabel": "Cost:",
+      "effectivenessLabel": "Effectiveness:",
+      "bestForLabel": "Best For:",
+      "viewGuide": "View Guide",
+      "videoBtn": "Video",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "Using a Hair Drier",
+          "description": "This is the SECOND MOST POPULAR fix for Stiff Figures. By simply and carefully warming up specific joints they break free from their binds and get loose!",
+          "cost": "Low",
+          "effectiveness": "Somewhat",
+          "best_for": "Larger Pieces",
+          "category": "paid fix"
+        },
+        {
+          "id": "micro-tack",
+          "title": "Using Lubricant",
+          "description": "No, you read that right. Using lube can actually help loosen up these figures. Now before we continue get your head out of the gutters, pervert! We mean Bike Lubricant!",
+          "cost": "Low",
+          "effectiveness": "Moderate",
+          "best_for": "All pieces",
+          "category": "paid fix"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "Most Viewed Tutorials",
+      "issuesTitle": "Most Common Issues"
+    },
+    "nav": {
+      "backToTutorials": "Back to Tutorials",
+      "backHome": "Back Home",
+      "backToTop": "Back To Top"
+    }
+  }
+}

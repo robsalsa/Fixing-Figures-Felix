@@ -247,6 +247,12 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                   <h4>{method.title}</h4>
                   <p className="muted">{method.description}</p>
                   <p className="method-tag">{t.methods.costLabel} {method.cost}</p>
+                  {method.effectiveness && (
+                    <p className="method-tag">{t.methods.effectivenessLabel} {method.effectiveness}</p>
+                  )}
+                  {method.best_for && (
+                    <p className="method-tag">{t.methods.bestForLabel} {method.best_for}</p>
+                  )}
                   <div className="card-actions">
                     <a href={`#step-${method.category}`} className="btn primary">
                       {t.methods.viewGuide}

@@ -125,6 +125,8 @@
       "title": "Other Fixes for Loose Parts",
       "description": "This is a directory for other fixes that very in effectiveness. Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.",
       "costLabel": "Cost:",
+      "effectivenessLabel": "Effectiveness:",
+      "bestForLabel": "Best For:",
       "viewGuide": "View Guide",
       "videoBtn": "Video",
       "items": [
@@ -133,6 +135,8 @@
           "title": "Using a Wet Paper Towel",
           "description": "Stuffing a wet paper towel piece into a socked to apply friction. Due to this added friction the pieces should now \"stick\" onto each other.",
           "cost": "Free",
+          "effectiveness": "Somewhat",
+          "best_for": "Slightly Loose Pieces",
           "category": "free fix"
         },
         {
@@ -140,6 +144,8 @@
           "title": "Using a Dot of Sticky Tack",
           "description": "Applying a well placed dot of sticky tack or sticky putty can go a long way. Best used for smaller pieces such as loose accesories, hand pieces, and other smaller parts on figures.",
           "cost": "Low",
+          "effectiveness": "Moderate",
+          "best_for": "Small Accessories & Hand Pieces",
           "category": "special glue"
         },
         {
@@ -147,6 +153,8 @@
           "title": "Taking Up Space With Saran Wrap",
           "description": "Similar to the Wet Paper Towel method's goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
           "cost": "Low",
+          "effectiveness": "Somewhat",
+          "best_for": "Slightly Loose Pieces",
           "category": "friction"
         }
       ]
@@ -287,6 +295,8 @@
       "title": "Otras Soluciones para Piezas Sueltas",
       "description": "Este es un directorio de otras soluciones que varían en efectividad. Ten en cuenta que estas soluciones provienen de Internet y cuentas personales, principalmente de Reddit pero verificadas por nuestro equipo.",
       "costLabel": "Costo:",
+      "effectivenessLabel": "Efectividad:",
+      "bestForLabel": "Mejor Para:",
       "viewGuide": "Ver Guía",
       "videoBtn": "Video",
       "items": [
@@ -295,6 +305,8 @@
           "title": "Usando una Toalla de Papel Mojada",
           "description": "Rellenando un pedazo de toalla de papel mojada en un encaje para aplicar fricción. Debido a esta fricción añadida, las piezas ahora deberían \"pegarse\" entre sí.",
           "cost": "Gratis",
+          "effectiveness": "Algo",
+          "best_for": "Piezas Ligeramente Sueltas",
           "category": "free fix"
         },
         {
@@ -302,6 +314,8 @@
           "title": "Usando un Punto de Masilla Adhesiva",
           "description": "Aplicar un punto bien colocado de masilla adhesiva puede ser muy útil. Mejor usado para piezas más pequeñas como accesorios sueltos, piezas de manos y otras partes pequeñas en figuras.",
           "cost": "Bajo",
+          "effectiveness": "Moderada",
+          "best_for": "Accesorios Pequeños y Piezas de Manos",
           "category": "special glue"
         },
         {
@@ -309,6 +323,8 @@
           "title": "Ocupando Espacio con Plástico Envolvente",
           "description": "Similar al objetivo del método de la Toalla de Papel Mojada, es hacer lo mismo. Ocupar espacio y causar más fricción para que las piezas sueltas se \"peguen\".",
           "cost": "Bajo",
+          "effectiveness": "Algo",
+          "best_for": "Piezas Ligeramente Sueltas",
           "category": "friction"
         }
       ]
@@ -449,6 +465,8 @@
       "title": "パーツの緩みに対するその他の修正方法",
       "description": "これは効果がさまざまな他の修正方法のディレクトリです。これらの修正方法はインターネットと個人の経験から提供されており、主にRedditから情報を得ていますが、私たちのチームによって検証されています。",
       "costLabel": "コスト：",
+      "effectivenessLabel": "効果：",
+      "bestForLabel": "最適な用途：",
       "viewGuide": "ガイドを見る",
       "videoBtn": "動画",
       "items": [
@@ -457,6 +475,8 @@
           "title": "濡れたペーパータオルを使用する",
           "description": "濡れたペーパータオルの切れ端をソケットに詰めて摩擦を加えます。この追加された摩擦により、パーツは互いに「くっつく」ようになります。",
           "cost": "無料",
+          "effectiveness": "やや効果的",
+          "best_for": "少し緩んだパーツ",
           "category": "free fix"
         },
         {
@@ -464,6 +484,8 @@
           "title": "粘着タックの点を使用する",
           "description": "適切に配置された粘着タックまたは粘着パテの点は大きな効果があります。緩んだアクセサリー、手のパーツ、フィギュアのその他の小さなパーツなど、小さなパーツに最適です。",
           "cost": "低",
+          "effectiveness": "まあまあ",
+          "best_for": "小さなアクセサリーと手のパーツ",
           "category": "special glue"
         },
         {
@@ -471,6 +493,8 @@
           "title": "ラップで隙間を埋める",
           "description": "濡れたペーパータオル方法の目標と同様に、同じことをします。スペースを占有し、緩んだパーツが「くっつく」ようにより多くの摩擦を生み出します。",
           "cost": "低",
+          "effectiveness": "やや効果的",
+          "best_for": "少し緩んだパーツ",
           "category": "friction"
         }
       ]

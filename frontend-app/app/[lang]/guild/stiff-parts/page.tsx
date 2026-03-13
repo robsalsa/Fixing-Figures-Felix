@@ -1,32 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
+import TutorialStats from '@/components/pages/TutorialStats';
+import translations from '@/lib/translations/tutorial-languages/stiff.json';
 
 interface LoosePartsPageProps {
   params: Promise<{ lang: string }>;
-}
-
-interface WorkflowStep {
-  id: string;
-  title: string;
-  content: string[];
-  tips: string[];
-}
-
-interface Method {
-  id: string;
-  title: string;
-  description: string;
-  cost: string;
-  category: string;
-}
-
-interface Stat {
-  label: string;
-  value: number;
 }
 
 export default function LoosePartsPage({ params }: LoosePartsPageProps) {
@@ -38,123 +21,34 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
     params.then((p) => setLang(p.lang));
   }, [params]);
 
-  const workflowSteps: WorkflowStep[] = [
-    {
-      id: 'diagnose',
-      title: 'Stage 1: Diagnose The Joint Type',
-      content: ['Identify whether the loose part is a peg, hinge, ball joint, or sliding rail.'],
-      tips: [
-        'Check for side wobble vs full spin.',
-        'Mark friction points with a removable pencil dot.',
-        'Avoid force testing with accessories attached.',
-      ],
-    },
-    {
-      id: 'tighten',
-      title: 'Stage 2: Apply Reversible Tightening',
-      content: ['Use reversible methods first before glue or replacement parts.'],
-      tips: [
-        'PTFE tape micro-wrap for pegs and neck stems.',
-        'Water-based floor polish micro-layer for hinge cups.',
-        'Let each layer cure fully, then re-test range.',
-      ],
-    },
-    {
-      id: 'lock',
-      title: 'Stage 3: Escalate To Semi-Permanent Methods',
-      content: ['Only escalate when reversible fixes fail after repeated testing.'],
-      tips: [
-        'Micro-shim sleeves for neck and wrist pegs.',
-        'Specialized tack formulas for intermittent slip.',
-        'Track cure times and avoid movement while setting.',
-      ],
-    },
-    {
-      id: 'maintain',
-      title: 'Stage 4: Maintenance Protocol',
-      content: ['Maintenance keeps your fix effective and reduces rework frequency.'],
-      tips: [
-        'Monthly range-of-motion checks.',
-        'De-pose heavy one-leg stances during storage.',
-        'Reapply friction enhancer at first sign of drift.',
-      ],
-    },
-  ];
+  const t = translations[lang as keyof typeof translations] || translations.en;
 
-  const methods: Method[] = [
-    {
-      id: 'warm-water',
-      title: 'Warm Water Reset + Movement Cycling',
-      description: 'A zero-cost baseline method for stiffness and micro-looseness.',
-      cost: 'Free',
-      category: 'free fix',
-    },
-    {
-      id: 'micro-tack',
-      title: 'Micro Tack Dot Strategy',
-      description: 'Controlled tack points for joints that slip during dynamic posing.',
-      cost: 'Low',
-      category: 'special glue',
-    },
-    {
-      id: 'ptfe-tape',
-      title: 'PTFE Tape Micro-Wrap',
-      description: 'Reliable friction boost for loose pegs without permanent changes.',
-      cost: 'Low',
-      category: 'friction',
-    },
-    {
-      id: 'replacement-peg',
-      title: 'Replacement Peg + Sleeve Kit',
-      description: 'Best for severe wear where friction methods no longer hold poses.',
-      cost: 'Medium',
-      category: 'paid fix',
-    },
-    {
-      id: 'custom-shim',
-      title: 'Custom Shim Lock-In',
-      description: 'A long-term option for display pieces that need maximum stability.',
-      cost: 'Medium',
-      category: 'permanent',
-    },
-  ];
-
-  const prepChecklist = [
-    'Wash hands and clear dust from joints',
-    'Capture before-photos of current posing range',
-    'Test movement dry before adding any material',
-    'Prepare cotton swabs and microfiber cloth',
-    'Decide whether you need reversible or permanent fix',
-    'Test equipment and clear workspace',
-  ];
-
-  const statsData: Stat[] = [
-    { label: 'Test Data Poll', value: 100 },
-    { label: 'Test Data Poll 2', value: 75 },
-    { label: 'Test Data Poll 3', value: 50 },
-    { label: 'Test Data Poll 4', value: 25 },
-    { label: 'Test Data Poll 5', value: 0 },
-  ];
-
-  const handleChecklistChange = (checkedCount: number) => {
-    setPrepPercent(Math.round((checkedCount / prepChecklist.length) * 100));
-  };
+  const handleChecklistChange = useCallback((checkedCount: number) => {
+    setPrepPercent(Math.round((checkedCount / t.prep.checklist.length) * 100));
+  }, [t.prep.checklist.length]);
 
   const handleAccordionToggle = (stepId: string) => {
-    setExpandedStep(expandedStep === stepId ? '' : stepId);
+    const isClosing = expandedStep === stepId;
+    setExpandedStep(isClosing ? '' : stepId);
+
+    if (!isClosing) {
+      setTimeout(() => {
+        document.getElementById(`step-${stepId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 50);
+    }
   };
 
   return (
     <div className="loose-guide-page">
       <Navigation lang={lang} currentPage="guild" />
 
-      <nav className="guild-trace-strip" aria-label="Guild path">
+      <nav className="guild-trace-strip" aria-label="Tutorial path">
         <div className="container guild-trace-inner">
-          <Link href={`/${lang}`}>Home</Link>
+          <Link href={`/${lang}`}>{t.breadcrumb.home}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/${lang}/guild`}>Guilds</Link>
+          <Link href={`/${lang}/guild`}>{t.breadcrumb.tutorials}</Link>
           <span aria-hidden="true">/</span>
-          <span className="current">Loose Parts Guild</span>
+          <span className="current">{t.breadcrumb.current}</span>
         </div>
       </nav>
 
@@ -163,34 +57,37 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="guide-hero" id="top">
           <div className="container hero-grid">
             <div className="hero-copy-block">
-              <p className="eyebrow">Community Guild: Loose Parts</p>
-              <h1>Build tighter joints, safer poses, and longer figure life.</h1>
+              <p className="eyebrow">{t.hero.eyebrow}</p>
+              <h1>{t.hero.title}</h1>
               <p className="hero-lead">
-                This guild is a full learning path for collectors: diagnosis, tool prep, quick fixes,
-                long-term methods, and embedded videos to follow step-by-step.
+                {t.hero.leadPart1}
+                {/* <a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>,{' '}
+                <a href="https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.kikiLinkText}</a> */}
+                {/* {t.hero.leadPart2}<a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>. */}
               </p>
               <div className="hero-cta-row">
                 <a href="#workflow" className="btn primary">
-                  Start The Guild
+                  {t.hero.jumpToTutorial}
                 </a>
                 <a href="#watch" className="btn outline">
-                  Jump To Videos
+                  {t.hero.jumpToVideo}
                 </a>
               </div>
-              <ul className="hero-pill-list" aria-label="Guild highlights">
-                <li>Beginner friendly</li>
-                <li>No teardown required first</li>
-                <li>Free and paid pathways</li>
+
+              <ul className="hero-pill-list" aria-label={t.hero.highlightsLabel}>
+                <li>{t.hero.pillBeginner}</li>
+                <li>{t.hero.pillMethods}</li>
+                <li>{t.hero.pillNoAlterations}</li>
               </ul>
             </div>
 
             <aside className="hero-side-card" aria-label="Quick navigation">
-              <h2>Guild Map</h2>
-              <a href="#prep">1. Pre-Fix Checklist</a>
-              <a href="#workflow">2. Repair Workflow</a>
-              <a href="#watch">3. Video Learning Bay</a>
-              <a href="#method-library">4. Method Library</a>
-              <a href="#stats">5. Collector Benchmarks</a>
+              <h2>{t.tutorialMap.title}</h2>
+              <a href="#prep">{t.tutorialMap.preFixChecklist}</a>
+              <a href="#workflow">{t.tutorialMap.stepByStep}</a>
+              <a href="#watch">{t.tutorialMap.videoTutorial}</a>
+              <a href="#method-library">{t.tutorialMap.otherMethods}</a>
+              <a href="#stats">{t.tutorialMap.figureStats}</a>
             </aside>
           </div>
         </section>
@@ -199,31 +96,40 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="prep-section" id="prep">
           <div className="container prep-grid">
             <div>
-              <h2>Pre-Fix Checklist</h2>
-              <p className="muted">
-                Check these first to reduce risk. This tracker updates as you mark items complete.
+              <h2 style={{color:"black", fontSize:"30px"}}>{t.prep.title}</h2>
+              <p className="muted" style={{color:"black"}}>
+                {t.prep.description}
               </p>
 
               <ChecklistItems
-                items={prepChecklist}
+                items={t.prep.checklist}
                 onChecklistChange={handleChecklistChange}
               />
             </div>
 
             <aside className="prep-progress-card" aria-live="polite">
-              <p className="small-label">Readiness</p>
+              <p className="small-label">{t.prep.readiness}</p>
               <p className="progress-value">
-                <span id="prepPercent">{prepPercent}%</span> complete
+                <span id="prepPercent">{prepPercent}%</span> {t.prep.complete}
               </p>
               <div className="prep-progress-bar" aria-hidden="true">
-                <div id="prepFill" style={{ width: `${prepPercent}%` }}></div>
+                <div
+                  id="prepFill"
+                  style={{
+                    width: `${prepPercent}%`,
+                    height: '100%',
+                    background: 'linear-gradient(90deg, #FFC60B, #FF8B00)',
+                    borderRadius: '999px',
+                    transition: 'width 260ms ease',
+                  }}
+                ></div>
               </div>
               <p className="muted small-note" id="prepStatus">
                 {prepPercent === 0
-                  ? 'Start with your first checklist item.'
+                  ? t.prep.statusStart
                   : prepPercent === 100
-                    ? 'You are fully prepared to begin!'
-                    : `You are ${prepPercent}% ready. Keep going!`}
+                    ? t.prep.statusDone
+                    : t.prep.statusProgress.replace('{percent}', String(prepPercent))}
               </p>
             </aside>
           </div>
@@ -232,13 +138,13 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Workflow Section */}
         <section className="workflow-section" id="workflow">
           <div className="container">
-            <h2>Repair Workflow: From Loose To Locked In</h2>
+            <h2 style={{color:"black", fontSize:"30px"}}>{t.workflow.title}</h2>
             <p className="muted workflow-intro">
-              Expand each stage for exact actions, timing, and stop signs.
+              {t.workflow.intro}
             </p>
 
             <div className="workflow-list">
-              {workflowSteps.map((step) => (
+              {t.workflow.steps.map((step) => (
                 <article key={step.id} className="workflow-item" id={`step-${step.id}`}>
                   <button
                     className="workflow-trigger"
@@ -253,14 +159,31 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     className={`workflow-panel ${expandedStep === step.id ? 'open' : ''}`}
                     id={`panel-${step.id}`}
                   >
-                    {step.content.map((text, idx) => (
-                      <p key={idx}>{text}</p>
-                    ))}
-                    <ul>
-                      {step.tips.map((tip, idx) => (
-                        <li key={idx}>{tip}</li>
+                    <div className="workflow-panel-inner">
+                      {step.content.map((text, idx) => (
+                        <p key={idx}>{text}</p>
                       ))}
-                    </ul>
+                      <ul>
+                        {step.tips.map((tip, idx) => {
+                          if (typeof tip === 'object' && tip !== null && 'image' in tip) {
+                            const tipObj = tip as { text: string; image: string };
+                            return (
+                              <li key={idx} className="tip-with-image">
+                                <Image
+                                  src={tipObj.image}
+                                  alt={tipObj.text}
+                                  width={120}
+                                  height={120}
+                                  className="tip-image"
+                                />
+                                <span>{tipObj.text}</span>
+                              </li>
+                            );
+                          }
+                          return <li key={idx}>{tip as string}</li>;
+                        })}
+                      </ul>
+                    </div>
                   </div>
                 </article>
               ))}
@@ -271,20 +194,20 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Video Section */}
         <section className="video-section" id="watch">
           <div className="container">
-            <h2>Video Bay</h2>
+            <h2 style={{color:"black", fontSize:"30px"}}>{t.video.title}</h2>
             <p className="muted">
-              Follow the local breakdown first, then continue with curated external walk-throughs.
+              {t.video.description}<a href="https://www.youtube.com/@PilkMilkFactory" style={{color:"blue"}}>{t.video.channelName}</a>
             </p>
 
             <div className="video-grid">
               <article className="video-card">
-                <h3>Hands-On Local Demo</h3>
+                <h3>{t.video.videoTitle}</h3>
                 <div
                   style={{
                     width: '100%',
                     paddingBottom: '56.25%',
                     position: 'relative',
-                    backgroundColor: '#000',
+                    backgroundColor: 'black',
                     borderRadius: '12px',
                   }}
                 >
@@ -302,7 +225,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     }}
                   >
                     <source src="/assets/videos/loose(spider).mp4" type="video/mp4" />
-                    Your browser does not support embedded video playback.
+                    {t.video.videoFallback}
                   </video>
                 </div>
               </article>             
@@ -310,24 +233,32 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           </div>
         </section>
 
-        {/* Method Library */}
+        {/* Directory for other fixes */}
         <section className="content-section" id="method-library">
           <div className="container">
-            <h2 className="section-title">Method Library</h2>
-            <p className="muted">Filter by cost and permanence to pick your best path quickly.</p>
+            <h2 className="section-title">{t.methods.title}</h2>
+            <p className="muted">
+              {t.methods.description}
+            </p>
 
             <div className="services-container" id="servicesContainer">
-              {methods.map((method) => (
+              {t.methods.items.map((method) => (
                 <article key={method.id} className="service-column card">
                   <h4>{method.title}</h4>
                   <p className="muted">{method.description}</p>
-                  <p className="method-tag">Cost: {method.cost}</p>
+                  <p className="method-tag">{t.methods.costLabel} {method.cost}</p>
+                  {method.effectiveness && (
+                    <p className="method-tag">{t.methods.effectivenessLabel} {method.effectiveness}</p>
+                  )}
+                  {method.best_for && (
+                    <p className="method-tag">{t.methods.bestForLabel} {method.best_for}</p>
+                  )}
                   <div className="card-actions">
                     <a href={`#step-${method.category}`} className="btn primary">
-                      View Guide
+                      {t.methods.viewGuide}
                     </a>
                     <a href="#watch" className="btn outline">
-                      Video
+                      {t.methods.videoBtn}
                     </a>
                   </div>
                 </article>
@@ -339,54 +270,24 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Stats Section */}
         <section className="goal-section" id="stats">
           <div className="container">
-            <div className="goal-grid">
-              <div className="goal-content">
-                <h3>Most Viewed Guilds</h3>
-                <ul className="stats-list" aria-live="polite">
-                  {statsData.map((stat, idx) => (
-                    <li key={idx}>
-                      <div className="stat-meta">
-                        <span className="stat-title">{stat.label}</span>
-                        <span className="stat-value">{stat.value}%</span>
-                      </div>
-                      <div className="stat-bar">
-                        <div style={{ width: `${stat.value}%` }}></div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <aside className="goal-stats">
-                <h3>Most Common Issues</h3>
-                <ul className="stats-list" aria-live="polite">
-                  {statsData.map((stat, idx) => (
-                    <li key={idx}>
-                      <div className="stat-meta">
-                        <span className="stat-title">{stat.label}</span>
-                        <span className="stat-value">{stat.value}%</span>
-                      </div>
-                      <div className="stat-bar">
-                        <div style={{ width: `${stat.value}%` }}></div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            </div>
+            <TutorialStats
+              tutorialSlug="loose-parts"
+              viewsTitle={t.stats.viewsTitle}
+              issuesTitle={t.stats.issuesTitle}
+            />
           </div>
         </section>
 
-        {/* Guild Return Row */}
+        {/* Tutorial Return Row */}
         <div className="guild-return-row">
           <Link href={`/${lang}/guild`} className="btn outline small">
-            Back to Guilds
+            {t.nav.backToTutorials}
           </Link>
           <Link href={`/${lang}`} className="btn secondary small">
-            Back Home
+            {t.nav.backHome}
           </Link>
           <a href="#top" className="btn primary small" style={{color: "black"}}>
-            Back To Top
+            {t.nav.backToTop}
           </a>
         </div>
       </main>
@@ -403,13 +304,32 @@ function ChecklistItems({
   items: string[];
   onChecklistChange: (checkedCount: number) => void;
 }) {
-  const [checkedItems, setCheckedItems] = useState<boolean[]>(new Array(items.length).fill(false));
+  const [checkedItems, setCheckedItems] = useState<boolean[]>(() =>
+    new Array(items.length).fill(false),
+  );
+
+  // Keep checkedItems in sync when the items list changes length
+  useEffect(() => {
+    setCheckedItems((prev) => {
+      if (prev.length === items.length) return prev;
+      const next = new Array(items.length).fill(false);
+      for (let i = 0; i < Math.min(prev.length, items.length); i++) {
+        next[i] = prev[i];
+      }
+      return next;
+    });
+  }, [items.length]);
+
+  useEffect(() => {
+    onChecklistChange(checkedItems.filter(Boolean).length);
+  }, [checkedItems, onChecklistChange]);
 
   const handleCheck = (index: number) => {
-    const newChecked = [...checkedItems];
-    newChecked[index] = !newChecked[index];
-    setCheckedItems(newChecked);
-    onChecklistChange(newChecked.filter(Boolean).length);
+    setCheckedItems((prev) => {
+      const newChecked = [...prev];
+      newChecked[index] = !newChecked[index];
+      return newChecked;
+    });
   };
 
   return (
@@ -419,7 +339,7 @@ function ChecklistItems({
           <input
             type="checkbox"
             className="prep-check"
-            checked={checkedItems[index]}
+            checked={checkedItems[index] ?? false}
             onChange={() => handleCheck(index)}
           />
           {item}
