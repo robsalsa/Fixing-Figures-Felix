@@ -8,6 +8,8 @@ import RankingCard from '@/components/pages/RankingCard';
 import { getTopFiguresByMentions, getTopBrandsByQCIssues, getTopIssues } from '@/lib/supabase/figure-data/figureFunctions';
 import homeTranslations from '@/lib/translations/home.json';
 
+export const dynamic = 'force-dynamic';
+
 function NavigationSkeleton() {
 	return (
 		<header style={{ background: '#f0f0f0', height: '60px', animation: 'pulse 2s infinite' }}>
