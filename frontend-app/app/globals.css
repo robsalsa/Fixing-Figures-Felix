@@ -1770,9 +1770,9 @@ body.loose-guide-page {
 
 .loose-guide-page #prepFill {
   height: 100%;
-  width: 0;
   background: linear-gradient(90deg, var(--guide-accent-2), var(--guide-accent));
   transition: width 260ms ease;
+  border-radius: 999px;
 }
 
 .loose-guide-page .small-note {
@@ -1832,13 +1832,24 @@ body.loose-guide-page {
 }
 
 .loose-guide-page .workflow-panel {
-  padding: 16px;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 350ms ease;
   color: var(--guide-muted);
-  display: none;
 }
 
 .loose-guide-page .workflow-panel.open {
-  display: block;
+  grid-template-rows: 1fr;
+}
+
+.loose-guide-page .workflow-panel-inner {
+  overflow: hidden;
+  padding: 0 16px;
+  transition: padding 350ms ease;
+}
+
+.loose-guide-page .workflow-panel.open .workflow-panel-inner {
+  padding: 16px;
 }
 
 .loose-guide-page .workflow-panel p {
@@ -1848,6 +1859,20 @@ body.loose-guide-page {
 .loose-guide-page .workflow-panel ul {
   margin: 0;
   padding-left: 18px;
+}
+
+.loose-guide-page .tip-with-image {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 8px 0;
+}
+
+.loose-guide-page .tip-image {
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .loose-guide-page .video-grid {
