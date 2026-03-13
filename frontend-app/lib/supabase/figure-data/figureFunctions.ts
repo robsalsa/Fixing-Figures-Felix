@@ -8,7 +8,8 @@ export interface FigureData {
   series_title: string | null;
   sculptor: string | null;
   scale: string | null;
-  materials: string | null;
+  materials: Set<string>;
+  other_materials: string | null;
 //   height: string;
   seller: string | null;
   age: string | null;
@@ -23,6 +24,13 @@ export async function saveFigureDataToSupabase(data: FigureData) {
   // Convert Set to Array for JSON storage
   const issuesArray = Array.from(data.issue);
 
+  // Combine selected materials with custom "other" materials into a single string
+  const materialsList = Array.from(data.materials).filter((m) => m !== 'other');
+  if (data.other_materials) {
+    materialsList.push(data.other_materials);
+  }
+  const materialsString = materialsList.length > 0 ? materialsList.join(' / ') : null;
+
   const figureRecord = {
     mode: data.mode,
     figure_name: data.figure_name,
@@ -31,7 +39,7 @@ export async function saveFigureDataToSupabase(data: FigureData) {
     series_title: data.series_title,
     sculptor: data.sculptor,
     scale: data.scale,
-    materials: data.materials,
+    materials: materialsString,
     // height: data.height || null,
     seller: data.seller,
     age: data.age || null,
