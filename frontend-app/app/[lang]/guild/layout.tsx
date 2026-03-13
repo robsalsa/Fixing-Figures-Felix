@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 
 type GuildRouterLayoutProps = {
   children: ReactNode;
@@ -6,5 +6,5 @@ type GuildRouterLayoutProps = {
 };
 
 export default function GuildRouterLayout({ children }: GuildRouterLayoutProps) {
-  return children;
+  return <Suspense>{children}</Suspense>;
 }
