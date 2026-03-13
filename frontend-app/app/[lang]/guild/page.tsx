@@ -27,20 +27,20 @@ const guilds = [
     href: 'stiff-parts',
     category: 'paid fix'
   },
-  {
-    id: 'defective-parts',
-    title: 'Warping / Defective Parts',
-    description: 'Ever got a piece or part that seems a little... off? Let\'s squash the weirdness and fix it!',
-    href: 'defective-parts',
-    category: 'paid fix'
-  },
-  {
-    id: 'accessories',
-    title: 'Accessories Customs / Fixes',
-    description: '"These accessories suck! I bet I can make a better one!" Luckily we can help, so let\'s fix it!',
-    href: 'accesories',
-    category: 'special glue'
-  },
+  // {
+  //   id: 'defective-parts',
+  //   title: 'Warping / Defective Parts',
+  //   description: 'Ever got a piece or part that seems a little... off? Let\'s squash the weirdness and fix it!',
+  //   href: 'defective-parts',
+  //   category: 'paid fix'
+  // },
+  // {
+  //   id: 'accessories',
+  //   title: 'Accessories Customs / Fixes',
+  //   description: '"These accessories suck! I bet I can make a better one!" Luckily we can help, so let\'s fix it!',
+  //   href: 'accesories',
+  //   category: 'special glue'
+  // },
   {
     id: 'broken-parts',
     title: 'Broken Parts',

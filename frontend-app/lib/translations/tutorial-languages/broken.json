@@ -8,14 +8,14 @@
         "hero": {
             "eyebrow": "Generic Tutorial: Broken Parts",
             "title": "If it's broke, let's fix it!",
-            "leadPart1": "DISCLAIMER: Luckily enough most broken figures can be fixed through using glue, such as crazy glue, poxy glue, or any other plastic friendly glue, and some light paint or sanding.",
-            "leadPart2": " So, to specify what our definition of broken parts we mean BROKEN BALL JOINTS. As shown here: ",
-            "leadPart3":"NOTE: This method can be a bit expensive.",
+            "leadPart1": "DISCLAIMER: Luckily enough, most broken figures can be fixed by using glue, such as crazy glue, epoxy glue, or any other plastic-friendly glue, along with some light paint or sanding.",
+            "leadPart2": "So, to specify what our definition of broken parts is, we mean BROKEN BALL JOINTS. As shown here: ",
+            "leadPart3": "NOTE: This method can be a bit expensive.",
             "jumpToTutorial": "Jump To The Tutorial",
             "jumpToVideo": "Jump To Video Tutorial",
-            "pillBeginner": "NOT Beginner friendly",
-            "pillMethods": "SINGLE methodS",
-            "pillNoAlterations": "PERMINENT FIGURE ALTERATION!!!",
+            "pillBeginner": "NOT Beginner Friendly",
+            "pillMethods": "Single Method",
+            "pillNoAlterations": "PERMANENT FIGURE ALTERATION!",
             "highlightsLabel": "Guild highlights"
         },
         "tutorialMap": {
@@ -28,13 +28,13 @@
         },
         "prep": {
             "title": "Pre-Fix Checklist",
-            "description": "This tutorial will show you how to use the most effective fix for Loose Parts. Which is to use special glue made specifically for figures.",
+            "description": "This tutorial will show you how to use the most effective fix for broken ball joints: using a drill to fish out wedged pieces and replacing them.",
             "checklist": [
-                "Find a clean and orginized workbench or table to use a drill and make a mess.",
-                "Find all broken pieces. Depending on how severe and the difficulty to fish out the pieces stuck within the figure. The main piece you must find is broken off piece such as a hand and the leg of the ball joint.",
-                "A drill or screw driver that allow for very small drill bits or nails",
-                "A drill bit or nail that is smaller than the hole where the wedge ball joint leg is stuck in",
-                "Replacement ball joint piece for figure"
+                "Find a clean and organized workbench or table to use a drill and make a mess.",
+                "Find all broken pieces. Depending on how severe the break is and the difficulty of fishing out the pieces stuck within the figure, the main piece you must find is the broken-off piece, such as a hand and the leg of the ball joint.",
+                "A drill or screwdriver that allows for very small drill bits or nails.",
+                "A drill bit or nail that is smaller than the hole where the wedged ball joint leg is stuck in.",
+                "A replacement ball joint piece for the figure."
             ],
             "readiness": "Readiness",
             "complete": "complete",
@@ -50,71 +50,73 @@
                     "id": "diagnose",
                     "title": "Stage 0: Understand What The Goal Is",
                     "content": [
-                        "Finding where the issue is is very obvious but what is not so obvious is understanding the goal of this fix."
+                        "Finding where the issue is can be very obvious, but what is not so obvious is understanding the goal of this fix."
                     ],
                     "tips": [
-                       "To further explain what you will be doing its to pretty much uncorking a wine bottle.",
-                       { "video": "https://www.shutterstock.com/shutterstock/videos/3547435695/preview/stock-footage-hands-of-man-opening-bottle-of-red-wine-with-a-corkscrew-in-park-at-sunset-close-up-vertical.webm", "text": "Uncorking a wine bottle — same concept applies here" },
-                       "" 
+                        "To further explain what you will be doing, it is pretty much like uncorking a wine bottle.",
+                        { "video": "https://www.shutterstock.com/shutterstock/videos/3547435695/preview/stock-footage-hands-of-man-opening-bottle-of-red-wine-with-a-corkscrew-in-park-at-sunset-close-up-vertical.webm", "text": "Uncorking a wine bottle — same concept applies here" }
                     ]
                 },
                 {
                     "id": "tighten",
                     "title": "Stage 1: Diagnose Where The Issue Is",
                     "content": [
-                        "After isolating what piece(s) are broken the next thing to do is drill it out."
+                        "After isolating what piece(s) are broken, the next thing to do is drill it out."
                     ],
                     "tips": [
-                       "Extream causion and pacients is required for this so, please take your time and be extreamly careful to not peirce through the figure and injuring yourself."                       
+                        "Extreme caution and patience are required for this, so please take your time and be extremely careful not to pierce through the figure or injure yourself.",
+                        { "image": "/assets/kat.jpg", "text": "Identify the broken ball joint location" }
                     ]
                 },
                 {
                     "id": "lock",
                     "title": "Stage 2: Prepare The Drill",
                     "content": [
-                        "Unfortunately this type of fix is both the most effective and most difficult to preform. So, take your time to preform this step."
+                        "Unfortunately, this type of fix is both the most effective and the most difficult to perform. So take your time with this step."
                     ],
                     "tips": [
-                        "In this guide I will be using an Electric Drill and a thin Screw.",
+                        "In this guide I will be using an electric drill and a thin screw.",
                         "------------------------------------------------------------------------------------",
-                        "Now before attatching the screw to the drill we first recommend to mark the exact center of the broken piece. In this guide we will be marking the center by using the screw point to do so. As shown here: ",
-                        "After taking your time and creating a mark or slightly creating an entry point. It will be time to press further with the drill."
+                        "Now, before attaching the screw to the drill, we first recommend marking the exact center of the broken piece. In this guide we will be marking the center by using the screw point to do so. As shown here:",
+                        { "image": "/assets/kat.jpg", "text": "Marking the center of the broken piece" },
+                        "After taking your time and creating a mark or slightly creating an entry point, it will be time to press further with the drill."
                     ]
                 },
                 {
                     "id": "other-options",
-                    "title": "Step 3: Drilling",
+                    "title": "Stage 3: Drilling",
                     "content": [
-                        "Now that there is a small impression on the center of the broken piece, it's time to uncork the wedge piece."
+                        "Now that there is a small impression on the center of the broken piece, it's time to uncork the wedged piece."
                     ],
                     "tips": [
-                        "NOTE: Try your best to apply enough pressure to continue peircing the piece, not peircing straight through, and obviously not hurting yourself.",
-                        "Since I am using a screw there is two outcomes: 1. Uncorking the piece or 2. Completely disintegrating the broken piece.",
+                        "NOTE: Try your best to apply enough pressure to continue piercing the piece without piercing straight through, and obviously without hurting yourself.",
+                        "Since I am using a screw, there are two outcomes: 1. Uncorking the piece, or 2. Completely disintegrating the broken piece.",
                         "------------------------------------------------------------------------------------",
                         "1) Uncorking the Piece",
-                        "At this point you would have reached the middle of the broken piece and like the wine bottle you simply and gently pull back and uncork it.",
+                        "At this point you would have reached the middle of the broken piece, and like the wine bottle you simply and gently pull back and uncork it.",
                         "As shown below:",
+                        { "image": "/assets/kat.jpg", "text": "Uncorking the wedged piece from the socket" },
                         "------------------------------------------------------------------------------------",
-                        "2) Desintigrating the Piece",
-                        "At this point you relized that the screw is exactly or at least slightly smaller than the gap. You are unfortunately now ice drilling.",
-                        "Futanately or unfortuanately we can accedently stubled into the same situation. We have made peace with the fact we will replace this ball joint with another so, instead of pulling we will continue drilling without moving.",
-                        "The reason for this is to destroy most of the wedge piece and slowly pick out the rest with some sort of needle.",
-                        "As shown below:"
-
+                        "2) Disintegrating the Piece",
+                        "At this point you realized that the screw is exactly or at least slightly smaller than the gap. You are unfortunately now ice-drilling.",
+                        "Fortunately or unfortunately, we accidentally stumbled into the same situation. We have made peace with the fact that we will replace this ball joint with another, so instead of pulling we will continue drilling without moving.",
+                        "The reason for this is to destroy most of the wedged piece and slowly pick out the rest with some sort of needle.",
+                        "As shown below:",
+                        { "image": "/assets/kat.jpg", "text": "Disintegrating the broken piece with the drill" }
                     ]
                 }
             ]
         },
         "video": {
             "title": "Video Tutorial",
-            "description": "This is the visual version of the tutorial. Both have the same set of information only in a visual method. Please feel free to follow our YouTube channel. ",
+            "description": "This is the visual version of the tutorial. Both have the same set of information, only in a visual method. Please feel free to follow our YouTube channel. ",
             "channelName": "Pilk Milk Factory",
-            "videoTitle": "Using MPS Glue to Solve Loose Joints on Figures",
+            "videoTitle": "Using a Drill to Fix Broken Ball Joints on Figures",
             "videoFallback": "Your browser does not support embedded video playback."
         },
         "methods": {
-            "title": "Other Fixes for Loose Parts",
-            "description": "This is a directory for other fixes that very in effectiveness. Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.",
+            "title": "Other Fixes for Broken Parts",
+            "description": "This is a directory for other fixes that vary in effectiveness. Note that these fixes are sourced from the Internet and personal accounts, mostly sourced from Reddit but verified by our team.",
             "costLabel": "Cost:",
             "effectivenessLabel": "Effectiveness:",
             "bestForLabel": "Best For:",
@@ -124,7 +126,7 @@
                 {
                     "id": "warm-water",
                     "title": "Using a Wire",
-                    "description": "This method is extreamly similar to the most effective one. Only difference is that this method is best for more stationary figures. The piece that is broken is still wedged inside of figure but instead of fishing out the piece it instead you use that piece to plant a metal wire and use the piece sticking out as a replacement.",
+                    "description": "This method is extremely similar to the most effective one. The only difference is that this method is best for more stationary figures. The piece that is broken is still wedged inside the figure, but instead of fishing it out, you use that piece to plant a metal wire and use the piece sticking out as a replacement.",
                     "cost": "Moderate",
                     "effectiveness": "Very Effective",
                     "best_for": "Broken Wedged Pieces",
@@ -140,6 +142,296 @@
             "backToTutorials": "Back to Tutorials",
             "backHome": "Back Home",
             "backToTop": "Back To Top"
+        }
+    },
+    "es": {
+        "breadcrumb": {
+            "home": "Inicio",
+            "tutorials": "Tutoriales",
+            "current": "Tutorial de Piezas Rotas"
+        },
+        "hero": {
+            "eyebrow": "Tutorial General: Piezas Rotas",
+            "title": "Si está roto, ¡arreglémoslo!",
+            "leadPart1": "AVISO: Afortunadamente, la mayoría de las figuras rotas se pueden reparar usando pegamento, como pegamento loco, pegamento epoxi o cualquier otro pegamento compatible con plástico, junto con un poco de pintura o lijado.",
+            "leadPart2": "Entonces, para especificar nuestra definición de piezas rotas, nos referimos a ARTICULACIONES DE BOLA ROTAS. Como se muestra aquí: ",
+            "leadPart3": "NOTA: Este método puede ser un poco costoso.",
+            "jumpToTutorial": "Ir al Tutorial",
+            "jumpToVideo": "Ir al Video Tutorial",
+            "pillBeginner": "NO Apto para Principiantes",
+            "pillMethods": "Método Único",
+            "pillNoAlterations": "¡ALTERACIÓN PERMANENTE DE LA FIGURA!",
+            "highlightsLabel": "Puntos destacados del tutorial"
+        },
+        "tutorialMap": {
+            "title": "Mapa del Tutorial",
+            "preFixChecklist": "1. Lista de Verificación Previa",
+            "stepByStep": "2. Tutorial Paso a Paso",
+            "videoTutorial": "3. Video Tutorial",
+            "otherMethods": "4. Otros Métodos",
+            "figureStats": "5. Estadísticas del Tutorial"
+        },
+        "prep": {
+            "title": "Lista de Verificación Previa",
+            "description": "Este tutorial te mostrará cómo usar la solución más efectiva para articulaciones de bola rotas: usar un taladro para extraer las piezas atascadas y reemplazarlas.",
+            "checklist": [
+                "Encuentra un banco de trabajo o mesa limpia y organizada para usar un taladro y ensuciar.",
+                "Encuentra todas las piezas rotas. Dependiendo de la gravedad de la rotura y la dificultad de extraer las piezas atascadas dentro de la figura, la pieza principal que debes encontrar es la pieza rota, como una mano y la pata de la articulación de bola.",
+                "Un taladro o destornillador que permita brocas o clavos muy pequeños.",
+                "Una broca o clavo que sea más pequeño que el agujero donde está atascada la pata de la articulación de bola.",
+                "Una pieza de articulación de bola de repuesto para la figura."
+            ],
+            "readiness": "Preparación",
+            "complete": "completado",
+            "statusStart": "Comienza con tu primer elemento de la lista.",
+            "statusDone": "¡Estás completamente preparado para comenzar!",
+            "statusProgress": "Estás {percent}% listo. ¡Sigue adelante!"
+        },
+        "workflow": {
+            "title": "Flujo de Reparación: Usando un Taladro para Extraer Piezas Rotas",
+            "intro": "Expande cada etapa para ver las acciones exactas, tiempos y señales de alto.",
+            "steps": [
+                {
+                    "id": "diagnose",
+                    "title": "Etapa 0: Entender Cuál Es el Objetivo",
+                    "content": [
+                        "Encontrar dónde está el problema puede ser muy obvio, pero lo que no es tan obvio es entender el objetivo de esta reparación."
+                    ],
+                    "tips": [
+                        "Para explicar mejor lo que vas a hacer, es básicamente como descorchar una botella de vino.",
+                        { "video": "https://www.shutterstock.com/shutterstock/videos/3547435695/preview/stock-footage-hands-of-man-opening-bottle-of-red-wine-with-a-corkscrew-in-park-at-sunset-close-up-vertical.webm", "text": "Descorchar una botella de vino — el mismo concepto aplica aquí" }
+                    ]
+                },
+                {
+                    "id": "tighten",
+                    "title": "Etapa 1: Diagnosticar Dónde Está el Problema",
+                    "content": [
+                        "Después de identificar qué pieza(s) están rotas, lo siguiente es perforar para extraerla."
+                    ],
+                    "tips": [
+                        "Se requiere extrema precaución y paciencia para esto, así que por favor tómate tu tiempo y ten mucho cuidado de no perforar a través de la figura ni lastimarte.",
+                        { "image": "/assets/kat.jpg", "text": "Identifica la ubicación de la articulación de bola rota" }
+                    ]
+                },
+                {
+                    "id": "lock",
+                    "title": "Etapa 2: Preparar el Taladro",
+                    "content": [
+                        "Desafortunadamente, este tipo de reparación es tanto la más efectiva como la más difícil de realizar. Así que tómate tu tiempo con este paso."
+                    ],
+                    "tips": [
+                        "En esta guía usaré un taladro eléctrico y un tornillo delgado.",
+                        "------------------------------------------------------------------------------------",
+                        "Ahora, antes de conectar el tornillo al taladro, primero recomendamos marcar el centro exacto de la pieza rota. En esta guía marcaremos el centro usando la punta del tornillo. Como se muestra aquí:",
+                        { "image": "/assets/kat.jpg", "text": "Marcando el centro de la pieza rota" },
+                        "Después de tomarte tu tiempo y crear una marca o un pequeño punto de entrada, será hora de presionar más con el taladro."
+                    ]
+                },
+                {
+                    "id": "other-options",
+                    "title": "Etapa 3: Perforación",
+                    "content": [
+                        "Ahora que hay una pequeña impresión en el centro de la pieza rota, es hora de descorchar la pieza atascada."
+                    ],
+                    "tips": [
+                        "NOTA: Haz tu mejor esfuerzo por aplicar suficiente presión para continuar perforando la pieza sin perforar completamente a través de ella, y obviamente sin lastimarte.",
+                        "Ya que estoy usando un tornillo, hay dos resultados posibles: 1. Descorchar la pieza, o 2. Desintegrar completamente la pieza rota.",
+                        "------------------------------------------------------------------------------------",
+                        "1) Descorchar la Pieza",
+                        "En este punto habrás llegado al centro de la pieza rota y, como con la botella de vino, simplemente tiras suavemente hacia atrás y la descorchas.",
+                        "Como se muestra a continuación:",
+                        { "image": "/assets/kat.jpg", "text": "Descorchando la pieza atascada del encaje" },
+                        "------------------------------------------------------------------------------------",
+                        "2) Desintegrar la Pieza",
+                        "En este punto te diste cuenta de que el tornillo es exactamente o al menos ligeramente más pequeño que el espacio. Desafortunadamente ahora estás perforando como en hielo.",
+                        "Afortunada o desafortunadamente, tropezamos accidentalmente con la misma situación. Hemos aceptado el hecho de que reemplazaremos esta articulación de bola con otra, así que en lugar de tirar, continuaremos perforando sin movernos.",
+                        "La razón de esto es destruir la mayor parte de la pieza atascada y lentamente sacar el resto con algún tipo de aguja.",
+                        "Como se muestra a continuación:",
+                        { "image": "/assets/kat.jpg", "text": "Desintegrando la pieza rota con el taladro" }
+                    ]
+                }
+            ]
+        },
+        "video": {
+            "title": "Video Tutorial",
+            "description": "Esta es la versión visual del tutorial. Ambos tienen el mismo conjunto de información, solo que en un método visual. Por favor no dudes en seguir nuestro canal de YouTube. ",
+            "channelName": "Pilk Milk Factory",
+            "videoTitle": "Usando un Taladro para Reparar Articulaciones de Bola Rotas en Figuras",
+            "videoFallback": "Tu navegador no soporta la reproducción de video integrada."
+        },
+        "methods": {
+            "title": "Otras Soluciones para Piezas Rotas",
+            "description": "Este es un directorio de otras soluciones que varían en efectividad. Ten en cuenta que estas soluciones provienen de Internet y cuentas personales, principalmente de Reddit pero verificadas por nuestro equipo.",
+            "costLabel": "Costo:",
+            "effectivenessLabel": "Efectividad:",
+            "bestForLabel": "Mejor Para:",
+            "viewGuide": "Ver Guía",
+            "videoBtn": "Video",
+            "items": [
+                {
+                    "id": "warm-water",
+                    "title": "Usando un Alambre",
+                    "description": "Este método es extremadamente similar al más efectivo. La única diferencia es que este método es mejor para figuras más estáticas. La pieza que está rota sigue atascada dentro de la figura, pero en lugar de extraerla, se usa esa pieza para plantar un alambre metálico y usar la parte que sobresale como reemplazo.",
+                    "cost": "Moderado",
+                    "effectiveness": "Muy Efectivo",
+                    "best_for": "Piezas Rotas Atascadas",
+                    "category": "paid fix"
+                }
+            ]
+        },
+        "stats": {
+            "viewsTitle": "Tutoriales Más Vistos",
+            "issuesTitle": "Problemas Más Comunes"
+        },
+        "nav": {
+            "backToTutorials": "Volver a Tutoriales",
+            "backHome": "Volver al Inicio",
+            "backToTop": "Volver Arriba"
+        }
+    },
+    "ja": {
+        "breadcrumb": {
+            "home": "ホーム",
+            "tutorials": "チュートリアル",
+            "current": "破損パーツ修理チュートリアル"
+        },
+        "hero": {
+            "eyebrow": "一般チュートリアル：破損パーツ",
+            "title": "壊れたなら、直しましょう！",
+            "leadPart1": "免責事項：幸いなことに、ほとんどの壊れたフィギュアは、瞬間接着剤、エポキシ接着剤、その他のプラスチック対応接着剤を使用し、軽い塗装やヤスリがけで修理できます。",
+            "leadPart2": "具体的に言うと、ここでの「破損パーツ」とは壊れたボールジョイントのことを指します。こちらをご覧ください：",
+            "leadPart3": "注意：この方法は少し費用がかかる場合があります。",
+            "jumpToTutorial": "チュートリアルへ",
+            "jumpToVideo": "動画チュートリアルへ",
+            "pillBeginner": "初心者向けではない",
+            "pillMethods": "単一の方法",
+            "pillNoAlterations": "フィギュアへの恒久的な変更あり！",
+            "highlightsLabel": "チュートリアルのハイライト"
+        },
+        "tutorialMap": {
+            "title": "チュートリアルマップ",
+            "preFixChecklist": "1. 修理前チェックリスト",
+            "stepByStep": "2. ステップバイステップチュートリアル",
+            "videoTutorial": "3. 動画チュートリアル",
+            "otherMethods": "4. その他の方法",
+            "figureStats": "5. フィギュアチュートリアル統計"
+        },
+        "prep": {
+            "title": "修理前チェックリスト",
+            "description": "このチュートリアルでは、壊れたボールジョイントに対する最も効果的な修理方法をお見せします。ドリルを使って挟まったパーツを取り出し、交換する方法です。",
+            "checklist": [
+                "ドリルを使って作業できる清潔で整理された作業台またはテーブルを見つけてください。",
+                "すべての壊れたパーツを見つけてください。破損の程度やフィギュア内に挟まったパーツを取り出す難易度によりますが、見つけるべき主なパーツは、手やボールジョイントの脚などの折れたパーツです。",
+                "非常に小さなドリルビットや釘に対応できるドリルまたはドライバー。",
+                "ボールジョイントの脚が挟まっている穴より小さいドリルビットまたは釘。",
+                "フィギュア用の交換ボールジョイントパーツ。"
+            ],
+            "readiness": "準備状況",
+            "complete": "完了",
+            "statusStart": "最初のチェックリスト項目から始めましょう。",
+            "statusDone": "準備完了です！",
+            "statusProgress": "{percent}%準備完了。続けましょう！"
+        },
+        "workflow": {
+            "title": "修理ワークフロー：ドリルを使って壊れたパーツを取り出す",
+            "intro": "各ステージを展開して、正確な手順、タイミング、注意点を確認してください。",
+            "steps": [
+                {
+                    "id": "diagnose",
+                    "title": "ステージ0：目標を理解する",
+                    "content": [
+                        "問題がどこにあるかを見つけるのは非常に明白ですが、それほど明白でないのは、この修理の目標を理解することです。"
+                    ],
+                    "tips": [
+                        "これからやることをさらに説明すると、ワインボトルのコルクを抜くのとほぼ同じことです。",
+                        { "video": "https://www.shutterstock.com/shutterstock/videos/3547435695/preview/stock-footage-hands-of-man-opening-bottle-of-red-wine-with-a-corkscrew-in-park-at-sunset-close-up-vertical.webm", "text": "ワインボトルのコルク抜き — 同じコンセプトがここに適用されます" }
+                    ]
+                },
+                {
+                    "id": "tighten",
+                    "title": "ステージ1：問題の箇所を診断する",
+                    "content": [
+                        "壊れているパーツを特定したら、次はドリルで取り出します。"
+                    ],
+                    "tips": [
+                        "これには細心の注意と忍耐が必要です。時間をかけて、フィギュアを貫通させたり、自分を怪我させたりしないよう十分注意してください。",
+                        { "image": "/assets/kat.jpg", "text": "壊れたボールジョイントの位置を特定する" }
+                    ]
+                },
+                {
+                    "id": "lock",
+                    "title": "ステージ2：ドリルを準備する",
+                    "content": [
+                        "残念ながら、この種の修理は最も効果的であると同時に最も難しいです。このステップには時間をかけてください。"
+                    ],
+                    "tips": [
+                        "このガイドでは電動ドリルと細いネジを使用します。",
+                        "------------------------------------------------------------------------------------",
+                        "ネジをドリルに取り付ける前に、まず壊れたパーツの正確な中心に印を付けることをお勧めします。このガイドではネジの先端を使って中心に印を付けます。こちらをご覧ください：",
+                        { "image": "/assets/kat.jpg", "text": "壊れたパーツの中心に印を付ける" },
+                        "時間をかけて印を付けるか、わずかに入口を作ったら、ドリルでさらに押し進める時です。"
+                    ]
+                },
+                {
+                    "id": "other-options",
+                    "title": "ステージ3：穴あけ",
+                    "content": [
+                        "壊れたパーツの中心に小さなくぼみができたので、挟まったパーツを取り出す時です。"
+                    ],
+                    "tips": [
+                        "注意：パーツを貫通させず、自分を怪我させないよう、十分な圧力をかけて穴あけを続けるよう最善を尽くしてください。",
+                        "ネジを使用しているので、結果は2つあります：1. パーツを引き抜く、または2. 壊れたパーツを完全に粉砕する。",
+                        "------------------------------------------------------------------------------------",
+                        "1) パーツを引き抜く",
+                        "この時点で壊れたパーツの中央に到達しているので、ワインボトルのように簡単にゆっくり引き戻して引き抜きます。",
+                        "以下に示すように：",
+                        { "image": "/assets/kat.jpg", "text": "ソケットから挟まったパーツを引き抜く" },
+                        "------------------------------------------------------------------------------------",
+                        "2) パーツを粉砕する",
+                        "この時点でネジが隙間とちょうど同じか、わずかに小さいことに気づきました。残念ながら、氷を掘削するような状態です。",
+                        "幸か不幸か、私たちも同じ状況に遭遇しました。このボールジョイントを別のものに交換することを受け入れたので、引き抜く代わりにそのまま穴あけを続けます。",
+                        "これは挟まったパーツの大部分を破壊し、残りを何らかの針で少しずつ取り出すためです。",
+                        "以下に示すように：",
+                        { "image": "/assets/kat.jpg", "text": "ドリルで壊れたパーツを粉砕する" }
+                    ]
+                }
+            ]
+        },
+        "video": {
+            "title": "動画チュートリアル",
+            "description": "これはチュートリアルのビジュアル版です。両方とも同じ情報を含んでいますが、視覚的な方法で提供されます。ぜひ私たちのYouTubeチャンネルをフォローしてください。",
+            "channelName": "Pilk Milk Factory",
+            "videoTitle": "ドリルを使ってフィギュアの壊れたボールジョイントを修理する",
+            "videoFallback": "お使いのブラウザは埋め込み動画の再生に対応していません。"
+        },
+        "methods": {
+            "title": "破損パーツのその他の修正方法",
+            "description": "これは効果がさまざまな他の修正方法のディレクトリです。これらの修正方法はインターネットと個人の経験から提供されており、主にRedditから情報を得ていますが、私たちのチームによって検証されています。",
+            "costLabel": "コスト：",
+            "effectivenessLabel": "効果：",
+            "bestForLabel": "最適な用途：",
+            "viewGuide": "ガイドを見る",
+            "videoBtn": "動画",
+            "items": [
+                {
+                    "id": "warm-water",
+                    "title": "ワイヤーを使用する",
+                    "description": "この方法は最も効果的な方法と非常に似ています。唯一の違いは、この方法がより静的なフィギュアに最適であることです。壊れたパーツはまだフィギュア内に挟まっていますが、取り出す代わりに、そのパーツを使って金属ワイヤーを植え、突き出た部分を代替品として使用します。",
+                    "cost": "中程度",
+                    "effectiveness": "非常に効果的",
+                    "best_for": "壊れて挟まったパーツ",
+                    "category": "paid fix"
+                }
+            ]
+        },
+        "stats": {
+            "viewsTitle": "最も閲覧されたチュートリアル",
+            "issuesTitle": "最も多い問題"
+        },
+        "nav": {
+            "backToTutorials": "チュートリアルに戻る",
+            "backHome": "ホームに戻る",
+            "backToTop": "トップに戻る"
         }
     }
 }

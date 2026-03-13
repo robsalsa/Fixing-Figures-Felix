@@ -165,6 +165,22 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                       ))}
                       <ul>
                         {step.tips.map((tip, idx) => {
+                          if (typeof tip === 'object' && tip !== null && 'video' in tip) {
+                            const tipObj = tip as { text: string; video: string };
+                            return (
+                              <li key={idx} className="tip-with-video">
+                                <video
+                                  src={tipObj.video}
+                                  autoPlay
+                                  loop
+                                  muted
+                                  playsInline
+                                  style={{ width: '100%', maxWidth: 480, borderRadius: 8 }}
+                                />
+                                <span>{tipObj.text}</span>
+                              </li>
+                            );
+                          }
                           if (typeof tip === 'object' && tip !== null && 'image' in tip) {
                             const tipObj = tip as { text: string; image: string };
                             return (
@@ -271,7 +287,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="goal-section" id="stats">
           <div className="container">
             <TutorialStats
-              tutorialSlug="loose-parts"
+              tutorialSlug="stiff-parts"
               viewsTitle={t.stats.viewsTitle}
               issuesTitle={t.stats.issuesTitle}
             />
