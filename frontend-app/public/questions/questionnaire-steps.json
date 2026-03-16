@@ -142,7 +142,7 @@
       "key": "issue",
       "options": [
         { "label": "Broken Joint", "value": "broken_joint" },
-        { "label": "Missing Part", "value": "missing_part" },
+        { "label": "Stiff Joint", "value": "stiff_part" },
         { "label": "Loose Joint", "value": "loose_joint" },
         { "label": "Other", "value":"other"}
       ],
