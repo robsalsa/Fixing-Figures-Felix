@@ -537,7 +537,7 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 						{noFixMessage ? (
 							<>
 								<p style={{ color: '#c0392b', fontWeight: 600, marginTop: '1rem' }}>
-									Unfortunately we currently do not have a fix for this specific issue. Please forgive us.
+									Unfortunately we currently do not have a fix for this specific issue. Please forgive us. We are working hard to solve this issue.
 								</p>
 								<button id="finishBtn" className="btn primary" onClick={() => { window.location.href = `/${lang}/home`; }}>
 									Go to Home
