@@ -23,9 +23,12 @@ const guilds = [
   {
     id: 'stiff-parts',
     title: 'Stiff Parts',
-    description: 'Sometimes figures come a little too tight. Unfortunately, one wrong push or pull it might snap! Good thing there is ways to loosen up these parts!',
+    description: 'Sometimes figures come a little too tight. Unfortunately, one wrong push or pull it might snap! Good thing there is ways to loosen up these parts! Unmute the video to hear the stiffness.',
+    // description:'(Unmute the video to hear the stiffness)',
     href: 'stiff-parts',
-    category: 'paid fix'
+    category: 'paid fix',
+    video: '/assets/videos/Stiff(Vegi).mp4',
+    hasAudio: true
   },
   // {
   //   id: 'defective-parts',
@@ -44,9 +47,10 @@ const guilds = [
   {
     id: 'broken-parts',
     title: 'Broken Parts',
-    description: 'Broken parts are the worst, unfortunately this is one of the harder things to DIY. Even if it\'s hard that doesn\'t mean we cannot try to fix it! So, let\'s fix it!',
+    description: 'Broken parts are the worst, unfortunately this is one of the harder things to DIY. Even if it\'s hard that doesn\'t mean we cannot try to fix it! So, let\'s fix it! Guide is only for Ball Joint-like pieces.',
     href: 'broken-parts',
-    category: 'paid fix'
+    category: 'paid fix',
+    image: '/assets/broken(igawa).png'
   }
 ];
 
@@ -107,7 +111,19 @@ export default function GuildRouterPage({ params }: GuildRouterPageProps) {
                         loop
                         muted
                         playsInline
-                        style={{ maxWidth: '75%', borderRadius: '8px' }}
+                        controls={guild.hasAudio}
+                        style={{ maxWidth: '70%', borderRadius: '8px' }}
+                      />
+                    </div>
+                  )}
+                  {guild.image && (
+                    <div style={{ display: 'flex', justifyContent: 'center', margin: '12px 0' }}>
+                      <Image
+                        src={guild.image}
+                        alt={guild.title}
+                        width={500}
+                        height={500}
+                        style={{ maxWidth: '90%', height: 'auto', borderRadius: '8px' }}
                       />
                     </div>
                   )}

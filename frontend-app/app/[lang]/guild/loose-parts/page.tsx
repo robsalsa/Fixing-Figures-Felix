@@ -16,6 +16,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const [lang, setLang] = useState<string>('en');
   const [expandedStep, setExpandedStep] = useState<string>('diagnose');
   const [prepPercent, setPrepPercent] = useState<number>(0);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   useEffect(() => {
     params.then((p) => setLang(p.lang));
@@ -169,13 +170,20 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                             const tipObj = tip as { text: string; image: string };
                             return (
                               <li key={idx} className="tip-with-image">
-                                <Image
-                                  src={tipObj.image}
-                                  alt={tipObj.text}
-                                  width={120}
-                                  height={120}
-                                  className="tip-image"
-                                />
+                                <button
+                                  type="button"
+                                  onClick={() => setLightbox({ src: tipObj.image, alt: tipObj.text })}
+                                  style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+                                  aria-label={`View ${tipObj.text} image`}
+                                >
+                                  <Image
+                                    src={tipObj.image}
+                                    alt={tipObj.text}
+                                    width={120}
+                                    height={120}
+                                    className="tip-image"
+                                  />
+                                </button>
                                 <span>{tipObj.text}</span>
                               </li>
                             );
@@ -291,6 +299,67 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           </a>
         </div>
       </main>
+
+      {lightbox && (
+        <div
+          className="lightbox-overlay"
+          onClick={() => setLightbox(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'relative',
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              background: '#fff',
+              borderRadius: '12px',
+              padding: '16px',
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => setLightbox(null)}
+              aria-label="Close image"
+              style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: '#333',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '32px',
+                height: '32px',
+                fontSize: '18px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                lineHeight: 1,
+              }}
+            >
+              &times;
+            </button>
+            <Image
+              src={lightbox.src}
+              alt={lightbox.alt}
+              width={600}
+              height={600}
+              style={{ maxWidth: '85vw', maxHeight: '80vh', objectFit: 'contain', borderRadius: '8px' }}
+            />
+            <p style={{ textAlign: 'center', marginTop: '8px', fontWeight: 600 }}>{lightbox.alt}</p>
+          </div>
+        </div>
+      )}
 
       <Footer lang={lang} />
     </div>
