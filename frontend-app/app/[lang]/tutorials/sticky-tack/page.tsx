@@ -17,7 +17,6 @@ interface LoosePartsPageProps {
 
 export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const [lang, setLang] = useState<string>('en');
-  const [expandedStep, setExpandedStep] = useState<string>('diagnose');
   const [prepPercent, setPrepPercent] = useState<number>(0);
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
@@ -30,17 +29,6 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const handleChecklistChange = useCallback((checkedCount: number) => {
     setPrepPercent(Math.round((checkedCount / t.prep.checklist.length) * 100));
   }, [t.prep.checklist.length]);
-
-  const handleAccordionToggle = (stepId: string) => {
-    const isClosing = expandedStep === stepId;
-    setExpandedStep(isClosing ? '' : stepId);
-
-    if (!isClosing) {
-      setTimeout(() => {
-        document.getElementById(`step-${stepId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 50);
-    }
-  };
 
   return (
     <div className="loose-guide-page">
@@ -152,66 +140,100 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
               {t.workflow.intro}
             </p>
 
-            <div className="workflow-list">
-              {t.workflow.steps.map((step) => (
-                <article key={step.id} className="workflow-item" id={`step-${step.id}`}>
-                  <button
-                    className="workflow-trigger"
-                    onClick={() => handleAccordionToggle(step.id)}
-                    aria-expanded={expandedStep === step.id}
-                    aria-controls={`panel-${step.id}`}
-                  >
-                    <span>{step.title}</span>
-                    <span className="workflow-icon">+</span>
-                  </button>
-                  <div
-                    className={`workflow-panel ${expandedStep === step.id ? 'open' : ''}`}
-                    id={`panel-${step.id}`}
-                  >
-                    <div className="workflow-panel-inner">
-                      {step.content.map((text, idx) => (
-                        <p key={idx}>{text}</p>
-                      ))}
-                      <ul>
-                        {step.tips.map((tip, idx) => {
-                          if (typeof tip === 'object' && tip !== null && 'link' in tip) {
-                            const tipObj = tip as { text: string; link: string };
-                            return (
-                              <li key={idx}>
-                                <a href={tipObj.link} style={{ color: 'blue' }} target="_blank" rel="noopener noreferrer">{tipObj.text}</a>
-                              </li>
-                            );
-                          }
-                          if (typeof tip === 'object' && tip !== null && 'image' in tip) {
-                            const tipObj = tip as { text: string; image: string };
-                            return (
-                              <li key={idx} className="tip-with-image">
-                                <button
-                                  type="button"
-                                  onClick={() => setLightbox({ src: tipObj.image, alt: tipObj.text })}
-                                  style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
-                                  aria-label={`View ${tipObj.text} image`}
-                                >
-                                  <Image
-                                    src={tipObj.image}
-                                    alt={tipObj.text}
-                                    width={200}
-                                    height={200}
-                                    className="tip-image"
-                                    style={{ display: 'block', margin: '0 auto' }}
-                                  />
-                                </button>
-                                <span>{tipObj.text}</span>
-                              </li>
-                            );
-                          }
-                          return <li key={idx}>{tip as string}</li>;
-                        })}
-                      </ul>
+            <div className="wf-timeline">
+              {t.workflow.steps.map((step, stepIdx) => {
+                const tips = step.tips as (string | { text: string; image?: string; link?: string })[];
+                const images = tips.filter(
+                  (tip): tip is { text: string; image: string } =>
+                    typeof tip === 'object' && tip !== null && 'image' in tip
+                );
+                const bulletColors = ['#FF1A1A', '#FF8B00', '#FFC60B'];
+
+                return (
+                  <article key={step.id} className="wf-step" id={`step-${step.id}`}>
+                    <div className="wf-step-marker">
+                      <span className="wf-step-number">{stepIdx + 1}</span>
+                      {stepIdx < t.workflow.steps.length - 1 && <div className="wf-step-line" />}
                     </div>
-                  </div>
-                </article>
-              ))}
+
+                    <div className="wf-step-body">
+                      <h3 className="wf-step-title">{step.title}</h3>
+
+                      <div className={`wf-step-content${images.length > 0 ? ' wf-has-media' : ''}`}>
+                        {images.length > 0 && (
+                          <div className="wf-media-col">
+                            {images.map((img, imgIdx) => (
+                              <button
+                                key={imgIdx}
+                                type="button"
+                                className="wf-thumb-btn"
+                                onClick={() => setLightbox({ src: img.image, alt: img.text })}
+                                aria-label={`View ${img.text} image`}
+                              >
+                                <Image
+                                  src={img.image}
+                                  alt={img.text}
+                                  width={220}
+                                  height={220}
+                                  className="wf-thumb"
+                                />
+                                <span className="wf-thumb-label">{img.text}</span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+
+                        <div className="wf-instructions">
+                          {step.content.map((text, idx) => (
+                            <p key={idx} className="wf-content-text">{text}</p>
+                          ))}
+
+                          <ul className="wf-bullet-list">
+                            {tips.map((tip, idx) => {
+                              if (typeof tip === 'object' && tip !== null && 'image' in tip) return null;
+
+                              if (typeof tip === 'string' && tip.startsWith('----------')) {
+                                return <li key={idx} className="wf-divider" aria-hidden="true" />;
+                              }
+
+                              if (typeof tip === 'string' && tip === '*!*') return null;
+
+                              if (typeof tip === 'object' && tip !== null && 'link' in tip) {
+                                const tipObj = tip as { text: string; link: string };
+                                return (
+                                  <li key={idx} className="wf-bullet-item">
+                                    <span className="wf-bullet-dot" style={{ background: bulletColors[idx % 3] }} />
+                                    <a href={tipObj.link} className="wf-link" target="_blank" rel="noopener noreferrer">{tipObj.text}</a>
+                                  </li>
+                                );
+                              }
+
+                              const tipStr = tip as string;
+                              const isCallout = tips[idx - 1] === '*!*' || tips[idx + 1] === '*!*';
+
+                              if (isCallout) {
+                                return (
+                                  <li key={idx} className="wf-callout">
+                                    <span className="wf-callout-icon">&#9888;</span>
+                                    <span>{tipStr}</span>
+                                  </li>
+                                );
+                              }
+
+                              return (
+                                <li key={idx} className="wf-bullet-item">
+                                  <span className="wf-bullet-dot" style={{ background: bulletColors[idx % 3] }} />
+                                  <span>{tipStr}</span>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>

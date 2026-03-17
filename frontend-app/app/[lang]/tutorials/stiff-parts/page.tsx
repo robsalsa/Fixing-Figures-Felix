@@ -14,8 +14,8 @@ interface LoosePartsPageProps {
 
 export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const [lang, setLang] = useState<string>('en');
-  const [expandedStep, setExpandedStep] = useState<string>('diagnose');
   const [prepPercent, setPrepPercent] = useState<number>(0);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   useEffect(() => {
     params.then((p) => setLang(p.lang));
@@ -26,17 +26,6 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const handleChecklistChange = useCallback((checkedCount: number) => {
     setPrepPercent(Math.round((checkedCount / t.prep.checklist.length) * 100));
   }, [t.prep.checklist.length]);
-
-  const handleAccordionToggle = (stepId: string) => {
-    const isClosing = expandedStep === stepId;
-    setExpandedStep(isClosing ? '' : stepId);
-
-    if (!isClosing) {
-      setTimeout(() => {
-        document.getElementById(`step-${stepId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 50);
-    }
-  };
 
   return (
     <div className="loose-guide-page">
@@ -143,66 +132,117 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
               {t.workflow.intro}
             </p>
 
-            <div className="workflow-list">
-              {t.workflow.steps.map((step) => (
-                <article key={step.id} className="workflow-item" id={`step-${step.id}`}>
-                  <button
-                    className="workflow-trigger"
-                    onClick={() => handleAccordionToggle(step.id)}
-                    aria-expanded={expandedStep === step.id}
-                    aria-controls={`panel-${step.id}`}
-                  >
-                    <span>{step.title}</span>
-                    <span className="workflow-icon">+</span>
-                  </button>
-                  <div
-                    className={`workflow-panel ${expandedStep === step.id ? 'open' : ''}`}
-                    id={`panel-${step.id}`}
-                  >
-                    <div className="workflow-panel-inner">
-                      {step.content.map((text, idx) => (
-                        <p key={idx}>{text}</p>
-                      ))}
-                      <ul>
-                        {step.tips.map((tip, idx) => {
-                          if (typeof tip === 'object' && tip !== null && 'video' in tip) {
-                            const tipObj = tip as { text: string; video: string };
-                            return (
-                              <li key={idx} className="tip-with-video">
+            <div className="wf-timeline">
+              {t.workflow.steps.map((step, stepIdx) => {
+                const tips = step.tips as (string | { text: string; image?: string; video?: string; link?: string })[];
+                const images = tips.filter(
+                  (tip): tip is { text: string; image: string } =>
+                    typeof tip === 'object' && tip !== null && 'image' in tip
+                );
+                const videos = tips.filter(
+                  (tip): tip is { text: string; video: string } =>
+                    typeof tip === 'object' && tip !== null && 'video' in tip
+                );
+                const bulletColors = ['#FF1A1A', '#FF8B00', '#FFC60B'];
+
+                return (
+                  <article key={step.id} className="wf-step" id={`step-${step.id}`}>
+                    <div className="wf-step-marker">
+                      <span className="wf-step-number">{stepIdx + 1}</span>
+                      {stepIdx < t.workflow.steps.length - 1 && <div className="wf-step-line" />}
+                    </div>
+
+                    <div className="wf-step-body">
+                      <h3 className="wf-step-title">{step.title}</h3>
+
+                      <div className={`wf-step-content${images.length > 0 || videos.length > 0 ? ' wf-has-media' : ''}`}>
+                        {(images.length > 0 || videos.length > 0) && (
+                          <div className="wf-media-col">
+                            {images.map((img, imgIdx) => (
+                              <button
+                                key={`img-${imgIdx}`}
+                                type="button"
+                                className="wf-thumb-btn"
+                                onClick={() => setLightbox({ src: img.image, alt: img.text })}
+                                aria-label={`View ${img.text} image`}
+                              >
+                                <Image
+                                  src={img.image}
+                                  alt={img.text}
+                                  width={220}
+                                  height={220}
+                                  className="wf-thumb"
+                                />
+                                <span className="wf-thumb-label">{img.text}</span>
+                              </button>
+                            ))}
+                            {videos.map((vid, vidIdx) => (
+                              <div key={`vid-${vidIdx}`} className="wf-thumb-btn" style={{ cursor: 'default' }}>
                                 <video
-                                  src={tipObj.video}
+                                  src={vid.video}
                                   autoPlay
                                   loop
                                   muted
                                   playsInline
-                                  style={{ width: '100%', maxWidth: 480, borderRadius: 8 }}
+                                  style={{ width: '220px', borderRadius: '8px' }}
                                 />
-                                <span>{tipObj.text}</span>
-                              </li>
-                            );
-                          }
-                          if (typeof tip === 'object' && tip !== null && 'image' in tip) {
-                            const tipObj = tip as { text: string; image: string };
-                            return (
-                              <li key={idx} className="tip-with-image">
-                                <Image
-                                  src={tipObj.image}
-                                  alt={tipObj.text}
-                                  width={120}
-                                  height={120}
-                                  className="tip-image"
-                                />
-                                <span>{tipObj.text}</span>
-                              </li>
-                            );
-                          }
-                          return <li key={idx}>{tip as string}</li>;
-                        })}
-                      </ul>
+                                <span className="wf-thumb-label">{vid.text}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        <div className="wf-instructions">
+                          {step.content.map((text, idx) => (
+                            <p key={idx} className="wf-content-text">{text}</p>
+                          ))}
+
+                          <ul className="wf-bullet-list">
+                            {tips.map((tip, idx) => {
+                              if (typeof tip === 'object' && tip !== null && ('image' in tip || 'video' in tip)) return null;
+
+                              if (typeof tip === 'string' && tip.startsWith('----------')) {
+                                return <li key={idx} className="wf-divider" aria-hidden="true" />;
+                              }
+
+                              if (typeof tip === 'string' && tip === '*!*') return null;
+
+                              if (typeof tip === 'object' && tip !== null && 'link' in tip) {
+                                const tipObj = tip as { text: string; link: string };
+                                return (
+                                  <li key={idx} className="wf-bullet-item">
+                                    <span className="wf-bullet-dot" style={{ background: bulletColors[idx % 3] }} />
+                                    <a href={tipObj.link} className="wf-link" target="_blank" rel="noopener noreferrer">{tipObj.text}</a>
+                                  </li>
+                                );
+                              }
+
+                              const tipStr = tip as string;
+                              const isCallout = tips[idx - 1] === '*!*' || tips[idx + 1] === '*!*';
+
+                              if (isCallout) {
+                                return (
+                                  <li key={idx} className="wf-callout">
+                                    <span className="wf-callout-icon">&#9888;</span>
+                                    <span>{tipStr}</span>
+                                  </li>
+                                );
+                              }
+
+                              return (
+                                <li key={idx} className="wf-bullet-item">
+                                  <span className="wf-bullet-dot" style={{ background: bulletColors[idx % 3] }} />
+                                  <span>{tipStr}</span>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -240,7 +280,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                       borderRadius: '12px',
                     }}
                   >
-                    <source src="/assets/videos/loose(spider).mp4" type="video/mp4" />
+                    <source src="/assets/videos/Stiff(Vegi).mp4" type="video/mp4" />
                     {t.video.videoFallback}
                   </video>
                 </div>
@@ -307,6 +347,67 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           </a>
         </div>
       </main>
+
+      {lightbox && (
+        <div
+          className="lightbox-overlay"
+          onClick={() => setLightbox(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'relative',
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              background: '#fff',
+              borderRadius: '12px',
+              padding: '16px',
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => setLightbox(null)}
+              aria-label="Close image"
+              style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: '#333',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '32px',
+                height: '32px',
+                fontSize: '18px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                lineHeight: 1,
+              }}
+            >
+              &times;
+            </button>
+            <Image
+              src={lightbox.src}
+              alt={lightbox.alt}
+              width={600}
+              height={600}
+              style={{ maxWidth: '85vw', maxHeight: '80vh', objectFit: 'contain', borderRadius: '8px' }}
+            />
+            <p style={{ textAlign: 'center', marginTop: '8px', fontWeight: 600 }}>{lightbox.alt}</p>
+          </div>
+        </div>
+      )}
 
       <Footer lang={lang} />
     </div>

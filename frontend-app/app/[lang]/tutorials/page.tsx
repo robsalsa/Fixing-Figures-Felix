@@ -44,13 +44,24 @@ const guilds = [
   //   href: 'accesories',
   //   category: 'special glue'
   // },
+  // {
+  //   id: 'broken-parts',
+  //   title: 'Broken Parts',
+  //   description: 'Broken parts are the worst, unfortunately this is one of the harder things to DIY. Even if it\'s hard that doesn\'t mean we cannot try to fix it! So, let\'s fix it! Guide is only for Ball Joint-like pieces.',
+  //   href: 'broken-parts',
+  //   category: 'paid fix',
+  //   image: '/assets/broken(igawa).png'
+  // },
   {
-    id: 'broken-parts',
-    title: 'Broken Parts',
-    description: 'Broken parts are the worst, unfortunately this is one of the harder things to DIY. Even if it\'s hard that doesn\'t mean we cannot try to fix it! So, let\'s fix it! Guide is only for Ball Joint-like pieces.',
-    href: 'broken-parts',
-    category: 'paid fix',
-    image: '/assets/broken(igawa).png'
+    id:'coming-soon',
+    title:'Tutorials Coming Soon',
+    description: [
+      'Easy-To-Make Acessories (10% Done)',
+      'Defective Parts (10% Done)',
+      'Broken Parts (Near Finished)'
+    ], 
+    href:'',
+    image:'/assets/comingsoonbear.gif'
   }
 ];
 
@@ -102,7 +113,15 @@ export default function GuildRouterPage({ params }: GuildRouterPageProps) {
               {guilds.map((guild) => (
                 <article key={guild.id} className="service-column card" data-category={guild.category}>
                   <h4>{guild.title}</h4>
-                  <p className="muted">{guild.description}</p>
+                  {Array.isArray(guild.description) ? (
+                    <ul className="muted" style={{ paddingLeft: '20px', margin: '0' }}>
+                      {guild.description.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="muted">{guild.description}</p>
+                  )}
                   {guild.video && (
                     <div style={{ display: 'flex', justifyContent: 'center', margin: '12px 0' }}>
                       <video
@@ -121,14 +140,15 @@ export default function GuildRouterPage({ params }: GuildRouterPageProps) {
                       <Image
                         src={guild.image}
                         alt={guild.title}
-                        width={500}
-                        height={500}
+                        width={guild.id === 'coming-soon' ? 250 : 500}
+                        height={guild.id === 'coming-soon' ? 250 : 500}
                         style={{ maxWidth: '90%', height: 'auto', borderRadius: '8px' }}
+                        unoptimized={guild.image.endsWith('.gif')}
                       />
                     </div>
                   )}
                   <div className="card-actions">
-                    <Link href={`/${lang}/tutorials/${guild.href}`} className="btn primary" style={{ flex: '1' }}>
+                    <Link href={guild.id === 'coming-soon' ? `/${lang}/tutorials` : `/${lang}/tutorials/${guild.href}`} className="btn primary" style={{ flex: '1' }}>
                       Let's Fix It!
                     </Link>
                     {/* <a href="#" className="btn outline" style={{ flex: '1' }} onClick={(e) => e.preventDefault()}>

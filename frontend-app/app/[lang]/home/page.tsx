@@ -74,15 +74,17 @@ async function HomePageContent({ params }: HomePageProps) {
 							</div>
 						</div>
 
-						<figure className="heroIllustration" aria-hidden="true">
+
+						{/* The Hero Images SUCK ASS!!! */}
+						{/* <figure className="heroIllustration" aria-hidden="true">
 							<Image
-								src="/assets/kat.jpg"
+								src="/assets/part-images/broken(igawa).png"
 								alt="Figure being fixed"
 								width={240}
 								height={160}
 								className="figIllustration"
 							/>
-						</figure>
+						</figure> */}
 					</div>
 				</section>
 

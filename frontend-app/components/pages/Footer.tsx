@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         <div className="footerLeft">
           <Link href={`/${lang}`} className="footerBrand">
             <Image
-              src="/assets/kat.jpg"
+              src="/assets/my-images/icon.png"
               alt={footerT.brandAlt}
               width={44}
               height={44}
@@ -32,16 +32,19 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             <ul>
               <li><Link href={`/${lang}/home`} style={{color:"black"}}>{footerT.footerLinksHome}</Link></li>
               <li><Link href={`/${lang}/about`} style={{color:"black"}}>{footerT.footerLinksAbout}</Link></li>
+              <li><Link href={`/${lang}/tutorials`} style={{color:"black"}}>{footerT.footerLinksContactUs}</Link></li>
               <li><Link href={`/${lang}/questionnaire`} style={{color:"black"}}>{footerT.footerLinksFixYourFigures}</Link></li>
+
               {/* <li><Link href={`/${lang}/contact`} style={{color:"black"}}>{footerT.footerLinksContactUs}</Link></li> */}
             </ul>
           </nav>
-          <p className="small muted">
+          {/* In the case if I have a more public personal website */}
+          {/* <p className="small muted">
             {footerT.passionProject}{' '}
             <a href="https://operation-null-trace.vercel.app/" target="_blank" rel="noopener noreferrer" style={{color: "blue"}}>
               {footerT.devBackground}
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

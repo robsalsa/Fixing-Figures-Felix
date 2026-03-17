@@ -31,7 +31,6 @@ interface Stat {
 
 export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const [lang, setLang] = useState<string>('en');
-  const [expandedStep, setExpandedStep] = useState<string>('diagnose');
   const [prepPercent, setPrepPercent] = useState<number>(0);
 
   useEffect(() => {
@@ -140,10 +139,6 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
     setPrepPercent(Math.round((checkedCount / prepChecklist.length) * 100));
   };
 
-  const handleAccordionToggle = (stepId: string) => {
-    setExpandedStep(expandedStep === stepId ? '' : stepId);
-  };
-
   return (
     <div className="loose-guide-page">
       <Navigation lang={lang} currentPage="guild" />
@@ -237,33 +232,59 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
               Expand each stage for exact actions, timing, and stop signs.
             </p>
 
-            <div className="workflow-list">
-              {workflowSteps.map((step) => (
-                <article key={step.id} className="workflow-item" id={`step-${step.id}`}>
-                  <button
-                    className="workflow-trigger"
-                    onClick={() => handleAccordionToggle(step.id)}
-                    aria-expanded={expandedStep === step.id}
-                    aria-controls={`panel-${step.id}`}
-                  >
-                    <span>{step.title}</span>
-                    <span className="workflow-icon">+</span>
-                  </button>
-                  <div
-                    className={`workflow-panel ${expandedStep === step.id ? 'open' : ''}`}
-                    id={`panel-${step.id}`}
-                  >
-                    {step.content.map((text, idx) => (
-                      <p key={idx}>{text}</p>
-                    ))}
-                    <ul>
-                      {step.tips.map((tip, idx) => (
-                        <li key={idx}>{tip}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              ))}
+            <div className="wf-timeline">
+              {workflowSteps.map((step, stepIdx) => {
+                const bulletColors = ['#FF1A1A', '#FF8B00', '#FFC60B'];
+
+                return (
+                  <article key={step.id} className="wf-step" id={`step-${step.id}`}>
+                    <div className="wf-step-marker">
+                      <span className="wf-step-number">{stepIdx + 1}</span>
+                      {stepIdx < workflowSteps.length - 1 && <div className="wf-step-line" />}
+                    </div>
+
+                    <div className="wf-step-body">
+                      <h3 className="wf-step-title">{step.title}</h3>
+
+                      <div className="wf-step-content">
+                        <div className="wf-instructions">
+                          {step.content.map((text, idx) => (
+                            <p key={idx} className="wf-content-text">{text}</p>
+                          ))}
+
+                          <ul className="wf-bullet-list">
+                            {step.tips.map((tip, idx) => {
+                              if (tip.startsWith('----------')) {
+                                return <li key={idx} className="wf-divider" aria-hidden="true" />;
+                              }
+
+                              if (tip === '*!*') return null;
+
+                              const isCallout = step.tips[idx - 1] === '*!*' || step.tips[idx + 1] === '*!*';
+
+                              if (isCallout) {
+                                return (
+                                  <li key={idx} className="wf-callout">
+                                    <span className="wf-callout-icon">&#9888;</span>
+                                    <span>{tip}</span>
+                                  </li>
+                                );
+                              }
+
+                              return (
+                                <li key={idx} className="wf-bullet-item">
+                                  <span className="wf-bullet-dot" style={{ background: bulletColors[idx % 3] }} />
+                                  <span>{tip}</span>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>

@@ -54,7 +54,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
       <div className="container headerInner">
         <Link href={`/${safeLang}`} className="brand">
           <Image
-            src="/assets/kat.jpg"
+            src="/assets/my-images/icon.png"
             alt={navT.brandAlt}
             width={44}
             height={44}
@@ -85,7 +85,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
             </li>
             <li>
               <Link 
-                href={`/${safeLang}/guild`} 
+                href={`/${safeLang}/tutorials`} 
                 className={`burgerItem ${isActive('guild')}`}
                 onClick={closeMobileMenu}
               style={{color:"black"}}>
@@ -149,7 +149,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lang, currentPage }) => 
                 top: '100%',
                 right: 0,
                 background: 'white',
-                border: '1px solid #ccc',
+                border: '1px solid #cccccc',
                 borderRadius: '4px',
                 boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
                 listStyle: 'none',
