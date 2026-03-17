@@ -130,7 +130,8 @@
                     "cost": "Moderate",
                     "effectiveness": "Very Effective",
                     "best_for": "Broken Wedged Pieces",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "wire-fix"
                 }
             ]
         },
@@ -275,7 +276,8 @@
                     "cost": "Moderado",
                     "effectiveness": "Muy Efectivo",
                     "best_for": "Piezas Rotas Atascadas",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "wire-fix"
                 }
             ]
         },
@@ -420,7 +422,8 @@
                     "cost": "中程度",
                     "effectiveness": "非常に効果的",
                     "best_for": "壊れて挟まったパーツ",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "wire-fix"
                 }
             ]
         },

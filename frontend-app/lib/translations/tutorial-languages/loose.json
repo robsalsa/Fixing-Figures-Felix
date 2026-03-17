@@ -106,9 +106,8 @@
           "title": "Other Options for Figure Glue",
           "content": ["While in this tutorial the use of the MPS Fix Loose Joint glue this is not the only glue of this type. Luckily, there is multiple glues for you to use."],
           "tips": [
-            "MPS Fix Loose Joints (Amazon)",
-            "Kiki Fix Loose Joints Solution (Amazon)",
-            "43ml Fix Loose Joints Solution (Amazon)",
+            { "text": "MPS Fix Loose Joints (Amazon)", "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2" },
+            { "text": "Kiki Fix Loose Joints Solution (Amazon)", "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" },
             "*!* Note that unfortunately MPS Fix Loose Joints is the ONLY glue we can vouch for. Simple because we own and use this glue specifically *!*"
           ]
         }
@@ -137,7 +136,8 @@
           "cost": "Free",
           "effectiveness": "Somewhat",
           "best_for": "Slightly Loose Pieces",
-          "category": "free fix"
+          "category": "free fix",
+          "guide": "wet-paper-towel"
         },
         {
           "id": "micro-tack",
@@ -146,7 +146,8 @@
           "cost": "Low",
           "effectiveness": "Moderate",
           "best_for": "Small Accessories & Hand Pieces",
-          "category": "special glue"
+          "category": "special glue",
+          "guide": "sticky-tack"
         },
         {
           "id": "ptfe-tape",
@@ -155,7 +156,8 @@
           "cost": "Low",
           "effectiveness": "Somewhat",
           "best_for": "Slightly Loose Pieces",
-          "category": "friction"
+          "category": "friction",
+          "guide": "saran-wrap"
         }
       ]
     },
@@ -224,10 +226,10 @@
           "tips": [
             "Averigua qué parte está suelta porque la ubicación donde irá el pegamento será según ciertas piezas. Por ejemplo, piezas como: ",
             "------------------------------------------------------------------------------------",
-            { "text": "Articulación de Bola", "image": "/assets/kat.jpg" },
-            { "text": "Articulación de Bisagra", "image": "/assets/kat.jpg" },
-            { "text": "Doble Bisagra", "image": "/assets/kat.jpg" },
-            { "text": "Articulación Giratoria", "image": "/assets/kat.jpg" },
+            { "text": "Articulación de Bola", "image": "/assets/types_of_ball_joints(revoltech).png" },
+            { "text": "Articulación de Bisagra", "image": "/assets/Hinge(revoltech).png" },
+            { "text": "Doble Bisagra", "image": "/assets/double_hinge(mafex).png" },
+            { "text": "Articulación Giratoria", "image": "/assets/swivel(marvel_legends).png" },
             "y más...",
             "------------------------------------------------------------------------------------",
             "La razón por la que ponemos mucho énfasis en esto es porque dependiendo del tipo de articulación, la ubicación para aplicar este pegamento variará.",
@@ -276,9 +278,8 @@
           "title": "Otras Opciones de Pegamento para Figuras",
           "content": ["Aunque en este tutorial usamos el pegamento MPS Fix Loose Joint, este no es el único pegamento de este tipo. Afortunadamente, hay múltiples pegamentos que puedes usar."],
           "tips": [
-            "MPS Fix Loose Joints (Amazon)",
-            "Kiki Fix Loose Joints Solution (Amazon)",
-            "43ml Fix Loose Joints Solution (Amazon)",
+             { "text": "MPS Fix Loose Joints (Amazon)", "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2" },
+            { "text": "Kiki Fix Loose Joints Solution (Amazon)", "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" },
             "*!* Ten en cuenta que desafortunadamente MPS Fix Loose Joints es el ÚNICO pegamento que podemos recomendar. Simplemente porque lo poseemos y usamos específicamente *!*"
           ]
         }
@@ -307,7 +308,8 @@
           "cost": "Gratis",
           "effectiveness": "Algo",
           "best_for": "Piezas Ligeramente Sueltas",
-          "category": "free fix"
+          "category": "free fix",
+          "guide": "wet-paper-towel"
         },
         {
           "id": "micro-tack",
@@ -316,7 +318,8 @@
           "cost": "Bajo",
           "effectiveness": "Moderada",
           "best_for": "Accesorios Pequeños y Piezas de Manos",
-          "category": "special glue"
+          "category": "special glue",
+          "guide": "sticky-tack"
         },
         {
           "id": "ptfe-tape",
@@ -325,7 +328,8 @@
           "cost": "Bajo",
           "effectiveness": "Algo",
           "best_for": "Piezas Ligeramente Sueltas",
-          "category": "friction"
+          "category": "friction",
+          "guide": "saran-wrap"
         }
       ]
     },
@@ -394,10 +398,10 @@
           "tips": [
             "接着剤を塗る場所は特定のパーツによって異なるため、どのパーツが緩んでいるかを把握してください。例えば次のようなパーツ：",
             "------------------------------------------------------------------------------------",
-            { "text": "ボールジョイント", "image": "/assets/kat.jpg" },
-            { "text": "ヒンジジョイント", "image": "/assets/kat.jpg" },
-            { "text": "ダブルヒンジ", "image": "/assets/kat.jpg" },
-            { "text": "スイベルジョイント", "image": "/assets/kat.jpg" },
+            { "text": "ボールジョイント", "image": "/assets/types_of_ball_joints(revoltech).png" },
+            { "text": "ヒンジジョイント", "image": "/assets/Hinge(revoltech).png" },
+            { "text": "ダブルヒンジ", "image": "/assets/double_hinge(mafex).png" },
+            { "text": "スイベルジョイント", "image": "/assets/swivel(marvel_legends).png" },
             "など...",
             "------------------------------------------------------------------------------------",
             "これを非常に重視する理由は、関節の種類によってこの接着剤を塗布する場所が変わるからです。",
@@ -446,9 +450,8 @@
           "title": "フィギュア用接着剤のその他のオプション",
           "content": ["このチュートリアルではMPS Fix Loose Joint接着剤を使用していますが、この種類の接着剤はこれだけではありません。幸いなことに、複数の接着剤を使用できます。"],
           "tips": [
-            "MPS Fix Loose Joints（Amazon）",
-            "Kiki Fix Loose Joints Solution（Amazon）",
-            "43ml Fix Loose Joints Solution（Amazon）",
+             { "text": "MPS Fix Loose Joints (Amazon)", "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2" },
+            { "text": "Kiki Fix Loose Joints Solution (Amazon)", "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" },
             "*!* 残念ながらMPS Fix Loose Jointsは私たちが保証できる唯一の接着剤です。私たちがこの接着剤を所有し、特に使用しているからです *!*"
           ]
         }
@@ -477,7 +480,8 @@
           "cost": "無料",
           "effectiveness": "やや効果的",
           "best_for": "少し緩んだパーツ",
-          "category": "free fix"
+          "category": "free fix",
+          "guide": "wet-paper-towel"
         },
         {
           "id": "micro-tack",
@@ -486,7 +490,8 @@
           "cost": "低",
           "effectiveness": "まあまあ",
           "best_for": "小さなアクセサリーと手のパーツ",
-          "category": "special glue"
+          "category": "special glue",
+          "guide": "sticky-tack"
         },
         {
           "id": "ptfe-tape",
@@ -495,7 +500,8 @@
           "cost": "低",
           "effectiveness": "やや効果的",
           "best_for": "少し緩んだパーツ",
-          "category": "friction"
+          "category": "friction",
+          "guide": "saran-wrap"
         }
       ]
     },

@@ -18,7 +18,7 @@
       "key": "figure_name",
       "input": {
         "type": "text",
-        "placeholder": "Example: \"Marvel Amazing Yamaguchi Revoltech Deadpool (Ver. 2.5)\""
+        "placeholder": "Example: \"Deadpool (Ver. 2.5)\", \"John Wick\", \"Spider-Man\""
       },
       "note": "Please use the full name of the figure for more accuracy. If you do not know the full name please refer to your items listing on your sellers website."
     },

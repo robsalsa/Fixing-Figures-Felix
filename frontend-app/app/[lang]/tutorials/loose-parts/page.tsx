@@ -47,7 +47,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <div className="container guild-trace-inner">
           <Link href={`/${lang}`}>{t.breadcrumb.home}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/${lang}/guild`}>{t.breadcrumb.tutorials}</Link>
+          <Link href={`/${lang}/tutorials`}>{t.breadcrumb.tutorials}</Link>
           <span aria-hidden="true">/</span>
           <span className="current">{t.breadcrumb.current}</span>
         </div>
@@ -166,6 +166,14 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                       ))}
                       <ul>
                         {step.tips.map((tip, idx) => {
+                          if (typeof tip === 'object' && tip !== null && 'link' in tip) {
+                            const tipObj = tip as { text: string; link: string };
+                            return (
+                              <li key={idx}>
+                                <a href={tipObj.link} style={{ color: 'blue' }} target="_blank" rel="noopener noreferrer">{tipObj.text}</a>
+                              </li>
+                            );
+                          }
                           if (typeof tip === 'object' && tip !== null && 'image' in tip) {
                             const tipObj = tip as { text: string; image: string };
                             return (
@@ -179,9 +187,10 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                                   <Image
                                     src={tipObj.image}
                                     alt={tipObj.text}
-                                    width={120}
-                                    height={120}
+                                    width={200}
+                                    height={200}
                                     className="tip-image"
+                                    style={{ display: 'block', margin: '0 auto' }}
                                   />
                                 </button>
                                 <span>{tipObj.text}</span>
@@ -262,12 +271,12 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     <p className="method-tag">{t.methods.bestForLabel} {method.best_for}</p>
                   )}
                   <div className="card-actions">
-                    <a href={`#step-${method.category}`} className="btn primary">
+                    <a href={`/${lang}/tutorials/${method.guide}`} className="btn primary">
                       {t.methods.viewGuide}
                     </a>
-                    <a href="#watch" className="btn outline">
+                    {/* <a href="#watch" className="btn outline">
                       {t.methods.videoBtn}
-                    </a>
+                    </a> */}
                   </div>
                 </article>
               ))}
@@ -288,7 +297,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
         {/* Tutorial Return Row */}
         <div className="guild-return-row">
-          <Link href={`/${lang}/guild`} className="btn outline small">
+          <Link href={`/${lang}/tutorials`} className="btn outline small">
             {t.nav.backToTutorials}
           </Link>
           <Link href={`/${lang}`} className="btn secondary small">

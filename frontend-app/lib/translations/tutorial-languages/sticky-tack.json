@@ -1,0 +1,130 @@
+{
+  "en": {
+    "breadcrumb": {
+      "home": "Home",
+      "tutorials": "Tutorials",
+      "current": "Loose Parts Tutorial"
+    },
+    "hero": {
+      "eyebrow": "EXTRA Generic Tutorial: Loose Parts",
+      "title": "Let's tighten up figures through easy fixes.",
+      "leadPart1": "In this guide we will be showing you how to use a small amount of sticky tack to tighten up some joints!",
+      "leadPart2": " Yep",
+      "jumpToTutorial": "Jump To The Tutorial",
+      "jumpToVideo": "Jump To Video Tutorial",
+      "pillBeginner": "Beginner friendly",
+      "pillMethods": "Multiple methods",
+      "pillNoAlterations": "No perminent figure alterations",
+      "highlightsLabel": "Guild highlights"
+    },
+    "tutorialMap": {
+      "title": "Tutorial Map",
+      "preFixChecklist": "1. Pre-Fix Checklist",
+      "stepByStep": "2. Step-By-Step Tutorial",
+      "videoTutorial": "3. Video Tutorial",
+      "otherMethods": "4. Other Methods",
+      "figureStats": "5. Figure Tutorial Stats"
+    },
+    "prep": {
+      "title": "Pre-Fix Checklist",
+      "description": "This tutorial will show you how to use the most effective fix for Loose Parts. Which is to use special glue made specifically for figures.",
+      "checklist": [
+        "Check and ensure, that the figure in question is not broken.",
+        "Purchase some sticky tack. Any tack works but we recommend the white or grey ones simply because they are harder to notice on figures.",
+        "Have a clean and orginized location to use the sticky tack."
+        ],
+      "readiness": "Readiness",
+      "complete": "complete",
+      "statusStart": "Start with your first checklist item.",
+      "statusDone": "You are fully prepared to begin!",
+      "statusProgress": "You are {percent}% ready. Keep going!"
+    },
+    "workflow": {
+      "title": "Repair Workflow: Using Sticky Tack",
+      "intro": "Expand each stage for exact actions, timing, and stop signs.",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Stage 1: Diagnose Where The Issue Is",
+          "content": ["Identify what peices are loose for you to apply this tack."],
+          "tips": [
+            ""
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "Stage 2: Spit Some Tack On It",
+          "content": ["After isolating what piece(s) are loose the next thing to do is to tack it."],
+          "tips": [
+            ""
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "Stage 3: Check and Clean Up",
+          "content": ["Since this is the most effective method to solve these type of loose part problems. That pretty much it."],
+          "tips": [
+            ""
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "Video Tutorial",
+      "description": "This is the visual version of the tutorial. Both have the same set of information only in a visual method. Please feel free to follow our YouTube channel. ",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "Using Sticky Tack to Solve Loose Pieces on Figures",
+      "videoFallback": "Your browser does not support embedded video playback."
+    },
+    "methods": {
+      "title": "Other Fixes for Loose Parts",
+      "description": "This is a directory for other fixes that very in effectiveness. Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.",
+      "costLabel": "Cost:",
+      "effectivenessLabel": "Effectiveness:",
+      "bestForLabel": "Best For:",
+      "viewGuide": "View Guide",
+      "videoBtn": "Video",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "Using a Wet Paper Towel",
+          "description": "Stuffing a wet paper towel piece into a socked to apply friction. Due to this added friction the pieces should now \"stick\" onto each other.",
+          "cost": "Free",
+          "effectiveness": "Somewhat",
+          "best_for": "Slightly Loose Pieces",
+          "category": "free fix",
+          "guide": "wet-paper-towel"
+        },
+        {
+          "id": "micro-tack",
+          "title": "Using Special Glue",
+          "description": "Applying this special glue pretty much solves any loose parts you got. It's an amazing DIY tool for collectors!",
+          "cost": "Low - Moderate",
+          "effectiveness": "EXTREAMLY Effective",
+          "best_for": "Any piece or part",
+          "category": "special glue",
+          "guide": "loose-parts"
+        },
+        {
+          "id": "ptfe-tape",
+          "title": "Taking Up Space With Saran Wrap",
+          "description": "Similar to the Wet Paper Towel method's goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
+          "cost": "Low",
+          "effectiveness": "Somewhat",
+          "best_for": "Slightly Loose Pieces",
+          "category": "friction",
+          "guide": "saran-wrap"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "Most Viewed Tutorials",
+      "issuesTitle": "Most Common Issues"
+    },
+    "nav": {
+      "backToTutorials": "Back to Tutorials",
+      "backHome": "Back Home",
+      "backToTop": "Back To Top"
+    }
+  }
+}

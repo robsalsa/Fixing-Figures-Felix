@@ -6,7 +6,10 @@ import Image from 'next/image';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import TutorialStats from '@/components/pages/TutorialStats';
-import translations from '@/lib/translations/tutorial-languages/stiff.json';
+import translations from '@/lib/translations/tutorial-languages/sticky-tack.json';
+// import translations from '@/lib/translations/tutorial-languages/loose.json';
+
+
 
 interface LoosePartsPageProps {
   params: Promise<{ lang: string }>;
@@ -16,6 +19,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
   const [lang, setLang] = useState<string>('en');
   const [expandedStep, setExpandedStep] = useState<string>('diagnose');
   const [prepPercent, setPrepPercent] = useState<number>(0);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   useEffect(() => {
     params.then((p) => setLang(p.lang));
@@ -46,9 +50,14 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <div className="container guild-trace-inner">
           <Link href={`/${lang}`}>{t.breadcrumb.home}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/${lang}/guild`}>{t.breadcrumb.tutorials}</Link>
+          <Link href={`/${lang}/tutorials`}>{t.breadcrumb.tutorials}</Link>
           <span aria-hidden="true">/</span>
-          <span className="current">{t.breadcrumb.current}</span>
+          <Link href={`/${lang}/tutorials/loose-parts`}>Loose Parts Tutorial</Link>
+          <span aria-hidden="true">/</span>
+          <span className="current">Other</span>
+          <span aria-hidden="true">/</span>
+          <span className="current">Sticky Tack</span>
+          
         </div>
       </nav>
 
@@ -62,8 +71,8 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
               <p className="hero-lead">
                 {t.hero.leadPart1}
                 {/* <a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>,{' '}
-                <a href="https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.kikiLinkText}</a> */}
-                {/* {t.hero.leadPart2}<a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>. */}
+                <a href="https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.kikiLinkText}</a>
+                {t.hero.leadPart2}<a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>. */}
               </p>
               <div className="hero-cta-row">
                 <a href="#workflow" className="btn primary">
@@ -165,19 +174,11 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                       ))}
                       <ul>
                         {step.tips.map((tip, idx) => {
-                          if (typeof tip === 'object' && tip !== null && 'video' in tip) {
-                            const tipObj = tip as { text: string; video: string };
+                          if (typeof tip === 'object' && tip !== null && 'link' in tip) {
+                            const tipObj = tip as { text: string; link: string };
                             return (
-                              <li key={idx} className="tip-with-video">
-                                <video
-                                  src={tipObj.video}
-                                  autoPlay
-                                  loop
-                                  muted
-                                  playsInline
-                                  style={{ width: '100%', maxWidth: 480, borderRadius: 8 }}
-                                />
-                                <span>{tipObj.text}</span>
+                              <li key={idx}>
+                                <a href={tipObj.link} style={{ color: 'blue' }} target="_blank" rel="noopener noreferrer">{tipObj.text}</a>
                               </li>
                             );
                           }
@@ -185,13 +186,21 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                             const tipObj = tip as { text: string; image: string };
                             return (
                               <li key={idx} className="tip-with-image">
-                                <Image
-                                  src={tipObj.image}
-                                  alt={tipObj.text}
-                                  width={120}
-                                  height={120}
-                                  className="tip-image"
-                                />
+                                <button
+                                  type="button"
+                                  onClick={() => setLightbox({ src: tipObj.image, alt: tipObj.text })}
+                                  style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+                                  aria-label={`View ${tipObj.text} image`}
+                                >
+                                  <Image
+                                    src={tipObj.image}
+                                    alt={tipObj.text}
+                                    width={200}
+                                    height={200}
+                                    className="tip-image"
+                                    style={{ display: 'block', margin: '0 auto' }}
+                                  />
+                                </button>
                                 <span>{tipObj.text}</span>
                               </li>
                             );
@@ -270,12 +279,12 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     <p className="method-tag">{t.methods.bestForLabel} {method.best_for}</p>
                   )}
                   <div className="card-actions">
-                    <a href={`#step-${method.category}`} className="btn primary">
+                    <a href={`/${lang}/tutorials/${method.guide}`} className="btn primary">
                       {t.methods.viewGuide}
                     </a>
-                    <a href="#watch" className="btn outline">
+                    {/* <a href="#watch" className="btn outline">
                       {t.methods.videoBtn}
-                    </a>
+                    </a> */}
                   </div>
                 </article>
               ))}
@@ -287,7 +296,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="goal-section" id="stats">
           <div className="container">
             <TutorialStats
-              tutorialSlug="stiff-parts"
+              tutorialSlug="loose-parts"
               viewsTitle={t.stats.viewsTitle}
               issuesTitle={t.stats.issuesTitle}
             />
@@ -296,7 +305,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
         {/* Tutorial Return Row */}
         <div className="guild-return-row">
-          <Link href={`/${lang}/guild`} className="btn outline small">
+          <Link href={`/${lang}/tutorials`} className="btn outline small">
             {t.nav.backToTutorials}
           </Link>
           <Link href={`/${lang}`} className="btn secondary small">
@@ -307,6 +316,67 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           </a>
         </div>
       </main>
+
+      {lightbox && (
+        <div
+          className="lightbox-overlay"
+          onClick={() => setLightbox(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'relative',
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              background: '#fff',
+              borderRadius: '12px',
+              padding: '16px',
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => setLightbox(null)}
+              aria-label="Close image"
+              style={{
+                position: 'absolute',
+                top: '8px',
+                right: '8px',
+                background: '#333',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '32px',
+                height: '32px',
+                fontSize: '18px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                lineHeight: 1,
+              }}
+            >
+              &times;
+            </button>
+            <Image
+              src={lightbox.src}
+              alt={lightbox.alt}
+              width={600}
+              height={600}
+              style={{ maxWidth: '85vw', maxHeight: '80vh', objectFit: 'contain', borderRadius: '8px' }}
+            />
+            <p style={{ textAlign: 'center', marginTop: '8px', fontWeight: 600 }}>{lightbox.alt}</p>
+          </div>
+        </div>
+      )}
 
       <Footer lang={lang} />
     </div>

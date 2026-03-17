@@ -102,7 +102,8 @@
                     "cost": "Low",
                     "effectiveness": "Somewhat",
                     "best_for": "Larger Pieces",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "hair-dryer"
                 },
                 {
                     "id": "micro-tack",
@@ -111,7 +112,8 @@
                     "cost": "Low",
                     "effectiveness": "Moderate",
                     "best_for": "All Pieces",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "lubricant"
                 }
             ]
         },
@@ -228,7 +230,8 @@
                     "cost": "Bajo",
                     "effectiveness": "Algo Efectivo",
                     "best_for": "Piezas Más Grandes",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "hair-dryer"
                 },
                 {
                     "id": "micro-tack",
@@ -237,7 +240,8 @@
                     "cost": "Bajo",
                     "effectiveness": "Moderado",
                     "best_for": "Todas las Piezas",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "lubricant"
                 }
             ]
         },
@@ -354,7 +358,8 @@
                     "cost": "低い",
                     "effectiveness": "やや効果的",
                     "best_for": "大きなパーツ",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "hair-dryer"
                 },
                 {
                     "id": "micro-tack",
@@ -363,7 +368,8 @@
                     "cost": "低い",
                     "effectiveness": "中程度",
                     "best_for": "すべてのパーツ",
-                    "category": "paid fix"
+                    "category": "paid fix",
+                    "guide": "lubricant"
                 }
             ]
         },

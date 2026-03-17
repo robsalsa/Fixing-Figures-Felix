@@ -128,7 +128,7 @@ export default function GuildRouterPage({ params }: GuildRouterPageProps) {
                     </div>
                   )}
                   <div className="card-actions">
-                    <Link href={`/${lang}/guild/${guild.href}`} className="btn primary" style={{ flex: '1' }}>
+                    <Link href={`/${lang}/tutorials/${guild.href}`} className="btn primary" style={{ flex: '1' }}>
                       Let's Fix It!
                     </Link>
                     {/* <a href="#" className="btn outline" style={{ flex: '1' }} onClick={(e) => e.preventDefault()}>
