@@ -6,7 +6,7 @@ import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import DynamicFigureStats from '@/components/pages/DynamicFigureStats';
 import RankingCard from '@/components/pages/RankingCard';
-import { getTopFiguresByMentions, getTopBrandsByQCIssues, getTopIssues } from '@/lib/supabase/figure-data/figureFunctions';
+import { getTopFiguresByMentions, getTopBrandsByQCIssues, getTopIssues, getTopTutorialViews } from '@/lib/supabase/figure-data/figureFunctions';
 import homeTranslations from '@/lib/translations/home.json';
 
 function NavigationSkeleton() {
@@ -44,14 +44,17 @@ async function HomePageContent({ params }: HomePageProps) {
 
 	// Fetch top X figures from Supabase
 	const topFigures = await getTopFiguresByMentions(10);
-	
+
 	// Fetch all brands and issues for expandable cards
 	// We fetch all (1000 is practical max) and slice for preview
 	const allBrands = await getTopBrandsByQCIssues(1000);
 	const topBrands = allBrands.slice(0, 7); // First 7 for preview
-	
+
 	const allIssues = await getTopIssues(1000);
 	const topIssues = allIssues.slice(0, 4);
+
+	const allTutorialViews = await getTopTutorialViews(1000);
+	const topTutorialViews = allTutorialViews.slice(0, 4);
 
 	return (
 		<>
@@ -68,9 +71,12 @@ async function HomePageContent({ params }: HomePageProps) {
 								<Link href={`/${lang}/questionnaire`} className="btn primary">
 									{t.questionnaireCTA}
 								</Link>
-								<a href="#guides" className="btn outline">
+								{/* <a href="#guides" className="btn outline">
 									{t.communityStatsCTA}
-								</a>
+								</a> */}
+								<Link href={`/${lang}/tutorials`} className="btn outline">
+									{t.communityStatsCTA}
+								</Link>
 							</div>
 						</div>
 
@@ -87,6 +93,8 @@ async function HomePageContent({ params }: HomePageProps) {
 						</figure> */}
 					</div>
 				</section>
+
+				
 
 				{/* Mission Section */}
 				<section id="about" className="goalSection">
@@ -120,24 +128,23 @@ async function HomePageContent({ params }: HomePageProps) {
 								</div>
 							</div>
 
-						<DynamicFigureStats
-							figures={topFigures}
-							lang={lang}
-							translations={{
-								communityQAStats: t.communityQAStats,
-								warningNotice: t.warningNotice,
-								warningText: t.warningText,
-								reportIssuesCTA: t.reportIssuesCTA,
-							}}
-						/>
+							<DynamicFigureStats
+								figures={topFigures}
+								lang={lang}
+								translations={{
+									communityQAStats: t.communityQAStats,
+									warningNotice: t.warningNotice,
+									warningText: t.warningText,
+									reportIssuesCTA: t.reportIssuesCTA,
+								}}
+							/>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
 
-			{/* Featured Guides Section */}
-			<section id="guides" className="featuredGuides">
+				{/* Featured Guides Section */}
+				<section id="guides" className="featuredGuides">
 				<div className="container">
-					{/* <h3>{t.mostCollectedDataTitle}</h3> */}
 						<div className="cards">
 							<RankingCard
 								title={t.brandsWithQCTitle}
@@ -159,11 +166,11 @@ async function HomePageContent({ params }: HomePageProps) {
 
 							<RankingCard
 								title={t.viewedIssuesTitle}
-								items={[]}
-								allItems={[]}
+								items={topTutorialViews}
+								allItems={allTutorialViews}
 								description={t.viewedIssuesDesc}
 								linkText={t.peekAtStatsLink}
-								noDataText="Coming soon"
+								noDataText="No view data yet"
 							/>
 						</div>
 					</div>

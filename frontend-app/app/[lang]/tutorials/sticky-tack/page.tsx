@@ -318,7 +318,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="goal-section" id="stats">
           <div className="container">
             <TutorialStats
-              tutorialSlug="loose-parts"
+              tutorialSlug="sticky-tack"
               viewsTitle={t.stats.viewsTitle}
               issuesTitle={t.stats.issuesTitle}
             />
