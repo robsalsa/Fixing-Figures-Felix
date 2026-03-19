@@ -38,6 +38,8 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           <Link href={`/${lang}/tutorials`}>{t.breadcrumb.tutorials}</Link>
           <span aria-hidden="true">/</span>
           <span className="current">{t.breadcrumb.current}</span>
+          <span aria-hidden="true">/</span>
+          <span className="current">{t.breadcrumb.actual}</span>
         </div>
       </nav>
 
@@ -204,12 +206,17 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
                               const tipStr = tip as string;
                               const isCallout = step.tips[idx - 1] === '*!*' || step.tips[idx + 1] === '*!*';
+                              const isNote = tipStr.startsWith('NOTE:') || tipStr.startsWith('Note:');
 
-                              if (isCallout) {
+                              if (isCallout || isNote) {
                                 return (
                                   <li key={idx} className="wf-callout">
                                     <span className="wf-callout-icon">&#9888;</span>
-                                    <span>{tipStr}</span>
+                                    {isNote ? (
+                                      <span><strong>{tipStr.slice(0, tipStr.indexOf(':') + 1)}</strong>{tipStr.slice(tipStr.indexOf(':') + 1)}</span>
+                                    ) : (
+                                      <span>{tipStr}</span>
+                                    )}
                                   </li>
                                 );
                               }
@@ -243,31 +250,33 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
             <div className="video-grid">
               <article className="video-card">
                 <h3>{t.video.videoTitle}</h3>
-                <div
+               <div
                   style={{
                     width: '100%',
-                    paddingBottom: '56.25%',
+                    maxWidth: '300px',
+                    margin: '0 auto',
+                    paddingBottom: 'min(177.78%, 533px)',
                     position: 'relative',
                     backgroundColor: 'black',
                     borderRadius: '12px',
+                    overflow: 'hidden',
                   }}
                 >
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
+                  <iframe
+                    src="https://www.youtube.com/embed/hvD6aTdfOGg"
+                    title={t.video.videoTitle}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                     style={{
                       position: 'absolute',
                       top: 0,
                       left: 0,
                       width: '100%',
                       height: '100%',
+                      border: 'none',
                       borderRadius: '12px',
                     }}
-                  >
-                    <source src="/assets/videos/loose(spider).mp4" type="video/mp4" />
-                    {t.video.videoFallback}
-                  </video>
+                  />
                 </div>
               </article>             
             </div>

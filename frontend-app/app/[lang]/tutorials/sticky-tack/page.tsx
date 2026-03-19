@@ -7,8 +7,6 @@ import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import TutorialStats from '@/components/pages/TutorialStats';
 import translations from '@/lib/translations/tutorial-languages/sticky-tack.json';
-// import translations from '@/lib/translations/tutorial-languages/loose.json';
-
 
 
 interface LoosePartsPageProps {
@@ -40,12 +38,11 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           <span aria-hidden="true">/</span>
           <Link href={`/${lang}/tutorials`}>{t.breadcrumb.tutorials}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/${lang}/tutorials/loose-parts`}>Loose Parts Tutorial</Link>
+          <Link href={`/${lang}/tutorials/loose-parts`}>{t.breadcrumb.from}</Link>
           <span aria-hidden="true">/</span>
-          <span className="current">Other</span>
+          <Link href={`/${lang}/tutorials/loose-parts#method-library`}>{t.breadcrumb.other}</Link>
           <span aria-hidden="true">/</span>
-          <span className="current">Sticky Tack</span>
-          
+          <span className="current">{t.breadcrumb.actual}</span>
         </div>
       </nav>
 
@@ -213,12 +210,17 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
                               const tipStr = tip as string;
                               const isCallout = tips[idx - 1] === '*!*' || tips[idx + 1] === '*!*';
+                              const isNote = tipStr.startsWith('NOTE:') || tipStr.startsWith('Note:');
 
-                              if (isCallout) {
+                              if (isCallout || isNote) {
                                 return (
                                   <li key={idx} className="wf-callout">
                                     <span className="wf-callout-icon">&#9888;</span>
-                                    <span>{tipStr}</span>
+                                    {isNote ? (
+                                      <span><strong>{tipStr.slice(0, tipStr.indexOf(':') + 1)}</strong>{tipStr.slice(tipStr.indexOf(':') + 1)}</span>
+                                    ) : (
+                                      <span>{tipStr}</span>
+                                    )}
                                   </li>
                                 );
                               }
@@ -251,32 +253,65 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
             <div className="video-grid">
               <article className="video-card">
-                <h3>{t.video.videoTitle}</h3>
+                <h3>{t.video.videoTitle2}</h3>
                 <div
                   style={{
                     width: '100%',
-                    paddingBottom: '56.25%',
+                    maxWidth: '300px',
+                    margin: '0 auto',
+                    paddingBottom: 'min(177.78%, 533px)',
                     position: 'relative',
                     backgroundColor: 'black',
                     borderRadius: '12px',
+                    overflow: 'hidden',
                   }}
                 >
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
+                  <iframe
+                    src="https://www.youtube.com/embed/hvD6aTdfOGg"
+                    title={t.video.videoTitle}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                     style={{
                       position: 'absolute',
                       top: 0,
                       left: 0,
                       width: '100%',
                       height: '100%',
+                      border: 'none',
                       borderRadius: '12px',
                     }}
-                  >
-                    <source src="/assets/videos/loose(spider).mp4" type="video/mp4" />
-                    {t.video.videoFallback}
-                  </video>
+                  />
+                </div>
+              </article>
+               <article className="video-card">
+                <h3>{t.video.videoTitle}</h3>
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '300px',
+                    margin: '0 auto',
+                    paddingBottom: 'min(177.78%, 533px)',
+                    position: 'relative',
+                    backgroundColor: 'black',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/AFAdoqRf-n4"
+                    title={t.video.videoTitle}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                      borderRadius: '12px',
+                    }}
+                  />
                 </div>
               </article>             
             </div>

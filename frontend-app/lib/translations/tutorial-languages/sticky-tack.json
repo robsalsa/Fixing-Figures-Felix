@@ -3,7 +3,9 @@
     "breadcrumb": {
       "home": "Home",
       "tutorials": "Tutorials",
-      "current": "Sticky Tack Tutorial"
+      "from": "Loose-Parts",
+      "other":"Other Methods",
+      "actual": "Sticky Tack Tutorial"
     },
     "hero": {
       "eyebrow": "(EXTRA) Generic Tutorial: Loose Parts",
@@ -134,6 +136,7 @@
       "description": "This is the visual version of the tutorial. Both have the same set of information only in a visual method. Please feel free to follow our YouTube channel. ",
       "channelName": "Pilk Milk Factory",
       "videoTitle": "Using Sticky Tack to Solve Loose Pieces on Figures",
+      "videoTitle2":"Using Sticy Tack to Tighten Hand Pieces",
       "videoFallback": "Your browser does not support embedded video playback."
     },
     "methods": {
@@ -164,16 +167,6 @@
           "best_for": "Any piece or part",
           "category": "special glue",
           "guide": "loose-parts"
-        },
-        {
-          "id": "ptfe-tape",
-          "title": "Taking Up Space With Saran Wrap",
-          "description": "Similar to the Wet Paper Towel method, the goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
-          "cost": "Low",
-          "effectiveness": "Somewhat",
-          "best_for": "Slightly Loose Pieces",
-          "category": "friction",
-          "guide": "saran-wrap"
         }
       ]
     },
@@ -191,7 +184,9 @@
     "breadcrumb": {
       "home": "Inicio",
       "tutorials": "Tutoriales",
-      "current": "Tutorial de Masilla Adhesiva"
+      "from": "Piezas Sueltas",
+      "other": "Otros Métodos",
+      "actual": "Tutorial de Masilla Adhesiva"
     },
     "hero": {
       "eyebrow": "(EXTRA) Tutorial General: Piezas Sueltas",
@@ -322,6 +317,7 @@
       "description": "Esta es la versión visual del tutorial. Ambos tienen el mismo conjunto de información solo que en un método visual. Por favor no dudes en seguir nuestro canal de YouTube. ",
       "channelName": "Pilk Milk Factory",
       "videoTitle": "Usando Masilla Adhesiva para Resolver Piezas Sueltas en Figuras",
+      "videoTitle2": "Usando Masilla Adhesiva para Apretar Piezas de Manos",
       "videoFallback": "Tu navegador no soporta la reproducción de video integrada."
     },
     "methods": {
@@ -352,16 +348,6 @@
           "best_for": "Cualquier pieza o parte",
           "category": "special glue",
           "guide": "loose-parts"
-        },
-        {
-          "id": "ptfe-tape",
-          "title": "Ocupando Espacio con Plástico Envolvente",
-          "description": "Similar al método de la Toalla de Papel Mojada, el objetivo es hacer lo mismo. Ocupar espacio y causar más fricción para que las piezas sueltas se \"peguen\".",
-          "cost": "Bajo",
-          "effectiveness": "Algo",
-          "best_for": "Piezas Ligeramente Sueltas",
-          "category": "friction",
-          "guide": "saran-wrap"
         }
       ]
     },
@@ -379,7 +365,9 @@
     "breadcrumb": {
       "home": "ホーム",
       "tutorials": "チュートリアル",
-      "current": "粘着タックチュートリアル"
+      "from": "パーツの緩み",
+      "other": "その他の方法",
+      "actual": "粘着タックチュートリアル"
     },
     "hero": {
       "eyebrow": "（追加）一般チュートリアル：パーツの緩み",
@@ -510,6 +498,7 @@
       "description": "これはチュートリアルのビジュアル版です。両方とも同じ情報を含んでいますが、視覚的な方法で提供されます。ぜひ私たちのYouTubeチャンネルをフォローしてください。",
       "channelName": "Pilk Milk Factory",
       "videoTitle": "粘着タックを使用してフィギュアの緩んだパーツを修理する",
+      "videoTitle2": "粘着タックを使用して手のパーツを締める",
       "videoFallback": "お使いのブラウザは埋め込み動画の再生に対応していません。"
     },
     "methods": {
@@ -540,16 +529,6 @@
           "best_for": "あらゆるパーツや部品",
           "category": "special glue",
           "guide": "loose-parts"
-        },
-        {
-          "id": "ptfe-tape",
-          "title": "ラップで隙間を埋める",
-          "description": "濡れたペーパータオル方法と同様に、目的は同じです。スペースを占有し、緩んだパーツが「くっつく」ようにより多くの摩擦を生み出します。",
-          "cost": "低",
-          "effectiveness": "やや効果的",
-          "best_for": "少し緩んだパーツ",
-          "category": "friction",
-          "guide": "saran-wrap"
         }
       ]
     },

@@ -235,12 +235,17 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
                               const tipStr = tip as string;
                               const isCallout = step.tips[idx - 1] === '*!*' || step.tips[idx + 1] === '*!*';
+                              const isNote = tipStr.startsWith('NOTE:') || tipStr.startsWith('Note:');
 
-                              if (isCallout) {
+                              if (isCallout || isNote) {
                                 return (
                                   <li key={idx} className="wf-callout">
                                     <span className="wf-callout-icon">&#9888;</span>
-                                    <span>{tipStr}</span>
+                                    {isNote ? (
+                                      <span><strong>{tipStr.slice(0, tipStr.indexOf(':') + 1)}</strong>{tipStr.slice(tipStr.indexOf(':') + 1)}</span>
+                                    ) : (
+                                      <span>{tipStr}</span>
+                                    )}
                                   </li>
                                 );
                               }

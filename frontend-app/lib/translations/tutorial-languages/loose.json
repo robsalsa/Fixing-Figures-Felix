@@ -3,7 +3,8 @@
     "breadcrumb": {
       "home": "Home",
       "tutorials": "Tutorials",
-      "current": "Loose Parts Tutorial"
+      "current": "Loose Parts Tutorial",
+      "actual":"Special Glue (Kiki or MPS)"
     },
     "hero": {
       "eyebrow": "Generic Tutorial: Loose Parts",
@@ -138,7 +139,11 @@
             
             {
               "text": "",
-              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait.jpg"
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait2.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait3.jpg"
             }
           ]
         },
@@ -197,16 +202,6 @@
           "best_for": "Small Accessories & Hand Pieces",
           "category": "special glue",
           "guide": "sticky-tack"
-        },
-        {
-          "id": "ptfe-tape",
-          "title": "Taking Up Space With Saran Wrap",
-          "description": "Similar to the Wet Paper Towel method, the goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
-          "cost": "Low",
-          "effectiveness": "Somewhat",
-          "best_for": "Slightly Loose Pieces",
-          "category": "friction",
-          "guide": "saran-wrap"
         }
       ]
     },
@@ -224,7 +219,8 @@
     "breadcrumb": {
       "home": "Inicio",
       "tutorials": "Tutoriales",
-      "current": "Tutorial de Piezas Sueltas"
+      "current": "Tutorial de Piezas Sueltas",
+      "actual": "Pegamento Especial (Kiki o MPS)"
     },
     "hero": {
       "eyebrow": "Tutorial General: Piezas Sueltas",
@@ -358,7 +354,11 @@
             "------------------------------------------------------------------------------------",
             {
               "text": "",
-              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait.jpg"
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait2.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait3.jpg"
             }
           ]
         },
@@ -417,16 +417,6 @@
           "best_for": "Accesorios Pequeños y Piezas de Manos",
           "category": "special glue",
           "guide": "sticky-tack"
-        },
-        {
-          "id": "ptfe-tape",
-          "title": "Ocupando Espacio con Plástico Envolvente",
-          "description": "Similar al método de la Toalla de Papel Mojada, el objetivo es hacer lo mismo. Ocupar espacio y causar más fricción para que las piezas sueltas se \"peguen\".",
-          "cost": "Bajo",
-          "effectiveness": "Algo",
-          "best_for": "Piezas Ligeramente Sueltas",
-          "category": "friction",
-          "guide": "saran-wrap"
         }
       ]
     },
@@ -444,7 +434,8 @@
     "breadcrumb": {
       "home": "ホーム",
       "tutorials": "チュートリアル",
-      "current": "パーツの緩み修理チュートリアル"
+      "current": "パーツの緩み修理チュートリアル",
+      "actual": "特殊接着剤（KikiまたはMPS）"
     },
     "hero": {
       "eyebrow": "一般チュートリアル：パーツの緩み",
@@ -578,7 +569,11 @@
             "------------------------------------------------------------------------------------",
             {
               "text": "",
-              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait.jpg"
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait2.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait3.jpg"
             }
           ]
         },
@@ -637,16 +632,6 @@
           "best_for": "小さなアクセサリーと手のパーツ",
           "category": "special glue",
           "guide": "sticky-tack"
-        },
-        {
-          "id": "ptfe-tape",
-          "title": "ラップで隙間を埋める",
-          "description": "濡れたペーパータオル方法と同様に、目的は同じです。スペースを占有し、緩んだパーツが「くっつく」ようにより多くの摩擦を生み出します。",
-          "cost": "低",
-          "effectiveness": "やや効果的",
-          "best_for": "少し緩んだパーツ",
-          "category": "friction",
-          "guide": "saran-wrap"
         }
       ]
     },
