@@ -263,7 +263,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                   }}
                 >
                   <iframe
-                    src="https://www.youtube.com/embed/hvD6aTdfOGg"
+                    src="https://www.youtube.com/embed/ukrd4e7BNKA"
                     title={t.video.videoTitle}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
