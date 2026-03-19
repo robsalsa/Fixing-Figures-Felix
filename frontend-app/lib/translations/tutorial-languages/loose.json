@@ -8,16 +8,17 @@
     "hero": {
       "eyebrow": "Generic Tutorial: Loose Parts",
       "title": "Let's tighten up figures through easy fixes.",
-      "leadPart1": "In this guild we will show you how to apply a \"Special Glue\" that will tighten loose joints. Note that there is many of these types of glues for example: ",
+      "leadPart1": "In this guide we will show you how to apply a \"Special Glue\" that will tighten loose joints. Note that there are many of these types of glues, for example: ",
       "mpsLinkText": "MPS Fix Loose Joints",
       "kikiLinkText": "Kiki Fix Loose Joints Solution",
-      "leadPart2": ", and many others, but for the purposes of this guild we will be using ",
+      "leadPart2": ", and many others, but for the purposes of this guide we will be using ",
       "jumpToTutorial": "Jump To The Tutorial",
+      "jumpToOther":"Jump to Other Guides",
       "jumpToVideo": "Jump To Video Tutorial",
       "pillBeginner": "Beginner friendly",
       "pillMethods": "Multiple methods",
-      "pillNoAlterations": "No perminent figure alterations",
-      "highlightsLabel": "Guild highlights"
+      "pillNoAlterations": "No permanent figure alterations",
+      "highlightsLabel": "Guide highlights"
     },
     "tutorialMap": {
       "title": "Tutorial Map",
@@ -31,11 +32,11 @@
       "title": "Pre-Fix Checklist",
       "description": "This tutorial will show you how to use the most effective fix for Loose Parts. Which is to use special glue made specifically for figures.",
       "checklist": [
-        "Check and ensure, that the figure in question is not broken.",
-        "Purchase glue. In this case there is multiple glues to use but for the purposes of this tutorial I will be using \"MPS Fix Loose Joints\"",
-        "Have a clean and orginized location to apply glue. Note that the glue flakes after application so be mindful after application.",
-        "Prepare glue. In this case the glue in question should have a tube to directly apply in locations needed. Ensure that the tube is clear from harden glue.",
-        "Although this fix is not permenent it will make it a bit difficult to seperate parts next time. Ensure that the part that is loose is not an interchangable piece."
+        "Check and ensure that the figure in question is not broken.",
+        "Purchase glue. In this case there are multiple glues to use but for the purposes of this tutorial I will be using \"MPS Fix Loose Joints\"",
+        "Have a clean and organized location to apply glue. Note that the glue flakes after application so be mindful after application.",
+        "Prepare glue. In this case the glue in question should have a tube to directly apply in locations needed. Ensure that the tube is clear from hardened glue.",
+        "Although this fix is not permanent it will make it a bit difficult to separate parts next time. Ensure that the part that is loose is not an interchangeable piece."
       ],
       "readiness": "Readiness",
       "complete": "complete",
@@ -50,52 +51,113 @@
         {
           "id": "diagnose",
           "title": "Stage 1: Diagnose Where The Issue Is",
-          "content": ["Above are images of possible locations of loose joints or parts. Within these areas are where the glue will be applied"],
+          "content": [
+            "(Above is an image of the figma Solid Snake from MG2. The torso ball joint was very loose to the point it dislodged.)"
+          ],
           "tips": [
-            "After identifying what part(s) are loose the next thing to do is find out what other pieces are causing or also loose.",
-            "For example looking at the Hinge Joint (Knee Area), here is most likely only once part that needs the resistance.",
-            "In the other hand sections like the Ball Joint we will need to \"glue\" both ball and sockets where they meet. ",
             "------------------------------------------------------------------------------------",
-            { "text": "Ball Joint", "image": "/assets/part-images/types_of_ball_joints(revoltech).png" },
-            { "text": "Hinge Joint", "image": "/assets/part-images/Hinge(revoltech).png" },
-            { "text": "Double Hinge", "image": "/assets/part-images/double_hinge(mafex).png" },
-            { "text": "Swivel Joint", "image": "/assets/part-images/swivel(marvel_legends).png" },
             "------------------------------------------------------------------------------------",
-            "In this section I will be tightening up this Arkham Knight Version 2.0 by Kaiyodo Amazing Yamaguchi.",
-            "This figure has both a Hinge Joint and Ball Joint, so I will be applying glue on both locations."
+            "Isolate issue area.",
+            "In this case the issue area is the torso area where the ball joint is located.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "The most important area for this guide is the socket where the ball joint will be going into",
+            {
+              "text": "Solid Snake Torso dislodged ",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off.jpg"
+            }
           ]
         },
         {
           "id": "tighten",
           "title": "Stage 2: Spit Some Glue To It",
-          "content": ["After isolating what piece(s) are loose the next thing to do is glue it."],
+          "content": [
+            "After isolating what piece(s) are loose the next thing to do is glue it."
+          ],
           "tips": [
-            "Now that you have the locations where to apply this \"glue\" you will simply apply it onto those locations",
             "------------------------------------------------------------------------------------",
-            "Important thing to note is that this glue can be applied directly onto whatever area on a figure but there is optimal locations for certain parts.",
-            "As mentioned this Arkham Knight has both a Hinge and a Ball Joint, while you simply glue all points this part touches to stiffen up the figure. For a Hinge its a lot better to place the glue within the socket, if possible.",
-            "In this case this Arkham Knight's hinge comes off so I will be applying the glue within the socket.",
-            "If in another case where the henge does NOT come apart its best to apply the glue within the available slit on the hinge. Then moving the figure to ensure the glue seeping to the socket."
+            "------------------------------------------------------------------------------------",
+            "As mentioned before the socket is the most important spot in this guide.",
+            "The most optimal location to \"glue\" is the socket.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Apply the glue of your choice within the socket, if available.",
+            "Note: If the socket is NOT easily accessible without breaking the figure or its joints, apply glue over the joint. (View video tutorial for more)",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "Find socket if available",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off2.jpg"
+            },
+            {
+              "text": "Apply glue",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off3.jpg"
+            },
+            {
+              "text": "Reattach parts",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off5.jpg"
+            }
           ]
         },
         {
           "id": "lock",
           "title": "Stage 3: Check and Clean Up",
-          "content": ["Since this is the most effective method to solve these type of loose part problems. That pretty much it."],
+          "content": [
+            "Now that you have applied the glue of your choice and reattached the figure back together again. Next is to ensure it worked."
+          ],
           "tips": [
-            "For whatever excess of glue was used simply use a paper towel to clean it off.",
-            "Note that some spill over is perfectly fine when it only spill onto the same piece",
-            "In the other hand if the spill of glue is reaching another unrelated piece, it's recommended to clean up before the glue settles."
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "While the glue is still not settled, it is good practice to move the joint in question.",
+            "In this case since we are fixing Solid Snake's ball joint torso, we will ensure that the entire socket is coated by twisting the torso.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off6.jpg"
+            },
+            {
+              "text": "Twisting to coat ball joint and socket",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off7.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off8.jpg"
+            }
+          ]
+        },
+         {
+          "id": "done",
+          "title": "Done!",
+          "content": [
+            "...and that is it!"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait.jpg"
+            }
           ]
         },
         {
           "id": "other-options",
           "title": "Other Options for Figure Glue",
-          "content": ["While in this tutorial the use of the MPS Fix Loose Joint glue this is not the only glue of this type. Luckily, there is multiple glues for you to use."],
+          "content": [
+            "While in this tutorial we used the MPS Fix Loose Joint glue, this is not the only glue of this type. Luckily, there are multiple glues for you to use."
+          ],
           "tips": [
-            { "text": "MPS Fix Loose Joints (Amazon)", "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2" },
-            { "text": "Kiki Fix Loose Joints Solution (Amazon)", "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" },
-            "*!* Note that unfortunately MPS Fix Loose Joints is the ONLY glue we can vouch for. Simple because we own and use this glue specifically *!*"
+            {
+              "text": "MPS Fix Loose Joints (Amazon)",
+              "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2"
+            },
+            {
+              "text": "Kiki Fix Loose Joints Solution (Amazon)",
+              "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1"
+            },
+            "*!* Note that unfortunately MPS Fix Loose Joints is the ONLY glue we can vouch for. Simply because we own and use this glue specifically *!*"
           ]
         }
       ]
@@ -109,7 +171,7 @@
     },
     "methods": {
       "title": "Other Fixes for Loose Parts",
-      "description": "This is a directory for other fixes that very in effectiveness. Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.",
+      "description": "This is a directory for other fixes that vary in effectiveness. Note that these fixes are sourced from the Internet and personal accounts, mostly from Reddit but verified by our Team.",
       "costLabel": "Cost:",
       "effectivenessLabel": "Effectiveness:",
       "bestForLabel": "Best For:",
@@ -119,7 +181,7 @@
         {
           "id": "warm-water",
           "title": "Using a Wet Paper Towel",
-          "description": "Stuffing a wet paper towel piece into a socked to apply friction. Due to this added friction the pieces should now \"stick\" onto each other.",
+          "description": "Stuffing a wet paper towel piece into a socket to apply friction. Due to this added friction the pieces should now \"stick\" onto each other.",
           "cost": "Free",
           "effectiveness": "Somewhat",
           "best_for": "Slightly Loose Pieces",
@@ -129,7 +191,7 @@
         {
           "id": "micro-tack",
           "title": "Using a Dot of Sticky Tack",
-          "description": "Applying a well placed dot of sticky tack or sticky putty can go a long way. Best used for smaller pieces such as loose accesories, hand pieces, and other smaller parts on figures.",
+          "description": "Applying a well placed dot of sticky tack or sticky putty can go a long way. Best used for smaller pieces such as loose accessories, hand pieces, and other smaller parts on figures.",
           "cost": "Low",
           "effectiveness": "Moderate",
           "best_for": "Small Accessories & Hand Pieces",
@@ -139,7 +201,7 @@
         {
           "id": "ptfe-tape",
           "title": "Taking Up Space With Saran Wrap",
-          "description": "Similar to the Wet Paper Towel method's goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
+          "description": "Similar to the Wet Paper Towel method, the goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
           "cost": "Low",
           "effectiveness": "Somewhat",
           "best_for": "Slightly Loose Pieces",
@@ -167,16 +229,17 @@
     "hero": {
       "eyebrow": "Tutorial General: Piezas Sueltas",
       "title": "Ajustemos las figuras con arreglos fáciles.",
-      "leadPart1": "En este tutorial te mostraremos cómo aplicar un \"Pegamento Especial\" que apretará las articulaciones sueltas. Ten en cuenta que hay muchos tipos de estos pegamentos, por ejemplo: ",
+      "leadPart1": "En esta guía te mostraremos cómo aplicar un \"Pegamento Especial\" que apretará las articulaciones sueltas. Ten en cuenta que hay muchos tipos de estos pegamentos, por ejemplo: ",
       "mpsLinkText": "MPS Fix Loose Joints",
       "kikiLinkText": "Kiki Fix Loose Joints Solution",
-      "leadPart2": ", y muchos otros, pero para los propósitos de este tutorial usaremos ",
+      "leadPart2": ", y muchos otros, pero para los propósitos de esta guía usaremos ",
       "jumpToTutorial": "Ir al Tutorial",
+      "jumpToOther": "Ir a Otras Guías",
       "jumpToVideo": "Ir al Video Tutorial",
       "pillBeginner": "Para principiantes",
       "pillMethods": "Múltiples métodos",
       "pillNoAlterations": "Sin alteraciones permanentes a la figura",
-      "highlightsLabel": "Puntos destacados del tutorial"
+      "highlightsLabel": "Puntos destacados de la guía"
     },
     "tutorialMap": {
       "title": "Mapa del Tutorial",
@@ -209,64 +272,111 @@
         {
           "id": "diagnose",
           "title": "Etapa 1: Diagnosticar Dónde Está el Problema",
-          "content": ["Identifica qué piezas están sueltas para aplicar este pegamento."],
+          "content": [
+            "(Arriba hay una imagen del figma Solid Snake de MG2. La articulación de bola del torso estaba tan suelta que se desprendió.)"
+          ],
           "tips": [
-            "Averigua qué parte está suelta porque la ubicación donde irá el pegamento será según ciertas piezas. Por ejemplo, piezas como: ",
             "------------------------------------------------------------------------------------",
-            { "text": "Articulación de Bola", "image": "/assets/part-images/types_of_ball_joints(revoltech).png" },
-            { "text": "Articulación de Bisagra", "image": "/assets/part-images/Hinge(revoltech).png" },
-            { "text": "Doble Bisagra", "image": "/assets/part-images/double_hinge(mafex).png" },
-            { "text": "Articulación Giratoria", "image": "/assets/part-images/swivel(marvel_legends).png" },
-            "y más...",
             "------------------------------------------------------------------------------------",
-            "La razón por la que ponemos mucho énfasis en esto es porque dependiendo del tipo de articulación, la ubicación para aplicar este pegamento variará.",
-            "Algunas las aplicarás directamente en la pieza de la articulación como la Articulación de Bola, pero en algo como una Bisagra de Rodilla sería mejor aplicar el pegamento dentro del encaje.",
+            "Aísla el área del problema.",
+            "En este caso el área del problema es la zona del torso donde se encuentra la articulación de bola.",
             "------------------------------------------------------------------------------------",
-            "Estaré reparando tanto el Amazing Yamaguchi Arkham Knight como el Amazing Yamaguchi One Punch Man.",
-            "Con el Arkham Knight mostraré cómo aplicar el pegamento con Bisagras de Rodilla mientras que con One Punch Man mostraré cómo aplicar con una articulación de bola.",
-            "¡¡¡¡¡agregar imágenes aquí!!!!!"
+            "------------------------------------------------------------------------------------",
+            "El área más importante para esta guía es el encaje donde la articulación de bola se insertará.",
+            {
+              "text": "Torso de Solid Snake desprendido",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off.jpg"
+            }
           ]
         },
         {
           "id": "tighten",
           "title": "Etapa 2: Aplicar el Pegamento",
-          "content": ["Después de aislar qué pieza(s) están sueltas, lo siguiente es pegarlas."],
+          "content": [
+            "Después de aislar qué pieza(s) están sueltas, lo siguiente es pegarlas."
+          ],
           "tips": [
-            "Comenzando con el Arkham Knight, ya que con esta figura la bisagra de la rodilla está suelta, la mejor manera de aplicar el pegamento será retirando la parte superior de la pierna de la inferior.",
-            "Esto puede ser diferente en figuras que no sean Amazing Yamaguchi pero cuando se trata de piezas tipo bisagra, la parte que tiene este encaje: (IMAGEN AQUÍ DEL ENCAJE DEL ARKHAM KNIGHT) Será la parte donde se aplicará el pegamento.",
-            "Aplica unas gotas en el encaje, luego vuelve a ensamblar las partes, muévelas un poco para asegurar que ambas piezas estén completamente cubiertas, y deja que se asiente por unos minutos.",
-            "*!*",
-            "AGREGAR TRES IMÁGENES COMO IFIXIT PARA MOSTRAR MEJOR LO QUE ESTÁ PASANDO A TRAVÉS DEL TEXTO",
-            "*!*",
             "------------------------------------------------------------------------------------",
-            "*!*",
-            "Algo importante a tener en cuenta es que si la bisagra sigue suelta, aplica un poco más por el espacio dentro de la rodilla. Mueve la figura de nuevo para cubrir y deja que repose hasta que el pegamento solidifique.",
-            "*!*",
             "------------------------------------------------------------------------------------",
-            "Ahora es momento para las piezas tipo articulación de bola. Esta debería ser bastante fácil ya que una aplicación directa del pegamento será suficiente.",
-            "Ten en cuenta que dependiendo del tipo de articulación de bola, el método debería ser muy similar entre uno y otro.",
-            "*!*",
-            "MOSTRAR IMÁGENES DE LA ARTICULACIÓN DE BOLA DE ONE PUNCH MAN SIENDO AJUSTADA",
-            "*!*"
+            "Como se mencionó antes, el encaje es el punto más importante en esta guía.",
+            "La ubicación más óptima para \"pegar\" es el encaje.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Aplica el pegamento de tu elección dentro del encaje, si está disponible.",
+            "Nota: Si el encaje NO es fácilmente accesible sin romper la figura o sus articulaciones, aplica el pegamento sobre la articulación. (Ve el video tutorial para más detalles)",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "Encuentra el encaje si está disponible",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off2.jpg"
+            },
+            {
+              "text": "Aplica pegamento",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off3.jpg"
+            },
+            {
+              "text": "Vuelve a unir las piezas",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off5.jpg"
+            }
           ]
         },
         {
           "id": "lock",
           "title": "Etapa 3: Revisar y Limpiar",
-          "content": ["Ya que este es el método más efectivo para resolver este tipo de problemas con piezas sueltas. Eso es todo."],
+          "content": [
+            "Ahora que has aplicado el pegamento de tu elección y vuelto a unir la figura. Lo siguiente es asegurarte de que funcionó."
+          ],
           "tips": [
-            "Para cualquier exceso de pegamento usado, simplemente usa una toalla de papel para limpiarlo.",
-            "Ten en cuenta que un poco de derrame está perfectamente bien cuando solo se derrama sobre la misma pieza.",
-            "Por otro lado, si el derrame de pegamento está llegando a otra pieza no relacionada, se recomienda limpiar antes de que el pegamento se asiente."
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Mientras el pegamento aún no se ha asentado, es buena práctica mover la articulación en cuestión.",
+            "En este caso, ya que estamos arreglando la articulación de bola del torso de Solid Snake, nos aseguraremos de que todo el encaje esté cubierto girando el torso.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off6.jpg"
+            },
+            {
+              "text": "Girando para cubrir la articulación de bola y el encaje",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off7.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off8.jpg"
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "¡Listo!",
+          "content": [
+            "...¡y eso es todo!"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait.jpg"
+            }
           ]
         },
         {
           "id": "other-options",
           "title": "Otras Opciones de Pegamento para Figuras",
-          "content": ["Aunque en este tutorial usamos el pegamento MPS Fix Loose Joint, este no es el único pegamento de este tipo. Afortunadamente, hay múltiples pegamentos que puedes usar."],
+          "content": [
+            "Aunque en este tutorial usamos el pegamento MPS Fix Loose Joint, este no es el único pegamento de este tipo. Afortunadamente, hay múltiples pegamentos que puedes usar."
+          ],
           "tips": [
-             { "text": "MPS Fix Loose Joints (Amazon)", "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2" },
-            { "text": "Kiki Fix Loose Joints Solution (Amazon)", "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" },
+            {
+              "text": "MPS Fix Loose Joints (Amazon)",
+              "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2"
+            },
+            {
+              "text": "Kiki Fix Loose Joints Solution (Amazon)",
+              "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1"
+            },
             "*!* Ten en cuenta que desafortunadamente MPS Fix Loose Joints es el ÚNICO pegamento que podemos recomendar. Simplemente porque lo poseemos y usamos específicamente *!*"
           ]
         }
@@ -311,7 +421,7 @@
         {
           "id": "ptfe-tape",
           "title": "Ocupando Espacio con Plástico Envolvente",
-          "description": "Similar al objetivo del método de la Toalla de Papel Mojada, es hacer lo mismo. Ocupar espacio y causar más fricción para que las piezas sueltas se \"peguen\".",
+          "description": "Similar al método de la Toalla de Papel Mojada, el objetivo es hacer lo mismo. Ocupar espacio y causar más fricción para que las piezas sueltas se \"peguen\".",
           "cost": "Bajo",
           "effectiveness": "Algo",
           "best_for": "Piezas Ligeramente Sueltas",
@@ -339,16 +449,17 @@
     "hero": {
       "eyebrow": "一般チュートリアル：パーツの緩み",
       "title": "簡単な修理でフィギュアを引き締めましょう。",
-      "leadPart1": "このチュートリアルでは、緩んだ関節を引き締める「特殊接着剤」の使い方をお見せします。この種類の接着剤は多数あります。例えば：",
+      "leadPart1": "このガイドでは、緩んだ関節を引き締める「特殊接着剤」の使い方をお見せします。この種類の接着剤は多数あります、例えば：",
       "mpsLinkText": "MPS Fix Loose Joints",
       "kikiLinkText": "Kiki Fix Loose Joints Solution",
-      "leadPart2": "、その他多数ありますが、このチュートリアルでは",
+      "leadPart2": "、その他多数ありますが、このガイドでは",
       "jumpToTutorial": "チュートリアルへ",
+      "jumpToOther": "他のガイドへ",
       "jumpToVideo": "動画チュートリアルへ",
       "pillBeginner": "初心者向け",
       "pillMethods": "複数の方法",
-      "pillNoAlterations": "フィギュアへの恒久的な変更なし",
-      "highlightsLabel": "チュートリアルのハイライト"
+      "pillNoAlterations": "フィギュアへの永久的な変更なし",
+      "highlightsLabel": "ガイドのハイライト"
     },
     "tutorialMap": {
       "title": "チュートリアルマップ",
@@ -366,7 +477,7 @@
         "接着剤を購入してください。この場合、複数の接着剤がありますが、このチュートリアルでは「MPS Fix Loose Joints」を使用します。",
         "接着剤を塗布するための清潔で整理された場所を用意してください。接着剤は塗布後に剥がれ落ちるので、塗布後は注意してください。",
         "接着剤を準備してください。この接着剤には必要な場所に直接塗布するためのチューブが付いているはずです。チューブが固まった接着剤で詰まっていないことを確認してください。",
-        "この修正は永続的ではありませんが、次回パーツを分離するのが少し難しくなります。緩んでいるパーツが交換可能なパーツでないことを確認してください。"
+        "この修正は永久的ではありませんが、次回パーツを分離するのが少し難しくなります。緩んでいるパーツが交換可能なパーツでないことを確認してください。"
       ],
       "readiness": "準備状況",
       "complete": "完了",
@@ -381,65 +492,112 @@
         {
           "id": "diagnose",
           "title": "ステージ1：問題の箇所を診断する",
-          "content": ["この接着剤を塗布するために、どのパーツが緩んでいるかを特定します。"],
+          "content": [
+            "(上の画像はMG2のfigma Solid Snakeです。胴体のボールジョイントがとても緩くなり、外れてしまいました。)"
+          ],
           "tips": [
-            "接着剤を塗る場所は特定のパーツによって異なるため、どのパーツが緩んでいるかを把握してください。例えば次のようなパーツ：",
             "------------------------------------------------------------------------------------",
-            { "text": "ボールジョイント", "image": "/assets/part-images/types_of_ball_joints(revoltech).png" },
-            { "text": "ヒンジジョイント", "image": "/assets/part-images/Hinge(revoltech).png" },
-            { "text": "ダブルヒンジ", "image": "/assets/part-images/double_hinge(mafex).png" },
-            { "text": "スイベルジョイント", "image": "/assets/part-images/swivel(marvel_legends).png" },
-            "など...",
             "------------------------------------------------------------------------------------",
-            "これを非常に重視する理由は、関節の種類によってこの接着剤を塗布する場所が変わるからです。",
-            "ボールジョイントのような関節部品には直接塗布しますが、膝のヒンジのようなものにはソケット内に接着剤を塗布する方が良いでしょう。",
+            "問題のある箇所を特定してください。",
+            "この場合、問題の箇所はボールジョイントがある胴体部分です。",
             "------------------------------------------------------------------------------------",
-            "Amazing Yamaguchi アーカムナイトとAmazing Yamaguchi ワンパンマンの両方のフィギュアを修理します。",
-            "アーカムナイトでは膝ヒンジへの接着剤の塗り方を、ワンパンマンではボールジョイントへの塗り方を実演します。",
-            "ここに画像を追加！！！！！"
+            "------------------------------------------------------------------------------------",
+            "このガイドで最も重要な部分は、ボールジョイントが入るソケットです。",
+            {
+              "text": "Solid Snakeの胴体が外れた状態",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off.jpg"
+            }
           ]
         },
         {
           "id": "tighten",
           "title": "ステージ2：接着剤を塗布する",
-          "content": ["緩んでいるパーツを特定したら、次は接着剤を塗ります。"],
+          "content": [
+            "緩んでいるパーツを特定したら、次は接着剤を塗ります。"
+          ],
           "tips": [
-            "アーカムナイトから始めます。このフィギュアは膝のヒンジが緩んでいるので、接着剤を塗布する最良の方法は上脚を下脚から外すことです。",
-            "Amazing Yamaguchi以外のフィギュアでは異なる場合がありますが、ヒンジ型のパーツの場合、このソケットがある部分：（アーカムナイトのソケットの画像をここに）が接着剤を塗布する部分です。",
-            "ソケットに数滴垂らし、パーツを組み立て直し、少し動かして両方のパーツが完全にコーティングされるようにし、数分間置いてください。",
-            "*!*",
-            "IFIXITのように3枚の画像を追加してテキストで何が起きているかをより良く示す",
-            "*!*",
             "------------------------------------------------------------------------------------",
-            "*!*",
-            "重要なのは、ヒンジがまだ緩い場合は、膝の隙間からもう少し塗布することです。フィギュアを再度動かしてコーティングし、接着剤が固まるまで休ませてください。",
-            "*!*",
             "------------------------------------------------------------------------------------",
-            "次はボールジョイント型のパーツです。接着剤を直接塗布するだけで十分なので、これは比較的簡単です。",
-            "ボールジョイントの種類によって方法は非常に似ているはずです。",
-            "*!*",
-            "ワンパンマンのボールジョイントが引き締められている画像を表示",
-            "*!*"
+            "先ほど述べたように、ソケットがこのガイドで最も重要なポイントです。",
+            "「接着」するのに最も適した場所はソケットです。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "ソケット内に好みの接着剤を塗布してください（可能な場合）。",
+            "注意：フィギュアや関節を壊さずにソケットに簡単にアクセスできない場合は、関節の上から接着剤を塗布してください。（詳しくは動画チュートリアルをご覧ください）",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "可能であればソケットを見つける",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off2.jpg"
+            },
+            {
+              "text": "接着剤を塗布する",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off3.jpg"
+            },
+            {
+              "text": "パーツを再接続する",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off5.jpg"
+            }
           ]
         },
         {
           "id": "lock",
           "title": "ステージ3：確認と清掃",
-          "content": ["これはこの種の緩んだパーツの問題を解決する最も効果的な方法なので、以上です。"],
+          "content": [
+            "好みの接着剤を塗布し、フィギュアを再び組み立てました。次は、うまくいったか確認することです。"
+          ],
           "tips": [
-            "余分な接着剤はペーパータオルで拭き取ってください。",
-            "同じパーツにのみこぼれた場合、少しのこぼれは全く問題ありません。",
-            "一方、接着剤のこぼれが関係のない別のパーツに達している場合は、接着剤が固まる前に清掃することをお勧めします。"
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "接着剤がまだ固まっていないうちに、問題の関節を動かすのが良い練習です。",
+            "この場合、Solid Snakeの胴体のボールジョイントを修理しているので、胴体をひねってソケット全体がコーティングされるようにします。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off6.jpg"
+            },
+            {
+              "text": "ボールジョイントとソケットをコーティングするためにひねる",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off7.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-off8.jpg"
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "完了！",
+          "content": [
+            "...以上です！"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/glue/snake-wait.jpg"
+            }
           ]
         },
         {
           "id": "other-options",
           "title": "フィギュア用接着剤のその他のオプション",
-          "content": ["このチュートリアルではMPS Fix Loose Joint接着剤を使用していますが、この種類の接着剤はこれだけではありません。幸いなことに、複数の接着剤を使用できます。"],
+          "content": [
+            "このチュートリアルではMPS Fix Loose Joint接着剤を使用しましたが、この種類の接着剤はこれだけではありません。幸いなことに、複数の接着剤を使用できます。"
+          ],
           "tips": [
-             { "text": "MPS Fix Loose Joints (Amazon)", "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2" },
-            { "text": "Kiki Fix Loose Joints Solution (Amazon)", "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" },
-            "*!* 残念ながらMPS Fix Loose Jointsは私たちが保証できる唯一の接着剤です。私たちがこの接着剤を所有し、特に使用しているからです *!*"
+            {
+              "text": "MPS Fix Loose Joints (Amazon)",
+              "link": "https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_2?sr=8-2"
+            },
+            {
+              "text": "Kiki Fix Loose Joints Solution (Amazon)",
+              "link": "https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1"
+            },
+            "*!* 残念ながらMPS Fix Loose Jointsは私たちが保証できる唯一の接着剤です。単純に私たちがこの接着剤を所有し、特に使用しているからです *!*"
           ]
         }
       ]
@@ -453,7 +611,7 @@
     },
     "methods": {
       "title": "パーツの緩みに対するその他の修正方法",
-      "description": "これは効果がさまざまな他の修正方法のディレクトリです。これらの修正方法はインターネットと個人の経験から提供されており、主にRedditから情報を得ていますが、私たちのチームによって検証されています。",
+      "description": "これは効果がさまざまな他の修正方法のディレクトリです。これらの修正方法はインターネットと個人の経験から提供されており、主にRedditからですが、私たちのチームによって検証されています。",
       "costLabel": "コスト：",
       "effectivenessLabel": "効果：",
       "bestForLabel": "最適な用途：",
@@ -483,7 +641,7 @@
         {
           "id": "ptfe-tape",
           "title": "ラップで隙間を埋める",
-          "description": "濡れたペーパータオル方法の目標と同様に、同じことをします。スペースを占有し、緩んだパーツが「くっつく」ようにより多くの摩擦を生み出します。",
+          "description": "濡れたペーパータオル方法と同様に、目的は同じです。スペースを占有し、緩んだパーツが「くっつく」ようにより多くの摩擦を生み出します。",
           "cost": "低",
           "effectiveness": "やや効果的",
           "best_for": "少し緩んだパーツ",

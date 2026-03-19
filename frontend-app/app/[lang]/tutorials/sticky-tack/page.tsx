@@ -69,6 +69,9 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                 <a href="#watch" className="btn outline">
                   {t.hero.jumpToVideo}
                 </a>
+                <a href="#method-library" className="btn outline">
+                  {t.hero.jumpToOther}
+                </a>
               </div>
 
               <ul className="hero-pill-list" aria-label={t.hero.highlightsLabel}>

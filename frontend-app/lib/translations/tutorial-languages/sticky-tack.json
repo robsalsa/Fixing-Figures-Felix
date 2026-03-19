@@ -3,19 +3,20 @@
     "breadcrumb": {
       "home": "Home",
       "tutorials": "Tutorials",
-      "current": "Loose Parts Tutorial"
+      "current": "Sticky Tack Tutorial"
     },
     "hero": {
-      "eyebrow": "EXTRA Generic Tutorial: Loose Parts",
+      "eyebrow": "(EXTRA) Generic Tutorial: Loose Parts",
       "title": "Let's tighten up figures through easy fixes.",
       "leadPart1": "In this guide we will be showing you how to use a small amount of sticky tack to tighten up some joints!",
       "leadPart2": " Yep",
       "jumpToTutorial": "Jump To The Tutorial",
       "jumpToVideo": "Jump To Video Tutorial",
+      "jumpToOther": "Jump to Other Guides",
       "pillBeginner": "Beginner friendly",
       "pillMethods": "Multiple methods",
-      "pillNoAlterations": "No perminent figure alterations",
-      "highlightsLabel": "Guild highlights"
+      "pillNoAlterations": "No permanent figure alterations",
+      "highlightsLabel": "Guide highlights"
     },
     "tutorialMap": {
       "title": "Tutorial Map",
@@ -27,12 +28,12 @@
     },
     "prep": {
       "title": "Pre-Fix Checklist",
-      "description": "This tutorial will show you how to use the most effective fix for Loose Parts. Which is to use special glue made specifically for figures.",
+      "description": "This tutorial will show you how to use sticky tack to fix loose parts on your figures. A simple and affordable method that works great for small and light pieces.",
       "checklist": [
-        "Check and ensure, that the figure in question is not broken.",
+        "Check and ensure that the figure in question is not broken.",
         "Purchase some sticky tack. Any tack works but we recommend the white or grey ones simply because they are harder to notice on figures.",
-        "Have a clean and orginized location to use the sticky tack."
-        ],
+        "Have a clean and organized location to use the sticky tack."
+      ],
       "readiness": "Readiness",
       "complete": "complete",
       "statusStart": "Start with your first checklist item.",
@@ -46,25 +47,84 @@
         {
           "id": "diagnose",
           "title": "Stage 1: Diagnose Where The Issue Is",
-          "content": ["Identify what peices are loose for you to apply this tack."],
+          "content": [
+            "Identify what pieces are loose for you to apply this tack. In this case Arkham Knight Ver 1.5 from Revoltech Amazing Yamaguchi."
+          ],
           "tips": [
-            ""
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "In this case this Arkham Knight has a loose hinge joint.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "NOTE: Sticky tack works best when the pieces/parts are small, light, and/or a hinge joint. Reason for this is because sticky tack is not really sticky on all figure materials but excels in sockets or light parts.",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off.jpg"
+            }
           ]
         },
         {
           "id": "tighten",
           "title": "Stage 2: Spit Some Tack On It",
-          "content": ["After isolating what piece(s) are loose the next thing to do is to tack it."],
+          "content": [
+            "After isolating what piece(s) are loose the next thing to do is to tack it."
+          ],
           "tips": [
-            ""
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "As mentioned sticky tack works best for sockets, small, and light pieces. In this case this Arkham Knight's issue is on a socket.",
+            "Use a small amount of tack (add/remove more if needed), place it within the socket.",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off2.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off3.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off4.jpg"
+            }
           ]
         },
         {
           "id": "lock",
           "title": "Stage 3: Check and Clean Up",
-          "content": ["Since this is the most effective method to solve these type of loose part problems. That pretty much it."],
+          "content": [
+            "Now that there is enough tack within the socket where it does not fully push out the peg. Now it's time to check if it worked."
+          ],
           "tips": [
-            ""
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Since this issue is on the hinge the next thing to do is bend the hinge to ensure there is enough tack for the space within the socket allows for more friction.",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off5.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off7.jpg"
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "Done!",
+          "content": [
+            "And that's it!"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-fixed.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-fixed2.jpg"
+            }
           ]
         }
       ]
@@ -78,7 +138,7 @@
     },
     "methods": {
       "title": "Other Fixes for Loose Parts",
-      "description": "This is a directory for other fixes that very in effectiveness. Note that these fixes are sourced by the Internet and Personal accounts, mostly sourced by Reddit but verified by our Team.",
+      "description": "This is a directory for other fixes that vary in effectiveness. Note that these fixes are sourced from the Internet and personal accounts, mostly from Reddit but verified by our Team.",
       "costLabel": "Cost:",
       "effectivenessLabel": "Effectiveness:",
       "bestForLabel": "Best For:",
@@ -88,7 +148,7 @@
         {
           "id": "warm-water",
           "title": "Using a Wet Paper Towel",
-          "description": "Stuffing a wet paper towel piece into a socked to apply friction. Due to this added friction the pieces should now \"stick\" onto each other.",
+          "description": "Stuffing a wet paper towel piece into a socket to apply friction. Due to this added friction the pieces should now \"stick\" onto each other.",
           "cost": "Free",
           "effectiveness": "Somewhat",
           "best_for": "Slightly Loose Pieces",
@@ -100,7 +160,7 @@
           "title": "Using Special Glue",
           "description": "Applying this special glue pretty much solves any loose parts you got. It's an amazing DIY tool for collectors!",
           "cost": "Low - Moderate",
-          "effectiveness": "EXTREAMLY Effective",
+          "effectiveness": "EXTREMELY Effective",
           "best_for": "Any piece or part",
           "category": "special glue",
           "guide": "loose-parts"
@@ -108,7 +168,7 @@
         {
           "id": "ptfe-tape",
           "title": "Taking Up Space With Saran Wrap",
-          "description": "Similar to the Wet Paper Towel method's goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
+          "description": "Similar to the Wet Paper Towel method, the goal is to do the same thing. Take up space and cause more friction for loose parts to \"stick together\".",
           "cost": "Low",
           "effectiveness": "Somewhat",
           "best_for": "Slightly Loose Pieces",
@@ -125,6 +185,382 @@
       "backToTutorials": "Back to Tutorials",
       "backHome": "Back Home",
       "backToTop": "Back To Top"
+    }
+  },
+  "es": {
+    "breadcrumb": {
+      "home": "Inicio",
+      "tutorials": "Tutoriales",
+      "current": "Tutorial de Masilla Adhesiva"
+    },
+    "hero": {
+      "eyebrow": "(EXTRA) Tutorial General: Piezas Sueltas",
+      "title": "Ajustemos las figuras con arreglos fáciles.",
+      "leadPart1": "En esta guía te mostraremos cómo usar una pequeña cantidad de masilla adhesiva para apretar algunas articulaciones.",
+      "leadPart2": " Sí",
+      "jumpToTutorial": "Ir al Tutorial",
+      "jumpToVideo": "Ir al Video Tutorial",
+      "jumpToOther": "Ir a Otras Guías",
+      "pillBeginner": "Para principiantes",
+      "pillMethods": "Múltiples métodos",
+      "pillNoAlterations": "Sin alteraciones permanentes a la figura",
+      "highlightsLabel": "Puntos destacados de la guía"
+    },
+    "tutorialMap": {
+      "title": "Mapa del Tutorial",
+      "preFixChecklist": "1. Lista de Verificación Previa",
+      "stepByStep": "2. Tutorial Paso a Paso",
+      "videoTutorial": "3. Video Tutorial",
+      "otherMethods": "4. Otros Métodos",
+      "figureStats": "5. Estadísticas del Tutorial"
+    },
+    "prep": {
+      "title": "Lista de Verificación Previa",
+      "description": "Este tutorial te mostrará cómo usar masilla adhesiva para arreglar piezas sueltas en tus figuras. Un método simple y económico que funciona muy bien para piezas pequeñas y ligeras.",
+      "checklist": [
+        "Revisa y asegúrate de que la figura en cuestión no esté rota.",
+        "Compra masilla adhesiva. Cualquier masilla funciona pero recomendamos las blancas o grises simplemente porque son más difíciles de notar en las figuras.",
+        "Ten un lugar limpio y organizado para usar la masilla adhesiva."
+      ],
+      "readiness": "Preparación",
+      "complete": "completado",
+      "statusStart": "Comienza con tu primer elemento de la lista.",
+      "statusDone": "¡Estás completamente preparado para comenzar!",
+      "statusProgress": "Estás {percent}% listo. ¡Sigue adelante!"
+    },
+    "workflow": {
+      "title": "Flujo de Reparación: Usando Masilla Adhesiva",
+      "intro": "Expande cada etapa para ver las acciones exactas, tiempos y señales de alto.",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Etapa 1: Diagnosticar Dónde Está el Problema",
+          "content": [
+            "Identifica qué piezas están sueltas para aplicar esta masilla. En este caso el Arkham Knight Ver 1.5 de Revoltech Amazing Yamaguchi."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "En este caso este Arkham Knight tiene una articulación de bisagra suelta.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "NOTA: La masilla adhesiva funciona mejor cuando las piezas/partes son pequeñas, ligeras, y/o una articulación de bisagra. La razón es porque la masilla adhesiva no es realmente pegajosa en todos los materiales de figuras pero se destaca en encajes o piezas ligeras.",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off.jpg"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "Etapa 2: Ponle Algo de Masilla",
+          "content": [
+            "Después de aislar qué pieza(s) están sueltas, lo siguiente es ponerle masilla."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Como se mencionó, la masilla adhesiva funciona mejor para encajes, piezas pequeñas y ligeras. En este caso el problema del Arkham Knight está en un encaje.",
+            "Usa una pequeña cantidad de masilla (agrega/quita más si es necesario), colócala dentro del encaje.",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off2.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off3.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off4.jpg"
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "Etapa 3: Revisar y Limpiar",
+          "content": [
+            "Ahora que hay suficiente masilla dentro del encaje donde no empuja completamente el perno. Es hora de verificar si funcionó."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Ya que este problema está en la bisagra, lo siguiente es doblar la bisagra para asegurar que haya suficiente masilla para que el espacio dentro del encaje permita más fricción.",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off5.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off7.jpg"
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "¡Listo!",
+          "content": [
+            "¡Y eso es todo!"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-fixed.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-fixed2.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "Video Tutorial",
+      "description": "Esta es la versión visual del tutorial. Ambos tienen el mismo conjunto de información solo que en un método visual. Por favor no dudes en seguir nuestro canal de YouTube. ",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "Usando Masilla Adhesiva para Resolver Piezas Sueltas en Figuras",
+      "videoFallback": "Tu navegador no soporta la reproducción de video integrada."
+    },
+    "methods": {
+      "title": "Otras Soluciones para Piezas Sueltas",
+      "description": "Este es un directorio de otras soluciones que varían en efectividad. Ten en cuenta que estas soluciones provienen de Internet y cuentas personales, principalmente de Reddit pero verificadas por nuestro equipo.",
+      "costLabel": "Costo:",
+      "effectivenessLabel": "Efectividad:",
+      "bestForLabel": "Mejor Para:",
+      "viewGuide": "Ver Guía",
+      "videoBtn": "Video",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "Usando una Toalla de Papel Mojada",
+          "description": "Rellenando un pedazo de toalla de papel mojada en un encaje para aplicar fricción. Debido a esta fricción añadida, las piezas ahora deberían \"pegarse\" entre sí.",
+          "cost": "Gratis",
+          "effectiveness": "Algo",
+          "best_for": "Piezas Ligeramente Sueltas",
+          "category": "free fix",
+          "guide": "wet-paper-towel"
+        },
+        {
+          "id": "micro-tack",
+          "title": "Usando Pegamento Especial",
+          "description": "Aplicar este pegamento especial prácticamente resuelve cualquier pieza suelta que tengas. ¡Es una herramienta increíble para coleccionistas!",
+          "cost": "Bajo a Moderado",
+          "effectiveness": "EXTREMADAMENTE Efectivo",
+          "best_for": "Cualquier pieza o parte",
+          "category": "special glue",
+          "guide": "loose-parts"
+        },
+        {
+          "id": "ptfe-tape",
+          "title": "Ocupando Espacio con Plástico Envolvente",
+          "description": "Similar al método de la Toalla de Papel Mojada, el objetivo es hacer lo mismo. Ocupar espacio y causar más fricción para que las piezas sueltas se \"peguen\".",
+          "cost": "Bajo",
+          "effectiveness": "Algo",
+          "best_for": "Piezas Ligeramente Sueltas",
+          "category": "friction",
+          "guide": "saran-wrap"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "Tutoriales Más Vistos",
+      "issuesTitle": "Problemas Más Comunes"
+    },
+    "nav": {
+      "backToTutorials": "Volver a Tutoriales",
+      "backHome": "Volver al Inicio",
+      "backToTop": "Volver Arriba"
+    }
+  },
+  "ja": {
+    "breadcrumb": {
+      "home": "ホーム",
+      "tutorials": "チュートリアル",
+      "current": "粘着タックチュートリアル"
+    },
+    "hero": {
+      "eyebrow": "（追加）一般チュートリアル：パーツの緩み",
+      "title": "簡単な修理でフィギュアを引き締めましょう。",
+      "leadPart1": "このガイドでは、少量の粘着タックを使っていくつかの関節を引き締める方法をお見せします！",
+      "leadPart2": " そうです",
+      "jumpToTutorial": "チュートリアルへ",
+      "jumpToVideo": "動画チュートリアルへ",
+      "jumpToOther": "他のガイドへ",
+      "pillBeginner": "初心者向け",
+      "pillMethods": "複数の方法",
+      "pillNoAlterations": "フィギュアへの永久的な変更なし",
+      "highlightsLabel": "ガイドのハイライト"
+    },
+    "tutorialMap": {
+      "title": "チュートリアルマップ",
+      "preFixChecklist": "1. 修理前チェックリスト",
+      "stepByStep": "2. ステップバイステップチュートリアル",
+      "videoTutorial": "3. 動画チュートリアル",
+      "otherMethods": "4. その他の方法",
+      "figureStats": "5. フィギュアチュートリアル統計"
+    },
+    "prep": {
+      "title": "修理前チェックリスト",
+      "description": "このチュートリアルでは、粘着タックを使ってフィギュアの緩んだパーツを修正する方法をお見せします。小さくて軽いパーツに最適な、シンプルで手頃な方法です。",
+      "checklist": [
+        "対象のフィギュアが壊れていないことを確認してください。",
+        "粘着タックを購入してください。どんなタックでも使えますが、フィギュアで目立ちにくいので白やグレーのものをお勧めします。",
+        "粘着タックを使うための清潔で整理された場所を用意してください。"
+      ],
+      "readiness": "準備状況",
+      "complete": "完了",
+      "statusStart": "最初のチェックリスト項目から始めましょう。",
+      "statusDone": "準備完了です！",
+      "statusProgress": "{percent}%準備完了。続けましょう！"
+    },
+    "workflow": {
+      "title": "修理ワークフロー：粘着タックの使用",
+      "intro": "各ステージを展開して、正確な手順、タイミング、注意点を確認してください。",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "ステージ1：問題の箇所を診断する",
+          "content": [
+            "このタックを塗布するために、どのパーツが緩んでいるかを特定します。この場合、Revoltech Amazing YamaguchiのArkham Knight Ver 1.5です。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "この場合、このArkham Knightはヒンジジョイントが緩んでいます。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "注意：粘着タックはパーツが小さく、軽く、そして/またはヒンジジョイントの場合に最も効果的です。理由は、粘着タックはすべてのフィギュア素材に対して本当に粘着性があるわけではありませんが、ソケットや軽いパーツでは優れた効果を発揮するからです。",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off.jpg"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "ステージ2：タックを付ける",
+          "content": [
+            "緩んでいるパーツを特定したら、次はタックを付けます。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "先ほど述べたように、粘着タックはソケット、小さなパーツ、軽いパーツに最適です。この場合、Arkham Knightの問題はソケットにあります。",
+            "少量のタックを使い（必要に応じて追加/除去してください）、ソケット内に配置してください。",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off2.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off3.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off4.jpg"
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "ステージ3：確認と清掃",
+          "content": [
+            "ペグを完全に押し出さない程度にソケット内に十分なタックが入りました。うまくいったか確認しましょう。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "この問題はヒンジにあるので、次はヒンジを曲げて、ソケット内のスペースがより多くの摩擦を生むように十分なタックがあることを確認します。",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off5.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-off7.jpg"
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "完了！",
+          "content": [
+            "以上です！"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-fixed.jpg"
+            },
+            {
+              "text": "",
+              "image": "/assets/tutorial-assets/loose-parts/sticky-tack/ark-fixed2.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "動画チュートリアル",
+      "description": "これはチュートリアルのビジュアル版です。両方とも同じ情報を含んでいますが、視覚的な方法で提供されます。ぜひ私たちのYouTubeチャンネルをフォローしてください。",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "粘着タックを使用してフィギュアの緩んだパーツを修理する",
+      "videoFallback": "お使いのブラウザは埋め込み動画の再生に対応していません。"
+    },
+    "methods": {
+      "title": "パーツの緩みに対するその他の修正方法",
+      "description": "これは効果がさまざまな他の修正方法のディレクトリです。これらの修正方法はインターネットと個人の経験から提供されており、主にRedditからですが、私たちのチームによって検証されています。",
+      "costLabel": "コスト：",
+      "effectivenessLabel": "効果：",
+      "bestForLabel": "最適な用途：",
+      "viewGuide": "ガイドを見る",
+      "videoBtn": "動画",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "濡れたペーパータオルを使用する",
+          "description": "濡れたペーパータオルの切れ端をソケットに詰めて摩擦を加えます。この追加された摩擦により、パーツは互いに「くっつく」ようになります。",
+          "cost": "無料",
+          "effectiveness": "やや効果的",
+          "best_for": "少し緩んだパーツ",
+          "category": "free fix",
+          "guide": "wet-paper-towel"
+        },
+        {
+          "id": "micro-tack",
+          "title": "特殊接着剤を使用する",
+          "description": "この特殊接着剤を塗れば、緩んだパーツはほぼ何でも解決します。コレクターにとって素晴らしいDIYツールです！",
+          "cost": "低〜中",
+          "effectiveness": "非常に効果的",
+          "best_for": "あらゆるパーツや部品",
+          "category": "special glue",
+          "guide": "loose-parts"
+        },
+        {
+          "id": "ptfe-tape",
+          "title": "ラップで隙間を埋める",
+          "description": "濡れたペーパータオル方法と同様に、目的は同じです。スペースを占有し、緩んだパーツが「くっつく」ようにより多くの摩擦を生み出します。",
+          "cost": "低",
+          "effectiveness": "やや効果的",
+          "best_for": "少し緩んだパーツ",
+          "category": "friction",
+          "guide": "saran-wrap"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "最も閲覧されたチュートリアル",
+      "issuesTitle": "最も多い問題"
+    },
+    "nav": {
+      "backToTutorials": "チュートリアルに戻る",
+      "backHome": "ホームに戻る",
+      "backToTop": "トップに戻る"
     }
   }
 }
