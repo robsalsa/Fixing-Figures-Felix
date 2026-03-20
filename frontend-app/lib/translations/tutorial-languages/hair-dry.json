@@ -1,0 +1,605 @@
+{
+  "en": {
+    "breadcrumb": {
+      "home": "Home",
+      "tutorials": "Tutorials",
+      "from": "Stiff Parts",
+      "other": "Other Methods",
+      "actual": "Hair Dryer"
+    },
+    "hero": {
+      "eyebrow": "(Extra) Generic Tutorial: Stiff Parts Hair Dryer",
+      "title": "A tightly wound figure leads to bad times, so let's loosen them up!",
+      "leadPart1": "In this guide, we will show you how to loosen up some figures. Unlike the other guides, the recommended and most common fix is not what you would expect. On top of this, this guide will show ONE of the TWO MOST POPULAR fixes for tight parts: a Hair Dryer!",
+      "mpsLinkText": "NOT IN USE",
+      "kikiLinkText": "NOT IN USE",
+      "leadPart2": "NOT IN USE",
+      "jumpToTutorial": "Jump To The Tutorial",
+      "jumpToVideo": "Jump To Video Tutorial",
+      "jumpToOther": "Jump to Other Guides",
+      "pillBeginner": "Beginner Friendly",
+      "pillMethods": "Multiple Methods",
+      "pillNoAlterations": "No permanent figure alterations",
+      "highlightsLabel": "Guide highlights"
+    },
+    "tutorialMap": {
+      "title": "Tutorial Map",
+      "preFixChecklist": "1. Pre Fix Checklist",
+      "stepByStep": "2. Step By Step Tutorial",
+      "videoTutorial": "3. Video Tutorial",
+      "otherMethods": "4. Other Methods",
+      "figureStats": "5. Figure Tutorial Stats"
+    },
+    "prep": {
+      "title": "Pre Fix Checklist",
+      "description": "This tutorial will show you how to use the most effective fix for stiff parts on figures, which is simply heating the figure in question using a hair dryer.",
+      "checklist": [
+        "Find a Hair Dryer to use."
+      ],
+      "readiness": "Readiness",
+      "complete": "complete",
+      "statusStart": "Start with your first checklist item.",
+      "statusDone": "You are fully prepared to begin!",
+      "statusProgress": "You are {percent}% ready. Keep going!"
+    },
+    "workflow": {
+      "title": "Repair Workflow: Using a Hair Dryer to Loosen Up Figures",
+      "intro": "Expand each stage for exact actions, timing, and stop signs.",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Stage 1: Diagnose Where The Issue Is",
+          "content": [
+            "Identify what pieces are stiff so you can heat them up."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Finding the location of the stiff parts you wish to loosen up is fairly easy, simply because you cannot move them easily or because you hear an infernal creaking sound. These are indicators of stiff joints or pieces.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Note: Stiff joints can be caused by various reasons, but while this dryer method fixes a large majority of them, there is a chance it simply may not work.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Note: We will be showcasing this fix with this Mantacora figure by SexyIce. Unfortunately, for the video portion of the guide we have already loosened up this copy, so we cannot really show it on video. BUT Mantacora is notorious for being incredibly stiff across the internet, so this is why we will be using this Mantacora figure for the images.",
+            {
+              "video": "/assets/videos/Stiff(Vegi).mp4",
+              "text": "Unmute to listen to stiff noises figures make. (Video from Reddit)"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-stiff2.jpg",
+              "text": "Ball joint shoulder is stiff"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "Stage 2: Rev Up The Heater",
+          "content": [
+            "After isolating what piece(s) are stiff, in this case the shoulder ball joint, the next thing to do is point the dryer at it and warm up that problem piece."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "On this Mantacora figure, the ball joint on its shoulder is the problem location for our copy. I will be pointing the dryer toward that area.",
+            "NOTE: Hair dryers can get really hot, duh. But something else to understand is that you SHOULD NOT LET THE GRILL ON THE DRYER TOUCH YOUR FIGURE! This might cause the piece to literally melt since it is even hotter than the air it blows.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "After a few minutes (if unsure, wait until the figure becomes really warm or hot). When you feel comfortable to begin, start GENTLY moving the problem piece.",
+            "NOTE: WARM AND HOT DOES NOT MEAN BURNING TO TOUCH! Similar to how we do not want the grill to touch the figure, we also do not want to melt the figure. This is very dependent on the figure in question since, depending on its conductivity, some parts will warm up faster or slower than others. BE AWARE AND ALERT OF THE TEMPERATURE OF YOUR FIGURE AT ALL TIMES!",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow.jpg",
+              "text": "Prime the figure to get heated up"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow2.jpg",
+              "text": "If the power of the heater is low you can get a bit closer"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow3.jpg",
+              "text": "If the power of the heater is higher you should be blowing from a fair distance"
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "Stage 3: Check and Clean Up",
+          "content": [
+            "This method is one of the most popular and the first thing people think to do when a figure is stiff, but it is always good to check if it worked."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Now that your figure is hopefully a lot more loose, it is best to check if this fix worked by gently moving the problem part of the figure.",
+            "NOTE: It is very important to move the problem part GENTLY! The reason for this is because of the chance this fix was ineffective. Roughly moving this figure in this state could cause it to snap.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "In the case that your figure has not loosened up, reheat the figure again. But instead of letting it rest, gently move the problem part until it becomes easier to move.",
+            "NOTE: DO NOT OVERHEAT THE FIGURE OR PLACE IT IN A COLD AREA IMMEDIATELY AFTER HEATING IT. THIS COULD CAUSE THE FIGURE TO CRACK OR SNAP!",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "Done!",
+          "content": [
+            "And that is pretty much it!"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-fixed2.jpg",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "Video Tutorial",
+      "description": "This is the visual version of the tutorial. Both have the same set of information, only in a visual method. Please feel free to follow our YouTube channel.",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "Using Warm Water to Fix Stiff Joints",
+      "videoFallback": "Your browser does not support embedded video playback."
+    },
+    "methods": {
+      "title": "Other Fixes for Stiff Parts",
+      "description": "This is a directory for other fixes that vary in effectiveness. Note that these fixes are sourced from the internet and personal accounts, mostly sourced from Reddit but verified by our team.",
+      "costLabel": "Cost:",
+      "effectivenessLabel": "Effectiveness:",
+      "bestForLabel": "Best For:",
+      "viewGuide": "View Guide",
+      "videoBtn": "Video",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "Using a Hair Dryer",
+          "description": "This is the SECOND MOST POPULAR fix for stiff figures. By simply and carefully warming up specific joints, they break free from their binds and get loose!",
+          "cost": "Low",
+          "effectiveness": "Somewhat",
+          "best_for": "Larger Pieces",
+          "category": "paid fix",
+          "guide": "hair-dryer"
+        },
+        {
+          "id": "micro-tack",
+          "title": "Using Lubricant",
+          "description": "No, you read that right. Using lube can actually help loosen up these figures. Now before we continue, get your head out of the gutter! We mean bike lubricant!",
+          "cost": "Low",
+          "effectiveness": "Moderate",
+          "best_for": "All Pieces",
+          "category": "paid fix",
+          "guide": "lubricant"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "Most Viewed Tutorials",
+      "issuesTitle": "Most Common Issues"
+    },
+    "nav": {
+      "backToTutorials": "Back to Tutorials",
+      "backHome": "Back Home",
+      "backToTop": "Back To Top"
+    }
+  },
+  "es": {
+    "breadcrumb": {
+      "home": "Inicio",
+      "tutorials": "Tutoriales",
+      "from": "Piezas Rígidas",
+      "other": "Otros Métodos",
+      "actual": "Secador de Pelo"
+    },
+    "hero": {
+      "eyebrow": "(Extra) Tutorial Genérico: Piezas Rígidas Secador de Pelo",
+      "title": "Una figura demasiado rígida lleva a malos momentos, ¡así que vamos a aflojarlas!",
+      "leadPart1": "En esta guía, te mostraremos cómo aflojar algunas figuras. A diferencia de las otras guías, la solución recomendada y más común no es lo que esperarías. Además, esta guía mostrará UNA de las DOS SOLUCIONES MÁS POPULARES para piezas rígidas: ¡un secador de pelo!",
+      "mpsLinkText": "NOT IN USE",
+      "kikiLinkText": "NOT IN USE",
+      "leadPart2": "NOT IN USE",
+      "jumpToTutorial": "Ir al Tutorial",
+      "jumpToVideo": "Ir al Video Tutorial",
+      "jumpToOther": "Ir a Otras Guías",
+      "pillBeginner": "Apto para Principiantes",
+      "pillMethods": "Múltiples Métodos",
+      "pillNoAlterations": "Sin alteraciones permanentes en la figura",
+      "highlightsLabel": "Aspectos destacados de la guía"
+    },
+    "tutorialMap": {
+      "title": "Mapa del Tutorial",
+      "preFixChecklist": "1. Lista de Verificación Previa",
+      "stepByStep": "2. Tutorial Paso a Paso",
+      "videoTutorial": "3. Video Tutorial",
+      "otherMethods": "4. Otros Métodos",
+      "figureStats": "5. Estadísticas del Tutorial de la Figura"
+    },
+    "prep": {
+      "title": "Lista de Verificación Previa",
+      "description": "Este tutorial te mostrará cómo usar la solución más efectiva para piezas rígidas en figuras, que es simplemente calentar la figura en cuestión usando un secador de pelo.",
+      "checklist": [
+        "Encuentra un secador de pelo para usar."
+      ],
+      "readiness": "Preparación",
+      "complete": "completo",
+      "statusStart": "Comienza con el primer elemento de tu lista.",
+      "statusDone": "¡Estás completamente preparado para comenzar!",
+      "statusProgress": "Estás {percent}% listo. ¡Sigue así!"
+    },
+    "workflow": {
+      "title": "Flujo de Reparación: Usando un Secador de Pelo para Aflojar Figuras",
+      "intro": "Expande cada etapa para ver acciones exactas, tiempo y señales de detención.",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Etapa 1: Diagnosticar Dónde Está el Problema",
+          "content": [
+            "Identifica qué piezas están rígidas para que puedas calentarlas."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Encontrar la ubicación de las piezas rígidas que deseas aflojar es bastante fácil, simplemente porque no puedes moverlas fácilmente o porque escuchas un sonido de crujido infernal. Estos son indicadores de articulaciones o piezas rígidas.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Nota: Las articulaciones rígidas pueden ser causadas por varias razones, pero aunque este método del secador soluciona la gran mayoría, existe la posibilidad de que simplemente no funcione.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Nota: Estaremos mostrando esta solución con esta figura Mantacora de SexyIce. Desafortunadamente, para la parte en video de la guía ya hemos aflojado esta copia, por lo que no podemos mostrarlo realmente en video. PERO Mantacora es notoria por ser increíblemente rígida en internet, por eso usaremos esta figura Mantacora para las imágenes.",
+            {
+              "video": "/assets/videos/Stiff(Vegi).mp4",
+              "text": "Activa el sonido para escuchar los ruidos de rigidez que hacen las figuras. (Video de Reddit)"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-stiff2.jpg",
+              "text": "La articulación de bola del hombro está rígida"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "Etapa 2: Enciende el Calor",
+          "content": [
+            "Después de aislar qué pieza(s) están rígidas, en este caso la articulación de bola del hombro, lo siguiente es apuntar el secador hacia ella y calentar esa pieza problemática."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "En esta figura Mantacora, la articulación de bola en su hombro es la ubicación del problema para nuestra copia. Estaré apuntando el secador hacia esa área.",
+            "NOTA: Los secadores de pelo pueden calentarse mucho, obvio. Pero algo más a entender es que ¡NO DEBES DEJAR QUE LA REJILLA DEL SECADOR TOQUE TU FIGURA! Esto podría hacer que la pieza literalmente se derrita ya que está incluso más caliente que el aire que sopla.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Después de unos minutos (si no estás seguro, espera hasta que la figura se sienta realmente tibia o caliente). Cuando te sientas listo para comenzar, empieza a mover SUAVEMENTE la pieza problemática.",
+            "NOTA: ¡TIBIO O CALIENTE NO SIGNIFICA QUE QUEME AL TOCAR! Similar a cómo no queremos que la rejilla toque la figura, tampoco queremos derretirla. Esto depende mucho de la figura en cuestión ya que, dependiendo de su conductividad, algunas partes se calentarán más rápido o más lento que otras. ¡MANTENTE ATENTO A LA TEMPERATURA DE TU FIGURA EN TODO MOMENTO!",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow.jpg",
+              "text": "Prepara la figura para que se caliente"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow2.jpg",
+              "text": "Si la potencia del calor es baja puedes acercarte un poco más"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow3.jpg",
+              "text": "Si la potencia del calor es alta deberías soplar desde una distancia razonable"
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "Etapa 3: Revisar y Limpiar",
+          "content": [
+            "Este método es uno de los más populares y lo primero que la gente piensa hacer cuando una figura está rígida, pero siempre es bueno verificar si funcionó."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Ahora que tu figura está, con suerte, mucho más suelta, lo mejor es verificar moviendo suavemente la parte problemática.",
+            "NOTA: Es muy importante mover la parte problemática SUAVEMENTE. La razón es que existe la posibilidad de que esta solución no haya funcionado. Moverla bruscamente podría hacer que se rompa.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "En caso de que tu figura no se haya aflojado, vuelve a calentarla. Pero en lugar de dejarla reposar, mueve suavemente la parte problemática hasta que sea más fácil moverla.",
+            "NOTA: ¡NO SOBRECALIENTES LA FIGURA NI LA COLOQUES EN UN ÁREA FRÍA INMEDIATAMENTE DESPUÉS DE CALENTARLA! ¡ESTO PODRÍA HACER QUE LA FIGURA SE AGRIETE O SE ROMPA!",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "¡Listo!",
+          "content": [
+            "¡Y eso es prácticamente todo!"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-fixed2.jpg",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "Video Tutorial",
+      "description": "Esta es la versión visual del tutorial. Ambos tienen la misma información, solo que en formato visual. No dudes en seguir nuestro canal de YouTube.",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "Usando Agua Tibia para Reparar Articulaciones Rígidas",
+      "videoFallback": "Tu navegador no soporta la reproducción de video integrada."
+    },
+    "methods": {
+      "title": "Otras Soluciones para Piezas Rígidas",
+      "description": "Este es un directorio de otras soluciones que varían en efectividad. Ten en cuenta que estas soluciones provienen de internet y experiencias personales, principalmente de Reddit pero verificadas por nuestro equipo.",
+      "costLabel": "Costo:",
+      "effectivenessLabel": "Efectividad:",
+      "bestForLabel": "Mejor Para:",
+      "viewGuide": "Ver Guía",
+      "videoBtn": "Video",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "Usando un Secador de Pelo",
+          "description": "Esta es la SEGUNDA SOLUCIÓN MÁS POPULAR para figuras rígidas. Al calentar cuidadosamente articulaciones específicas, se liberan y se aflojan.",
+          "cost": "Bajo",
+          "effectiveness": "Algo",
+          "best_for": "Piezas Grandes",
+          "category": "paid fix",
+          "guide": "hair-dryer"
+        },
+        {
+          "id": "micro-tack",
+          "title": "Usando Lubricante",
+          "description": "Sí, leíste bien. Usar lubricante puede ayudar a aflojar estas figuras. Ahora antes de continuar, ¡saca tu mente de la alcantarilla! ¡Nos referimos a lubricante para bicicletas!",
+          "cost": "Bajo",
+          "effectiveness": "Moderado",
+          "best_for": "Todas las Piezas",
+          "category": "paid fix",
+          "guide": "lubricant"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "Tutoriales Más Vistos",
+      "issuesTitle": "Problemas Más Comunes"
+    },
+    "nav": {
+      "backToTutorials": "Volver a Tutoriales",
+      "backHome": "Volver al Inicio",
+      "backToTop": "Volver Arriba"
+    }
+  },
+  
+  "ja": {
+    "breadcrumb": {
+      "home": "ホーム",
+      "tutorials": "チュートリアル",
+      "from": "硬いパーツ",
+      "other": "その他の方法",
+      "actual": "ヘアドライヤー"
+    },
+    "hero": {
+      "eyebrow": "(Extra) 一般チュートリアル：硬いパーツ ヘアドライヤー",
+      "title": "硬すぎるフィギュアは厄介なことになるので、柔らかくしましょう！",
+      "leadPart1": "このガイドでは、フィギュアを柔らかくする方法を紹介します。他のガイドとは異なり、推奨されている最も一般的な修正方法は予想外のものです。さらに、このガイドでは硬いパーツに対する最も人気のある2つの修正方法のうちの1つである「ヘアドライヤー」を使う方法を紹介します！",
+      "mpsLinkText": "NOT IN USE",
+      "kikiLinkText": "NOT IN USE",
+      "leadPart2": "NOT IN USE",
+      "jumpToTutorial": "チュートリアルへ",
+      "jumpToVideo": "動画チュートリアルへ",
+      "jumpToOther": "他のガイドへ",
+      "pillBeginner": "初心者向け",
+      "pillMethods": "複数の方法",
+      "pillNoAlterations": "フィギュアへの永久的な改造なし",
+      "highlightsLabel": "ガイドのハイライト"
+    },
+    "tutorialMap": {
+      "title": "チュートリアルマップ",
+      "preFixChecklist": "1. 事前チェックリスト",
+      "stepByStep": "2. ステップバイステップチュートリアル",
+      "videoTutorial": "3. 動画チュートリアル",
+      "otherMethods": "4. その他の方法",
+      "figureStats": "5. フィギュアチュートリアル統計"
+    },
+    "prep": {
+      "title": "事前チェックリスト",
+      "description": "このチュートリアルでは、フィギュアの硬いパーツに対する最も効果的な修正方法を紹介します。それはヘアドライヤーを使ってフィギュアを温めるというシンプルな方法です。",
+      "checklist": [
+        "使用するヘアドライヤーを用意してください。"
+      ],
+      "readiness": "準備状況",
+      "complete": "完了",
+      "statusStart": "最初のチェック項目から始めてください。",
+      "statusDone": "準備は完了です！",
+      "statusProgress": "{percent}%準備完了です。続けましょう！"
+    },
+    "workflow": {
+      "title": "修理ワークフロー：ヘアドライヤーを使ってフィギュアを柔らかくする",
+      "intro": "各ステージを展開して、具体的な手順、時間、注意点を確認してください。",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "ステージ1：問題箇所を診断する",
+          "content": [
+            "どのパーツが硬いのかを特定し、それを加熱できるようにしてください。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "硬いパーツの場所を見つけるのは比較的簡単です。動かしにくかったり、きしむような音がする場合、それは硬いジョイントやパーツのサインです。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "注意：硬いジョイントはさまざまな原因で発生しますが、このドライヤー方法で多くの場合は解決できます。ただし、必ずしも効果があるとは限りません。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "注意：このガイドではSexyIceのMantacoraフィギュアを例として使用します。動画用ではすでにこの個体を柔らかくしてしまっているため、実際の状態は映像では確認できません。ただしMantacoraは非常に硬いことで知られているため、画像で使用しています。",
+            {
+              "video": "/assets/videos/Stiff(Vegi).mp4",
+              "text": "音をオンにして、硬いフィギュアが出す音を聞いてください。（Redditの動画）"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-stiff2.jpg",
+              "text": "肩のボールジョイントが硬い状態"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "ステージ2：ヒーターを回す",
+          "content": [
+            "どのパーツが硬いかを特定したら（この場合は肩のボールジョイント）、その部分にドライヤーを当てて問題のパーツを温めます。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "このMantacoraフィギュアでは、肩のボールジョイントが問題の箇所です。その部分にドライヤーを向けます。",
+            "注意：ヘアドライヤーは非常に熱くなることがあります。当然ですが、それだけではなくドライヤーのグリル部分をフィギュアに触れさせてはいけません！吹き出す空気よりもさらに高温になるため、パーツが溶ける可能性があります。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "数分後（不安な場合はフィギュアがかなり温かくなるまで待つ）、準備ができたら問題のパーツを優しく動かし始めてください。",
+            "注意：温かい、または熱いというのは触れないほどではありません！グリルを触れさせないのと同様に、フィギュアを溶かしたくはありません。これはフィギュアによって異なり、素材の性質により一部は早く温まり、一部は遅く温まります。常にフィギュアの温度に注意してください！",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow.jpg",
+              "text": "フィギュアを温める準備をする"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow2.jpg",
+              "text": "出力が弱い場合は少し近づけても大丈夫です"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/hair/manti-blow3.jpg",
+              "text": "出力が強い場合は少し距離を取ってください"
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "ステージ3：確認と仕上げ",
+          "content": [
+            "この方法は最も一般的なものの1つですが、実際に効果があったか確認することが重要です。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "フィギュアが柔らかくなったかを確認するために、問題のある部分を優しく動かしてください。",
+            "注意：必ず優しく動かしてください。この方法が効いていない場合、強く動かすと破損する可能性があります。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "まだ硬い場合は、再度温めてください。今度は放置するのではなく、問題のパーツを優しく動かしながら、動かしやすくなるまで続けます。",
+            "注意：フィギュアを過熱したり、加熱後すぐに冷たい場所に置かないでください。ひび割れや破損の原因になります！",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "完了！",
+          "content": [
+            "これでほぼ完了です！"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-fixed2.jpg",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "動画チュートリアル",
+      "description": "これはチュートリアルのビジュアル版です。内容は同じですが、映像で説明されています。ぜひYouTubeチャンネルをフォローしてください。",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "お湯を使って硬いジョイントを修理する",
+      "videoFallback": "お使いのブラウザは動画の埋め込み再生に対応していません。"
+    },
+    "methods": {
+      "title": "硬いパーツのその他の修正方法",
+      "description": "これは効果が異なる他の修正方法の一覧です。これらの方法は主にRedditなどのインターネット情報や個人の経験から集められ、チームによって確認されています。",
+      "costLabel": "コスト：",
+      "effectivenessLabel": "効果：",
+      "bestForLabel": "最適な用途：",
+      "viewGuide": "ガイドを見る",
+      "videoBtn": "動画",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "ヘアドライヤーを使用する",
+          "description": "これは硬いフィギュアに対する2番目に人気のある修正方法です。特定のジョイントを丁寧に温めることで、拘束から解放されて動きやすくなります。",
+          "cost": "低い",
+          "effectiveness": "やや",
+          "best_for": "大きなパーツ",
+          "category": "paid fix",
+          "guide": "hair-dryer"
+        },
+        {
+          "id": "micro-tack",
+          "title": "潤滑剤を使用する",
+          "description": "はい、その通りです。潤滑剤を使うことでフィギュアを柔らかくするのに役立ちます。変な意味ではありません。自転車用の潤滑剤のことです。",
+          "cost": "低い",
+          "effectiveness": "中程度",
+          "best_for": "すべてのパーツ",
+          "category": "paid fix",
+          "guide": "lubricant"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "最も閲覧されたチュートリアル",
+      "issuesTitle": "最も一般的な問題"
+    },
+    "nav": {
+      "backToTutorials": "チュートリアルに戻る",
+      "backHome": "ホームに戻る",
+      "backToTop": "トップに戻る"
+    }
+  }
+
+
+}

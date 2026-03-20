@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -1703,6 +1707,11 @@ body.loose-guide-page {
 .loose-guide-page #method-library,
 .loose-guide-page #stats {
   padding: 30px 0;
+  scroll-margin-top: 140px;
+}
+
+.loose-guide-page #top {
+  scroll-margin-top: 140px;
 }
 
 .loose-guide-page .prep-grid {
@@ -1780,99 +1789,201 @@ body.loose-guide-page {
 }
 
 .loose-guide-page .workflow-intro {
-  margin: 8px 0 18px;
+  margin: 8px 0 24px;
+  color: #555;
 }
 
-.loose-guide-page .workflow-list {
-  display: grid;
-  gap: 12px;
-}
-
-.loose-guide-page .workflow-item {
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(68, 68, 68, 0.14);
-  background: #fff;
-}
-
-.loose-guide-page .workflow-trigger {
-  width: 100%;
-  text-align: left;
-  border: 0;
+/* ── Timeline layout ── */
+.loose-guide-page .wf-timeline {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0;
+}
+
+.loose-guide-page .wf-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0 20px;
+  position: relative;
+}
+
+/* Step number marker */
+.loose-guide-page .wf-step-marker {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
-  cursor: pointer;
-  color: white;
-  background: var(--accent-2);
-  font-weight: 700;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  position: relative;
 }
 
-.loose-guide-page .workflow-trigger:hover {
-  opacity: 0.9;
-}
-
-.loose-guide-page .workflow-icon {
-  inline-size: 22px;
-  block-size: 22px;
+.loose-guide-page .wf-step-number {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  display: inline-flex;
+  background: var(--accent-2);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(68, 68, 68, 0.14);
-  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(255, 139, 0, 0.3);
 }
 
-.loose-guide-page .workflow-trigger[aria-expanded="true"] .workflow-icon {
-  transform: rotate(45deg);
+.loose-guide-page .wf-step-line {
+  width: 3px;
+  flex: 1;
+  background: linear-gradient(180deg, var(--accent-2), rgba(255, 139, 0, 0.2));
+  border-radius: 3px;
+  margin-top: 4px;
 }
 
-.loose-guide-page .workflow-panel {
+/* Step body card */
+.loose-guide-page .wf-step-body {
+  background: #fff;
+  border: 1px solid rgba(68, 68, 68, 0.1);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.loose-guide-page .wf-step-body:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.loose-guide-page .wf-step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(255, 198, 11, 0.4);
+}
+
+/* Two-column: media + instructions */
+.loose-guide-page .wf-step-content.wf-has-media {
   display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 350ms ease;
-  color: var(--guide-muted);
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
-.loose-guide-page .workflow-panel.open {
-  grid-template-rows: 1fr;
-}
-
-.loose-guide-page .workflow-panel-inner {
-  overflow: hidden;
-  padding: 0 16px;
-  transition: padding 350ms ease;
-}
-
-.loose-guide-page .workflow-panel.open .workflow-panel-inner {
-  padding: 16px;
-}
-
-.loose-guide-page .workflow-panel p {
-  margin: 0 0 8px;
-}
-
-.loose-guide-page .workflow-panel ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.loose-guide-page .tip-with-image {
+/* Image thumbnails column */
+.loose-guide-page .wf-media-col {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  list-style: none;
-  margin: 8px 0;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.loose-guide-page .tip-image {
+.loose-guide-page .wf-thumb-btn {
+  background: #f8f8f8;
+  border: 2px solid rgba(68, 68, 68, 0.08);
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.loose-guide-page .wf-thumb-btn:hover {
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+}
+
+.loose-guide-page .wf-thumb {
   border-radius: 8px;
   object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.loose-guide-page .wf-thumb-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #555;
+  text-align: center;
+}
+
+/* Instructions column */
+.loose-guide-page .wf-instructions {
+  min-width: 0;
+}
+
+.loose-guide-page .wf-content-text {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.loose-guide-page .wf-bullet-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loose-guide-page .wf-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+.loose-guide-page .wf-bullet-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.loose-guide-page .wf-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(68, 68, 68, 0.15), transparent);
+  margin: 6px 0;
+  list-style: none;
+}
+
+/* Warning/info callout */
+.loose-guide-page .wf-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #FFF8E5;
+  border-left: 4px solid #FFC60B;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #6B5900;
+}
+
+.loose-guide-page .wf-callout-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.loose-guide-page .wf-link {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.loose-guide-page .wf-link:hover {
+  color: #d47300;
 }
 
 .loose-guide-page .video-grid {
@@ -1997,8 +2108,34 @@ body.loose-guide-page {
     grid-template-columns: 1fr;
   }
 
-  .loose-guide-page .workflow-trigger {
-    font-size: 0.95rem;
+  .loose-guide-page .wf-step {
+    grid-template-columns: 44px 1fr;
+    gap: 0 14px;
+  }
+
+  .loose-guide-page .wf-step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .loose-guide-page .wf-step-body {
+    padding: 18px 16px;
+  }
+
+  .loose-guide-page .wf-step-content.wf-has-media {
+    grid-template-columns: 1fr;
+  }
+
+  .loose-guide-page .wf-media-col {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+
+  .loose-guide-page .wf-thumb-btn {
+    min-width: 140px;
   }
 }
 

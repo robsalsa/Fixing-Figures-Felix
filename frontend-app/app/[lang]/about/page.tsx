@@ -56,13 +56,13 @@ async function AboutPageContent({ params }: AboutPageProps) {
 							<Link href={`/${lang}/questionnaire`} className="btn primary">
 								{t.fixYourFiguresCTA}
 							</Link>
-							<a href="#community" className="btn outline">
+							{/* <a href="#community" className="btn outline">
 								{t.figureStatsCTA}
-							</a>
+							</a> */}
 						</div>
 					</div>
 
-					<figure className="heroIllustration" aria-hidden="true">
+					{/* <figure className="heroIllustration" aria-hidden="true">
 						<Image
 							src="/assets/kat.jpg"
 							alt="Figure being fixed"
@@ -70,7 +70,7 @@ async function AboutPageContent({ params }: AboutPageProps) {
 							height={160}
 							className="figIllustration"
 							/>
-						</figure>
+					</figure> */}
 					</div>
 				</section>
 
@@ -115,7 +115,7 @@ async function AboutPageContent({ params }: AboutPageProps) {
 								</p>
 								<div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
 									<Image
-										src="/assets/kat.jpg"
+										src="/assets/my-images/icon.png"
 										alt="Pilk profile"
 										width={56}
 										height={56}

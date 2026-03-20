@@ -33,6 +33,8 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 	const [route, setRoute] = useState(0);
 	const [steps, setSteps] = useState<any[]>([]);
 	const [showSplash, setShowSplash] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [noFixMessage, setNoFixMessage] = useState(false);
 	const [navState, setNavState] = useState({ backVisible: false, nextEnabled: false });
 
 	const [autocomplete, setAutocomplete] = useState({
@@ -256,6 +258,9 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 	};
 
 	const handleFinish = async () => {
+		if (isSubmitting) return;
+		setIsSubmitting(true);
+
 		try {
 			const { saveFigureDataToSupabase } = await import('@/lib/supabase/figure-data/figureFunctions');
 			const result = await saveFigureDataToSupabase(state);
@@ -265,12 +270,35 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 			}
 
 			if (state.mode === 'fix') {
-				window.location.href = `/${lang}/solutions?brand=${encodeURIComponent(state.brand || '')}&figure=${encodeURIComponent(state.figure_name || '')}&series=${encodeURIComponent(state.series_title || '')}`;
+				const issues = state.issue;
+				const nonOtherIssues = [...issues].filter((i) => i !== 'other');
+
+				if (nonOtherIssues.length === 0) {
+					// Only "other" was selected
+					setNoFixMessage(true);
+					setIsSubmitting(false);
+					return;
+				}
+
+				const issueToGuild: Record<string, string> = {
+					broken_joint: 'broken-parts',
+					stiff_part: 'stiff-parts',
+					loose_joint: 'loose-parts',
+				};
+
+				if (nonOtherIssues.length === 1) {
+					const guildSlug = issueToGuild[nonOtherIssues[0]] || 'guild';
+					window.location.href = `/${lang}/guild/${guildSlug}`;
+				} else {
+					// Multiple issues selected — go to the guild router
+					window.location.href = `/${lang}/guild`;
+				}
 			} else {
 				window.location.href = `/${lang}/home`;
 			}
 		} catch (error) {
 			console.error('Error in handleFinish:', error);
+			setIsSubmitting(false);
 			window.location.href = `/${lang}/home`;
 		}
 	};
@@ -506,9 +534,20 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 						<h2>Submitted</h2>
 						<p id="splashGoal">{computeGoalText()}</p>
 						<div id="viz" className="viz">{visualizeProgress()}</div>
-						<button id="finishBtn" className="btn primary" onClick={handleFinish}>
-							Go to Home
-						</button>
+						{noFixMessage ? (
+							<>
+								<p style={{ color: '#c0392b', fontWeight: 600, marginTop: '1rem' }}>
+									Unfortunately we currently do not have a fix for this specific issue. Please forgive us. We are working hard to solve this issue.
+								</p>
+								<button id="finishBtn" className="btn primary" onClick={() => { window.location.href = `/${lang}/home`; }}>
+									Go to Home
+								</button>
+							</>
+						) : (
+							<button id="finishBtn" className="btn primary" onClick={handleFinish} disabled={isSubmitting}>
+								{isSubmitting ? 'Submitting...' : (state.mode === 'fix' ? 'Take Me to the Fix!' : 'Go to Home')}
+							</button>
+						)}
 					</div>
 				</div>
 			</main>
