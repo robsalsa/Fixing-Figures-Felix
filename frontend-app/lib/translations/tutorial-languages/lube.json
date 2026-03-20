@@ -1,0 +1,577 @@
+{
+  "en": {
+    "breadcrumb": {
+      "home": "Home",
+      "tutorials": "Tutorials",
+      "current": "Stiff Parts Tutorial",
+      "other": "Other",
+      "actual": "Lubebricant"
+    },
+    "hero": {
+      "eyebrow": "(Extra) Generic Tutorial: Stiff Parts Lubricant",
+      "title": "A tightly wound figure leads to bad times, so let's loosen them up!",
+      "leadPart1": "In this guide, we will show you how to loosen up your figures with the MOST EFFECTIVE method, using Lube.",
+      "mpsLinkText": "NOT IN USE",
+      "kikiLinkText": "NOT IN USE",
+      "leadPart2": "NOT IN USE",
+      "jumpToTutorial": "Jump To The Tutorial",
+      "jumpToVideo": "Jump To Video Tutorial",
+      "jumpToOther": "Jump to Other Guides",
+      "pillBeginner": "Beginner Friendly",
+      "pillMethods": "Multiple Methods",
+      "pillNoAlterations": "No permanent figure alterations",
+      "highlightsLabel": "Guide highlights"
+    },
+    "tutorialMap": {
+      "title": "Tutorial Map",
+      "preFixChecklist": "1. Pre Fix Checklist",
+      "stepByStep": "2. Step By Step Tutorial",
+      "videoTutorial": "3. Video Tutorial",
+      "otherMethods": "4. Other Methods",
+      "figureStats": "5. Figure Tutorial Stats"
+    },
+    "prep": {
+      "title": "Pre Fix Checklist",
+      "description": "This tutorial will show you how to use the most effective fix for stiff parts on figures, which is simply submerging the figure in warm to hot water.",
+      "checklist": [
+        "Find your lubebricant of choice. (Most common lubebricants: Soap (Dishsoap), Synthetic Oil, Gun Oil, actual Lube, Shock Oil, and others)",
+        "Find a clean and organized location to use lubebricants. Note that some stain and/or smell.",
+        "Find a cloth to clean up"
+      ],
+      "readiness": "Readiness",
+      "complete": "complete",
+      "statusStart": "Start with your first checklist item.",
+      "statusDone": "You are fully prepared to begin!",
+      "statusProgress": "You are {percent}% ready. Keep going!"
+    },
+    "workflow": {
+      "title": "Repair Workflow: Using Hot Water to Loosen Up Figures",
+      "intro": "Expand each stage for exact actions, timing, and stop signs.",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Stage 1: Diagnose Where The Issue Is",
+          "content": [
+            "Identify what pieces are stiff so you can submerge the figure."
+          ],
+          "tips": [
+            "Finding the location of the stiff parts you wish to loosen up is fairly easy, simply because you cannot move them easily or because you hear an infernal creaking sound. These are indicators of stiff joints or pieces.",
+            "For this fix we will be using my Bike Chain Lubebricant. (I DO NOT RECOMMEND THIS LUBEBRICANT BASED ON THE STRONG SMELL)",
+            "Note: Stiff joints can be caused by various reasons, but while this warm water method fixes a large majority of them, there is a chance it simply may not work.",
+            "Note: We will be showcasing this fix with this Mantacora figure by SexyIce. Unfortunately, for the video portion of the guide we have already loosened up this copy, so we cannot really show it on video. BUT Mantacora is notorious for being incredibly stiff across the internet, so this is why we will be using this Mantacora figure for the images.",
+            {
+              "video": "/assets/videos/Stiff(Vegi).mp4",
+              "text": "Unmute to listen to stiff noises figures make. (Video from Reddit)"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-stiff2.jpg",
+              "text": "Ball joint shoulder is stiff"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "Stage 2: Spit Some Lube on It",
+          "content": [
+            "After isolating what piece(s) are stiff, in this case the shoulder ball joint, the next thing to do is spit some lube on it."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "In this case our Manticora's ball joint shoulders are really stiff, so the best location to apply lube will be on that joint.",
+            "Note: Depending on how much lube you use, a piece will become that amount more loose. So, let's say that we apply a LOT of lube. This will cause the problem piece to be a LOT more loose, and vice versa.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "When applying lube, ensure that you place it on every slit possible. For example, since this Manticora's problem area is on a ball joint, applying lube on the slit of the ball joint will loosen the up-and-down motion of the figure. Similarly, if it's on the socket touching the ball joint, its arm will become more loose overall.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "Stage 3: Check and Clean Up",
+          "content": [
+            "This method is one of the most effective ways to loosen stiff figures, but it's not 100%. So, let's check."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Now that your figure is hopefully a lot more loose, it is best to check if this fix worked by gently moving the problem part of the figure.",
+            "NOTE: It is very important to move the problem part GENTLY! The reason is because there is a chance this fix was ineffective in loosening the parts. Roughly moving this figure in this state could cause it to snap.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "If the figure is still stiff, apply a little more lube until you are satisfied with its movements.",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "Done!",
+          "content": [
+            "And that is pretty much it!"
+          ],
+          "tips": [
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-fixed.jpg",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "Video Tutorial",
+      "description": "This is the visual version of the tutorial. Both have the same set of information, only in a visual method. Please feel free to follow our YouTube channel.",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "Using Liberty Oil (YouTube: @TheArtOfActionFigures)",
+      "videoFallback": "Your browser does not support embedded video playback."
+    },
+    "methods": {
+      "title": "Other Fixes for Stiff Parts",
+      "description": "This is a directory for other fixes that vary in effectiveness. Note that these fixes are sourced from the internet and personal accounts, mostly sourced from Reddit but verified by our team.",
+      "costLabel": "Cost:",
+      "effectivenessLabel": "Effectiveness:",
+      "bestForLabel": "Best For:",
+      "viewGuide": "View Guide",
+      "videoBtn": "Video",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "Using a Hair Dryer",
+          "description": "This is the SECOND MOST POPULAR fix for stiff figures. By simply and carefully warming up specific joints, they break free from their binds and get loose!",
+          "cost": "Low",
+          "effectiveness": "Somewhat",
+          "best_for": "Larger Pieces",
+          "category": "paid fix",
+          "guide": "hair-dryer"
+        },
+        {
+          "id": "micro-tack",
+          "title": "Using Lubricant",
+          "description": "No, you read that right. Using lube can actually help loosen up these figures. Now before we continue, get your head out of the gutter! We mean bike lubricant!",
+          "cost": "Low",
+          "effectiveness": "Moderate",
+          "best_for": "All Pieces",
+          "category": "paid fix",
+          "guide": "lubricant"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "Most Viewed Tutorials",
+      "issuesTitle": "Most Common Issues"
+    },
+    "nav": {
+      "backToTutorials": "Back to Tutorials",
+      "backHome": "Back Home",
+      "backToTop": "Back To Top"
+    }
+  },
+  "es": {
+    "breadcrumb": {
+      "home": "Inicio",
+      "tutorials": "Tutoriales",
+      "current": "Tutorial de Piezas Rígidas",
+      "other": "Otros",
+      "actual": "Lubricante"
+    },
+    "hero": {
+      "eyebrow": "(Extra) Tutorial Genérico: Piezas Rígidas Lubricante",
+      "title": "¡Una figura muy rígida conduce a malos momentos, así que vamos a aflojarlas!",
+      "leadPart1": "En esta guía, te mostraremos cómo aflojar tus figuras con el método MÁS EFECTIVO, usando lubricante.",
+      "mpsLinkText": "NO EN USO",
+      "kikiLinkText": "NO EN USO",
+      "leadPart2": "NO EN USO",
+      "jumpToTutorial": "Ir al Tutorial",
+      "jumpToVideo": "Ir al Tutorial en Video",
+      "jumpToOther": "Ir a Otros Tutoriales",
+      "pillBeginner": "Apto para Principiantes",
+      "pillMethods": "Múltiples Métodos",
+      "pillNoAlterations": "Sin alteraciones permanentes de la figura",
+      "highlightsLabel": "Aspectos destacados de la guía"
+    },
+    "tutorialMap": {
+      "title": "Mapa del Tutorial",
+      "preFixChecklist": "1. Lista de Verificación Pre-Fijación",
+      "stepByStep": "2. Tutorial Paso a Paso",
+      "videoTutorial": "3. Tutorial en Video",
+      "otherMethods": "4. Otros Métodos",
+      "figureStats": "5. Estadísticas del Tutorial de la Figura"
+    },
+    "prep": {
+      "title": "Lista de Verificación Pre-Fijación",
+      "description": "Este tutorial te mostrará cómo usar la solución más efectiva para piezas rígidas en figuras, que consiste simplemente en sumergir la figura en agua tibia a caliente.",
+      "checklist": [
+        "Encuentra tu lubricante de elección. (Lubricantes más comunes: Jabón (Detergente), Aceite Sintético, Aceite de Pistola, Lubricante real, Aceite de Choque y otros)",
+        "Encuentra un lugar limpio y organizado para usar lubricantes. Ten en cuenta que algunos pueden manchar y/o oler.",
+        "Encuentra un paño para limpiar"
+      ],
+      "readiness": "Preparación",
+      "complete": "completo",
+      "statusStart": "Comienza con el primer elemento de la lista de verificación.",
+      "statusDone": "¡Estás completamente preparado para comenzar!",
+      "statusProgress": "Estás {percent}% listo. ¡Sigue adelante!"
+    },
+    "workflow": {
+      "title": "Flujo de Reparación: Usando Agua Caliente para Aflojar Figuras",
+      "intro": "Expande cada etapa para ver las acciones exactas, tiempos y señales de parada.",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Etapa 1: Diagnosticar Dónde Está el Problema",
+          "content": [
+            "Identifica qué piezas están rígidas para poder sumergir la figura."
+          ],
+          "tips": [
+            "Encontrar la ubicación de las piezas rígidas que deseas aflojar es bastante fácil, simplemente porque no puedes moverlas fácilmente o porque escuchas un sonido infernal de crujido. Estos son indicadores de juntas o piezas rígidas.",
+            "Para esta solución usaremos mi Lubricante de Cadena de Bicicleta. (NO RECOMIENDO ESTE LUBRICANTE DEBIDO AL FUERTE OLOR)",
+            "Nota: Las juntas rígidas pueden deberse a varias razones, pero aunque este método con agua caliente soluciona la mayoría de los casos, existe la posibilidad de que no funcione.",
+            "Nota: Mostraremos esta solución con esta figura Mantacora de SexyIce. Desafortunadamente, para la parte en video de la guía ya hemos aflojado esta copia, por lo que no podemos mostrarla realmente en video. PERO Mantacora es famosa por ser increíblemente rígida en internet, por eso usaremos esta figura para las imágenes.",
+            {
+              "video": "/assets/videos/Stiff(Vegi).mp4",
+              "text": "Activa el sonido para escuchar los crujidos de las figuras. (Video de Reddit)"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-stiff2.jpg",
+              "text": "La articulación esférica del hombro está rígida"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "Etapa 2: Aplica un Poco de Lubricante",
+          "content": [
+            "Después de aislar la(s) pieza(s) rígida(s), en este caso la articulación esférica del hombro, lo siguiente es aplicar un poco de lubricante."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "En este caso, los hombros con articulación esférica de nuestra Manticora están muy rígidos, por lo que el mejor lugar para aplicar lubricante será esa articulación.",
+            "Nota: Dependiendo de la cantidad de lubricante que uses, una pieza se volverá proporcionalmente más suelta. Por ejemplo, si aplicamos MUCHO lubricante, la pieza problemática se volverá MUCHO más suelta, y viceversa.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Al aplicar el lubricante, asegúrate de colocarlo en todas las rendijas posibles. Por ejemplo, dado que el área problemática de esta Manticora está en la articulación esférica, aplicar lubricante en la rendija de la articulación aflojará el movimiento hacia arriba y abajo de la figura. De manera similar, si está en la cavidad que toca la articulación esférica, su brazo se moverá más libremente en general.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "Etapa 3: Revisar y Limpiar",
+          "content": [
+            "Este método es una de las formas más efectivas para aflojar figuras rígidas, pero no es 100%. Así que, vamos a revisar."
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Ahora que tu figura está, con suerte, mucho más suelta, lo mejor es comprobar si la solución funcionó moviendo suavemente la parte problemática de la figura.",
+            "NOTA: ¡Es muy importante mover la parte problemática SUAVEMENTE! La razón es que existe la posibilidad de que este método no haya aflojado las piezas. Mover bruscamente la figura en este estado podría romperla.",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "Si la figura sigue rígida, aplica un poco más de lubricante hasta que estés satisfecho con su movimiento.",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "¡Listo!",
+          "content": [
+            "¡Y eso es prácticamente todo!"
+          ],
+          "tips": [
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-fixed.jpg",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "Tutorial en Video",
+      "description": "Esta es la versión visual del tutorial. Ambos contienen la misma información, solo que de manera visual. No dudes en seguir nuestro canal de YouTube.",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "Usando Aceite Liberty (YouTube: @TheArtOfActionFigures)",
+      "videoFallback": "Tu navegador no soporta reproducción de video embebido."
+    },
+    "methods": {
+      "title": "Otros Métodos para Piezas Rígidas",
+      "description": "Este es un directorio de otras soluciones que varían en efectividad. Ten en cuenta que estas soluciones se obtuvieron de internet y relatos personales, principalmente de Reddit, pero verificadas por nuestro equipo.",
+      "costLabel": "Costo:",
+      "effectivenessLabel": "Efectividad:",
+      "bestForLabel": "Mejor Para:",
+      "viewGuide": "Ver Guía",
+      "videoBtn": "Video",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "Usando un Secador de Pelo",
+          "description": "Esta es la SEGUNDA solución MÁS POPULAR para figuras rígidas. Simplemente calentando cuidadosamente las articulaciones específicas, se liberan de sus ataduras y se aflojan.",
+          "cost": "Bajo",
+          "effectiveness": "Algo",
+          "best_for": "Piezas Grandes",
+          "category": "solución de pago",
+          "guide": "hair-dryer"
+        },
+        {
+          "id": "micro-tack",
+          "title": "Usando Lubricante",
+          "description": "No, leíste bien. Usar lubricante puede realmente ayudar a aflojar estas figuras. Antes de continuar, ¡saca tu cabeza del mal pensamiento! Nos referimos a lubricante para bicicletas.",
+          "cost": "Bajo",
+          "effectiveness": "Moderado",
+          "best_for": "Todas las Piezas",
+          "category": "solución de pago",
+          "guide": "lubricant"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "Tutoriales Más Vistos",
+      "issuesTitle": "Problemas Más Comunes"
+    },
+    "nav": {
+      "backToTutorials": "Volver a Tutoriales",
+      "backHome": "Volver al Inicio",
+      "backToTop": "Volver Arriba"
+    }
+  },
+  "ja": {
+    "breadcrumb": {
+      "home": "ホーム",
+      "tutorials": "チュートリアル",
+      "current": "硬いパーツチュートリアル",
+      "other": "その他",
+      "actual": "潤滑剤"
+    },
+    "hero": {
+      "eyebrow": "(追加) 一般的なチュートリアル：硬いパーツ潤滑剤",
+      "title": "固く巻かれたフィギュアは悲劇の元、さあ緩めましょう！",
+      "leadPart1": "このガイドでは、最も効果的な方法である潤滑剤を使ってフィギュアを緩める方法を紹介します。",
+      "mpsLinkText": "未使用",
+      "kikiLinkText": "未使用",
+      "leadPart2": "未使用",
+      "jumpToTutorial": "チュートリアルへジャンプ",
+      "jumpToVideo": "ビデオチュートリアルへジャンプ",
+      "jumpToOther": "他のガイドへジャンプ",
+      "pillBeginner": "初心者向け",
+      "pillMethods": "複数の方法",
+      "pillNoAlterations": "フィギュアの永久的な改造なし",
+      "highlightsLabel": "ガイドのハイライト"
+    },
+    "tutorialMap": {
+      "title": "チュートリアルマップ",
+      "preFixChecklist": "1. 事前チェックリスト",
+      "stepByStep": "2. ステップバイステップチュートリアル",
+      "videoTutorial": "3. ビデオチュートリアル",
+      "otherMethods": "4. その他の方法",
+      "figureStats": "5. フィギュアチュートリアル統計"
+    },
+    "prep": {
+      "title": "事前チェックリスト",
+      "description": "このチュートリアルでは、フィギュアの硬いパーツに最も効果的な解決法を紹介します。それは、単に対象のフィギュアを温かい〜熱いお湯に浸す方法です。",
+      "checklist": [
+        "使用する潤滑剤を選ぶ。（一般的な潤滑剤：石鹸（食器用洗剤）、合成オイル、ガンオイル、実際の潤滑剤、ショックオイル、その他）",
+        "潤滑剤を使用するための清潔で整理された場所を用意する。一部は染みや匂いが残る場合があります。",
+        "清掃用の布を用意する"
+      ],
+      "readiness": "準備状況",
+      "complete": "完了",
+      "statusStart": "最初のチェックリスト項目から始めましょう。",
+      "statusDone": "準備完了！始められます。",
+      "statusProgress": "{percent}% 準備完了。続けてください！"
+    },
+    "workflow": {
+      "title": "修理フロー：お湯でフィギュアを緩める",
+      "intro": "各ステージを展開して、正確な作業内容、タイミング、注意点を確認してください。",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "ステージ1：問題箇所を診断",
+          "content": [
+            "どのパーツが硬いかを確認し、フィギュアを浸す準備をします。"
+          ],
+          "tips": [
+            "硬いパーツの場所を見つけるのは簡単です。動かしにくいか、キィーというきしみ音がするためです。これらは関節やパーツが硬いサインです。",
+            "今回は私の自転車チェーン用潤滑剤を使用します。（強い匂いがするため、この潤滑剤は推奨しません）",
+            "注：硬い関節は様々な理由で硬くなることがあります。このお湯の方法で多くの場合解消されますが、効果がない場合もあります。",
+            "注：今回はSexyIce製のマンタコラを使用してこの修正を紹介します。ビデオ部分では既に緩めた状態なので映像で完全には示せません。しかしマンタコラはネット上でも非常に硬いことで有名なので、画像用に使用します。",
+            {
+              "video": "/assets/videos/Stiff(Vegi).mp4",
+              "text": "音声をオンにしてフィギュアの硬い音を聞いてください。（Redditからの動画）"
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-stiff2.jpg",
+              "text": "肩のボールジョイントが硬い"
+            }
+          ]
+        },
+        {
+          "id": "tighten",
+          "title": "ステージ2：潤滑剤を塗る",
+          "content": [
+            "硬いパーツ（この場合は肩のボールジョイント）を特定したら、次に潤滑剤を塗ります。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "この場合、マンタコラの肩ボールジョイントが非常に硬いため、潤滑剤を塗る最適な場所はその関節です。",
+            "注：使用する潤滑剤の量によって、パーツの動きがより緩くなります。多く塗ればより緩く、少なければそれに応じて緩みにくくなります。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "潤滑剤を塗る際は、可能な限りすべての溝に塗ってください。マンタコラの場合、問題箇所がボールジョイントにあるため、関節の溝に塗ることで上下の動きが緩みます。ソケット側にも塗ると、腕全体の動きがよりスムーズになります。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-wet3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "lock",
+          "title": "ステージ3：確認と片付け",
+          "content": [
+            "この方法は硬いフィギュアを緩める最も効果的な方法の一つですが、100%ではありません。では確認しましょう。"
+          ],
+          "tips": [
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "フィギュアが十分に緩んだら、問題箇所を優しく動かして効果を確認します。",
+            "注：問題箇所は必ず優しく動かしてください！ 効果が不十分だった場合、乱暴に動かすと折れる可能性があります。",
+            "------------------------------------------------------------------------------------",
+            "------------------------------------------------------------------------------------",
+            "まだ硬い場合は、満足するまで少量の潤滑剤を追加してください。",
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move2.jpg",
+              "text": ""
+            },
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-move3.jpg",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "id": "done",
+          "title": "完了！",
+          "content": [
+            "これでほぼすべてです！"
+          ],
+          "tips": [
+            {
+              "image": "/assets/tutorial-assets/stiff-parts/water/manti-fixed.jpg",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    "video": {
+      "title": "ビデオチュートリアル",
+      "description": "これはチュートリアルの視覚版です。情報は同じですが、視覚的に示しています。ぜひ私たちのYouTubeチャンネルもフォローしてください。",
+      "channelName": "Pilk Milk Factory",
+      "videoTitle": "リバティオイルの使用（YouTube: @TheArtOfActionFigures）",
+      "videoFallback": "お使いのブラウザでは埋め込み動画を再生できません。"
+    },
+    "methods": {
+      "title": "その他の硬いパーツの解決方法",
+      "description": "効果が異なるその他の解決方法のディレクトリです。主にRedditなどから情報を収集し、チームが確認しています。",
+      "costLabel": "コスト：",
+      "effectivenessLabel": "効果：",
+      "bestForLabel": "最適対象：",
+      "viewGuide": "ガイドを見る",
+      "videoBtn": "ビデオ",
+      "items": [
+        {
+          "id": "warm-water",
+          "title": "ヘアドライヤーの使用",
+          "description": "硬いフィギュアの2番目に人気のある解決方法です。特定の関節を慎重に温めることで、縛られた状態が解放され、緩みます。",
+          "cost": "低",
+          "effectiveness": "やや",
+          "best_for": "大きいパーツ",
+          "category": "有料解決法",
+          "guide": "hair-dryer"
+        },
+        {
+          "id": "micro-tack",
+          "title": "潤滑剤の使用",
+          "description": "その通りです。潤滑剤を使うとフィギュアを緩めることができます。ただし誤解しないでください！自転車用潤滑剤のことです。",
+          "cost": "低",
+          "effectiveness": "中",
+          "best_for": "すべてのパーツ",
+          "category": "有料解決法",
+          "guide": "lubricant"
+        }
+      ]
+    },
+    "stats": {
+      "viewsTitle": "最も閲覧されたチュートリアル",
+      "issuesTitle": "最も一般的な問題"
+    },
+    "nav": {
+      "backToTutorials": "チュートリアルに戻る",
+      "backHome": "ホームに戻る",
+      "backToTop": "ページトップへ戻る"
+    }
+  }
+
+
+}

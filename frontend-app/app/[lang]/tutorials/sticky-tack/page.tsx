@@ -248,7 +248,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           <div className="container">
             <h2 style={{color:"black", fontSize:"30px"}}>{t.video.title}</h2>
             <p className="muted">
-              {t.video.description}<a href="https://www.youtube.com/@PilkMilkFactory" style={{color:"blue"}}>{t.video.channelName}</a>
+              {t.video.description}<a href="https://www.youtube.com/@PilkMilkFactory" style={{color:"blue"}}> {t.video.channelName}</a>
             </p>
 
             <div className="video-grid">
