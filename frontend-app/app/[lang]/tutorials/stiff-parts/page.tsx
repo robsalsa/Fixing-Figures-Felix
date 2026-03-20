@@ -259,9 +259,9 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="video-section" id="watch">
           <div className="container">
             <h2 style={{color:"black", fontSize:"30px"}}>{t.video.title}</h2>
-            <p className="muted">
+            {/* <p className="muted">
               {t.video.description}<a href="https://www.youtube.com/@PilkMilkFactory" style={{color:"blue"}}>{t.video.channelName}</a>
-            </p>
+            </p> */}
 
             <div className="video-grid">
               <article className="video-card">
