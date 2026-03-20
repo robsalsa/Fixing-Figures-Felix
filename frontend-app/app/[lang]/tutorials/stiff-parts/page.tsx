@@ -38,6 +38,8 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           <Link href={`/${lang}/tutorials`}>{t.breadcrumb.tutorials}</Link>
           <span aria-hidden="true">/</span>
           <span className="current">{t.breadcrumb.current}</span>
+          <span aria-hidden="true">/</span>
+          <span className="current">{t.breadcrumb.actual}</span>
         </div>
       </nav>
 
@@ -50,9 +52,6 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
               <h1>{t.hero.title}</h1>
               <p className="hero-lead">
                 {t.hero.leadPart1}
-                {/* <a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>,{' '}
-                <a href="https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.kikiLinkText}</a> */}
-                {/* {t.hero.leadPart2}<a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>. */}
               </p>
               <div className="hero-cta-row">
                 <a href="#workflow" className="btn primary">
@@ -60,6 +59,9 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                 </a>
                 <a href="#watch" className="btn outline">
                   {t.hero.jumpToVideo}
+                </a>
+                <a href="#method-library" className="btn outline">
+                  {t.hero.jumpToOther}
                 </a>
               </div>
 
@@ -184,6 +186,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                                   loop
                                   muted
                                   playsInline
+                                  controls
                                   style={{ width: '220px', borderRadius: '8px' }}
                                 />
                                 <span className="wf-thumb-label">{vid.text}</span>
