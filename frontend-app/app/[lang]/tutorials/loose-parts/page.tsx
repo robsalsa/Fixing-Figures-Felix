@@ -206,7 +206,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
                               const tipStr = tip as string;
                               const isCallout = step.tips[idx - 1] === '*!*' || step.tips[idx + 1] === '*!*';
-                              const isNote = tipStr.startsWith('NOTE:') || tipStr.startsWith('Note:');
+                              const isNote = tipStr.startsWith('NOTE:') || tipStr.startsWith('Note:') || tipStr.startsWith('NOTA') || tipStr.startsWith('Nota') || tipStr.startsWith('注') ;
 
                               if (isCallout || isNote) {
                                 return (
