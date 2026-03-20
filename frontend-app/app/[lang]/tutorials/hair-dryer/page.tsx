@@ -266,7 +266,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
             </p>
 
             <div className="video-grid">
-              <article className="video-card">
+              {/* <article className="video-card">
                 <h3>{t.video.videoTitle}</h3>
                 <div
                   style={{
@@ -294,7 +294,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     {t.video.videoFallback}
                   </video>
                 </div>
-              </article>             
+              </article>              */}
             </div>
           </div>
         </section>

@@ -269,30 +269,32 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                 <div
                   style={{
                     width: '100%',
-                    paddingBottom: '56.25%',
+                    maxWidth: '300px',
+                    margin: '0 auto',
+                    paddingBottom: 'min(177.78%, 533px)',
                     position: 'relative',
                     backgroundColor: 'black',
                     borderRadius: '12px',
+                    overflow: 'hidden',
                   }}
                 >
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
+                  <iframe
+                    src="https://www.youtube.com/embed/t0IfuH-cQpY"
+                    title={t.video.videoTitle}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                     style={{
                       position: 'absolute',
                       top: 0,
                       left: 0,
                       width: '100%',
                       height: '100%',
+                      border: 'none',
                       borderRadius: '12px',
                     }}
-                  >
-                    <source src="/assets/videos/Stiff(Vegi).mp4" type="video/mp4" />
-                    {t.video.videoFallback}
-                  </video>
+                  />
                 </div>
-              </article>             
+              </article>            
             </div>
           </div>
         </section>
