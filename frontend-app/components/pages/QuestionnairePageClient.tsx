@@ -287,11 +287,11 @@ export default function QuestionnairePageClient({ lang }: QuestionnairePageClien
 				};
 
 				if (nonOtherIssues.length === 1) {
-					const guildSlug = issueToGuild[nonOtherIssues[0]] || 'guild';
-					window.location.href = `/${lang}/guild/${guildSlug}`;
+					const guildSlug = issueToGuild[nonOtherIssues[0]] || 'tutorials';
+					window.location.href = `/${lang}/tutorials/${guildSlug}`;
 				} else {
 					// Multiple issues selected — go to the guild router
-					window.location.href = `/${lang}/guild`;
+					window.location.href = `/${lang}/tutorials`;
 				}
 			} else {
 				window.location.href = `/${lang}/home`;
