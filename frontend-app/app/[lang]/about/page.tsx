@@ -1,9 +1,47 @@
 import React, { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import aboutTranslations from '@/lib/translations/about.json';
+import { BreadcrumbStructuredData, StructuredDataScript } from '@/lib/utils/structured-data';
+
+type AboutPageProps = {
+	params: Promise<{ lang: string }>;
+};
+
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+	const { lang } = await params;
+	const t = aboutTranslations[lang as keyof typeof aboutTranslations] || aboutTranslations.en;
+	
+	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+		process.env.VERCEL_URL 
+		? `https://${process.env.VERCEL_URL}` 
+		: 'http://localhost:3000';
+
+	const titles: Record<string, string> = {
+		en: 'About - Our Mission to Help Fix Action Figures',
+		es: 'Acerca de - Nuestra Misión de Ayudar a Reparar Figuras',
+		ja: '私たちについて - アクションフィギュアの修理支援',
+	};
+
+	const descriptions: Record<string, string> = {
+		en: 'Learn about Figure Fixing Felix and our mission to help the action figure community fix loose, stiff, and broken parts through free tutorials.',
+		es: 'Conoce Figure Fixing Felix y nuestra misión de ayudar a la comunidad de figuras de acción a reparar partes sueltas, rígidas y rotas.',
+		ja: 'Figure Fixing Felixと、無料のチュートリアルを通じてアクションフィギュアコミュニティをサポートする私たちの使命について。',
+	};
+
+	return {
+		title: titles[lang] || titles.en,
+		description: descriptions[lang] || descriptions.en,
+		openGraph: {
+			title: titles[lang] || titles.en,
+			description: descriptions[lang] || descriptions.en,
+			url: `${baseUrl}/${lang}/about`,
+		},
+	};
+}
 
 function NavigationSkeleton() {
 	return (
@@ -37,8 +75,19 @@ async function AboutPageContent({ params }: AboutPageProps) {
 	const { lang } = await params;
 	const t = aboutTranslations[lang as keyof typeof aboutTranslations] || aboutTranslations.en;
 
+	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+		process.env.VERCEL_URL 
+		? `https://${process.env.VERCEL_URL}` 
+		: 'http://localhost:3000';
+
+	const breadcrumbData = BreadcrumbStructuredData([
+		{ name: 'Home', url: `${baseUrl}/${lang}/home` },
+		{ name: 'About', url: `${baseUrl}/${lang}/about` },
+	]);
+
 	return (
 		<>
+			<StructuredDataScript data={breadcrumbData} />
 			<Suspense fallback={<NavigationSkeleton />}>
 				<Navigation lang={lang} currentPage="about" />
 			</Suspense>
