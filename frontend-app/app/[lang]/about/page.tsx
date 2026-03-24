@@ -1,9 +1,11 @@
 import React, { Suspense } from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import aboutTranslations from '@/lib/translations/about.json';
+import { generateSEOMetadata, pageTranslations } from '@/lib/seo/metadata';
 
 function NavigationSkeleton() {
 	return (
@@ -24,6 +26,19 @@ function FooterSkeleton() {
 type AboutPageProps = {
 	params: Promise<{ lang: string }>;
 };
+
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+	const { lang } = await params;
+	const locale = ['en', 'es', 'ja'].includes(lang) ? lang : 'en';
+	const translations = pageTranslations[locale as keyof typeof pageTranslations];
+
+	return generateSEOMetadata({
+		title: translations.about.title,
+		description: translations.about.description,
+		path: `/${locale}/about`,
+		locale,
+	});
+}
 
 export default function AboutPage({ params }: AboutPageProps) {
 	return (
