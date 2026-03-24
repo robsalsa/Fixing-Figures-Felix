@@ -59,10 +59,6 @@ function FooterSkeleton() {
 	);
 }
 
-type AboutPageProps = {
-	params: Promise<{ lang: string }>;
-};
-
 export default function AboutPage({ params }: AboutPageProps) {
 	return (
 		<Suspense fallback={<main />}>
