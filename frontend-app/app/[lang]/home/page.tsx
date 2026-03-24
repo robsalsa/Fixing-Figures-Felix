@@ -2,58 +2,12 @@ import React, { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { connection } from 'next/server';
-import { Metadata } from 'next';
 import Navigation from '@/components/pages/Navigation';
 import Footer from '@/components/pages/Footer';
 import DynamicFigureStats from '@/components/pages/DynamicFigureStats';
 import RankingCard from '@/components/pages/RankingCard';
 import { getTopFiguresByMentions, getTopBrandsByQCIssues, getTopIssues, getTopTutorialViews } from '@/lib/supabase/figure-data/figureFunctions';
 import homeTranslations from '@/lib/translations/home.json';
-import { WebsiteStructuredData, OrganizationStructuredData, StructuredDataScript } from '@/lib/utils/structured-data';
-
-type HomePageProps = {
-	params: Promise<{ lang: string }>;
-};
-
-export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
-	const { lang } = await params;
-	const t = homeTranslations[lang as keyof typeof homeTranslations] || homeTranslations.en;
-	
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
-		process.env.VERCEL_URL 
-		? `https://${process.env.VERCEL_URL}` 
-		: 'http://localhost:3000';
-
-	const titles: Record<string, string> = {
-		en: 'Home - Action Figure Repair Community',
-		es: 'Inicio - Comunidad de Reparación de Figuras',
-		ja: 'ホーム - フィギュア修理コミュニティ',
-	};
-
-	const descriptions: Record<string, string> = {
-		en: 'Join our community to learn how to fix loose, stiff, and broken parts on action figures. Free tutorials, community stats, and repair guides.',
-		es: 'Únete a nuestra comunidad para aprender a reparar partes sueltas, rígidas y rotas de figuras de acción. Tutoriales gratuitos y guías de reparación.',
-		ja: 'アクションフィギュアの緩い部品、固い部品、壊れた部品の修理方法を学ぶコミュニティに参加しましょう。無料のチュートリアルと修理ガイド。',
-	};
-
-	return {
-		title: titles[lang] || titles.en,
-		description: descriptions[lang] || descriptions.en,
-		openGraph: {
-			title: titles[lang] || titles.en,
-			description: descriptions[lang] || descriptions.en,
-			url: `${baseUrl}/${lang}/home`,
-			images: [
-				{
-					url: '/assets/og-home.png',
-					width: 1200,
-					height: 630,
-					alt: 'Figure Fixing Felix Home',
-				},
-			],
-		},
-	};
-}
 
 function NavigationSkeleton() {
 	return (
@@ -100,8 +54,6 @@ async function HomePageContent({ params }: HomePageProps) {
 
 	return (
 		<>
-			<StructuredDataScript data={WebsiteStructuredData()} />
-			<StructuredDataScript data={OrganizationStructuredData()} />
 			<Suspense fallback={<NavigationSkeleton />}>
 				<Navigation lang={lang} currentPage="home" />
 			</Suspense>
