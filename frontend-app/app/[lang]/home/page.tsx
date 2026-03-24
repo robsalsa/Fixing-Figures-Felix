@@ -71,10 +71,6 @@ function FooterSkeleton() {
 	);
 }
 
-type HomePageProps = {
-	params: Promise<{ lang: string }>;
-};
-
 export default function HomePage({ params }: HomePageProps) {
 	return (
 		<Suspense fallback={<main />}>
