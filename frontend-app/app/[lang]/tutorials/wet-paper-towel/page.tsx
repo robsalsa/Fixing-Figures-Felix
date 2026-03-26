@@ -251,23 +251,21 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
             <div className="video-grid">
               <article className="video-card">
-                <h3>{t.video.videoTitle}</h3>
+                {/* <h3>{t.video.videoTitle}</h3> */}
                 <div
                   style={{
                     width: '100%',
-                    maxWidth: '300px',
-                    margin: '0 auto',
-                    paddingBottom: 'min(177.78%, 533px)',
+                    paddingBottom: '56.25%',
                     position: 'relative',
                     backgroundColor: 'black',
                     borderRadius: '12px',
-                    overflow: 'hidden',
                   }}
                 >
                   <iframe
-                    src="https://www.youtube.com/embed/DTK2FB4VIHo"
-                    title={t.video.videoTitle}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    src="https://www.youtube.com/embed/69I4xInGFjk?si=1rXyLFPVyGLzmldL"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                     style={{
                       position: 'absolute',
@@ -280,7 +278,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     }}
                   />
                 </div>
-              </article>             
+              </article>            
             </div>
           </div>
         </section>

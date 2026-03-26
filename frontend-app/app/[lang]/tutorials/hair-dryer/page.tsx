@@ -266,8 +266,8 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
             </p>
 
             <div className="video-grid">
-              {/* <article className="video-card">
-                <h3>{t.video.videoTitle}</h3>
+              <article className="video-card">
+                {/* <h3>{t.video.videoTitle}</h3> */}
                 <div
                   style={{
                     width: '100%',
@@ -277,24 +277,24 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     borderRadius: '12px',
                   }}
                 >
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
+                  <iframe
+                    src="https://www.youtube.com/embed/noZbpPNhDzE?si=iZ-IP4TSsBxLIg07"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                     style={{
                       position: 'absolute',
                       top: 0,
                       left: 0,
                       width: '100%',
                       height: '100%',
+                      border: 'none',
                       borderRadius: '12px',
                     }}
-                  >
-                    <source src="/assets/videos/Stiff(Vegi).mp4" type="video/mp4" />
-                    {t.video.videoFallback}
-                  </video>
+                  />
                 </div>
-              </article>              */}
+              </article>
             </div>
           </div>
         </section>
@@ -337,7 +337,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="goal-section" id="stats">
           <div className="container">
             <TutorialStats
-              tutorialSlug="stiff-parts"
+              tutorialSlug="hair-dryer"
               viewsTitle={t.stats.viewsTitle}
               issuesTitle={t.stats.issuesTitle}
             />

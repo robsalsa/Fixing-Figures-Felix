@@ -228,7 +228,13 @@ export async function recordTutorialView(tutorialSlug: string): Promise<void> {
     .from('tutorial_views')
     .insert([{ tutorial_slug: tutorialSlug }]);
   if (error) {
-    console.error('Error recording tutorial view:', error);
+    console.error('Error recording tutorial view:', {
+      message: error.message,
+      details: error.details,
+      hint: error.hint,
+      code: error.code,
+      tutorialSlug,
+    });
   }
 }
 

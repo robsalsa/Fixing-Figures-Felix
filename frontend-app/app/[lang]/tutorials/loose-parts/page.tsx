@@ -278,7 +278,36 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     }}
                   />
                 </div>
-              </article>             
+              </article>   
+               <article className="video-card">
+                {/* <h3>{t.video.videoTitle}</h3> */}
+                <div
+                  style={{
+                    width: '100%',
+                    paddingBottom: '56.25%',
+                    position: 'relative',
+                    backgroundColor: 'black',
+                    borderRadius: '12px',
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/Z977jc1xXGc?si=7ph84jE5zc3BJnKW"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                      borderRadius: '12px',
+                    }}
+                  />
+                </div>
+              </article>           
             </div>
           </div>
         </section>
