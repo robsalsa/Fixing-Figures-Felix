@@ -8,11 +8,11 @@ import Footer from '@/components/pages/Footer';
 import TutorialStats from '@/components/pages/TutorialStats';
 import translations from '@/lib/translations/tutorial-languages/broken.json';
 
-interface LoosePartsPageProps {
+interface brokenPartsPageProps {
   params: Promise<{ lang: string }>;
 }
 
-export default function LoosePartsPage({ params }: LoosePartsPageProps) {
+export default function brokenPartsPage({ params }: brokenPartsPageProps) {
   const [lang, setLang] = useState<string>('en');
   const [prepPercent, setPrepPercent] = useState<number>(0);
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
@@ -38,6 +38,8 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           <Link href={`/${lang}/tutorials`}>{t.breadcrumb.tutorials}</Link>
           <span aria-hidden="true">/</span>
           <span className="current">{t.breadcrumb.current}</span>
+          <span aria-hidden="true">/</span>
+          <span className="current">{t.breadcrumb.actual}</span>
         </div>
       </nav>
 
@@ -51,24 +53,22 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
               <p className="hero-lead">
                 {t.hero.leadPart1}
                 {/* <a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>,{' '}
-                <a href="https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.kikiLinkText}</a> */}
-                {/* {t.hero.leadPart2}<a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>. */}
-                
+                <a href="https://www.amazon.com/Joints-Solution-Action-Figures-Models/dp/B0DLB26L8X/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.kikiLinkText}</a>
+                {t.hero.leadPart2}<a href="https://www.amazon.com/Joints-Various-Models-Action-Figures/dp/B0CBVPXQLS/ref=sr_1_1?sr=8-1" style={{color:"blue"}}>{t.hero.mpsLinkText}</a>. */}
+                {/* {t.hero.leadPart2} */}
+              </p>
+              <p className="hero-lead">
+                {t.hero.mpsLinkText}
               </p>
               <p className="hero-lead">
                 {t.hero.leadPart2}
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'center', margin: '12px 0' }}>
                 <Image
-                  src="/assets/kat.jpg"
-                  alt="Example of a broken ball joint"
-                  width={250}
-                  height={150}
-                  style={{ borderRadius: '8px', maxWidth: '100%', height: 'auto' }}
+                  src="/assets/tutorial-assets/broken-parts/hand.png"
+                  alt={"loading..."}
+                  width={400}
+                  height={400}
+                  // className="wf-thumb"
                 />
-              </div>
-              <p className="hero-lead">
-                {t.hero.leadPart3}
               </p>
 
               <div className="hero-cta-row">
@@ -77,6 +77,9 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                 </a>
                 <a href="#watch" className="btn outline">
                   {t.hero.jumpToVideo}
+                </a>
+                <a href="#method-library" className="btn outline">
+                  {t.hero.jumpToOther}
                 </a>
               </div>
 
@@ -102,8 +105,8 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         <section className="prep-section" id="prep">
           <div className="container prep-grid">
             <div>
-              <h2 style={{color:"black", fontSize:"30px"}}>{t.prep.title}</h2>
-              <p className="muted" style={{color:"black"}}>
+              <h2 style={{ color: "black", fontSize: "30px" }}>{t.prep.title}</h2>
+              <p className="muted" style={{ color: "black" }}>
                 {t.prep.description}
               </p>
 
@@ -144,7 +147,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Workflow Section */}
         <section className="workflow-section" id="workflow">
           <div className="container">
-            <h2 style={{color:"black", fontSize:"30px"}}>{t.workflow.title}</h2>
+            <h2 style={{ color: "black", fontSize: "30px" }}>{t.workflow.title}</h2>
             <p className="muted workflow-intro">
               {t.workflow.intro}
             </p>
@@ -154,10 +157,6 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                 const images = step.tips.filter(
                   (tip): tip is { text: string; image: string } =>
                     typeof tip === 'object' && tip !== null && 'image' in tip
-                );
-                const videos = step.tips.filter(
-                  (tip): tip is { text: string; video: string } =>
-                    typeof tip === 'object' && tip !== null && 'video' in tip
                 );
                 const bulletColors = ['#FF1A1A', '#FF8B00', '#FFC60B'];
 
@@ -171,12 +170,12 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     <div className="wf-step-body">
                       <h3 className="wf-step-title">{step.title}</h3>
 
-                      <div className={`wf-step-content${images.length > 0 || videos.length > 0 ? ' wf-has-media' : ''}`}>
-                        {(images.length > 0 || videos.length > 0) && (
+                      <div className={`wf-step-content${images.length > 0 ? ' wf-has-media' : ''}`}>
+                        {images.length > 0 && (
                           <div className="wf-media-col">
                             {images.map((img, imgIdx) => (
                               <button
-                                key={`img-${imgIdx}`}
+                                key={imgIdx}
                                 type="button"
                                 className="wf-thumb-btn"
                                 onClick={() => setLightbox({ src: img.image, alt: img.text })}
@@ -192,19 +191,6 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                                 <span className="wf-thumb-label">{img.text}</span>
                               </button>
                             ))}
-                            {videos.map((vid, vidIdx) => (
-                              <div key={`vid-${vidIdx}`} className="wf-thumb-btn" style={{ cursor: 'default' }}>
-                                <video
-                                  src={vid.video}
-                                  autoPlay
-                                  loop
-                                  muted
-                                  playsInline
-                                  style={{ width: '220px', borderRadius: '8px' }}
-                                />
-                                <span className="wf-thumb-label">{vid.text}</span>
-                              </div>
-                            ))}
                           </div>
                         )}
 
@@ -215,7 +201,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
                           <ul className="wf-bullet-list">
                             {step.tips.map((tip, idx) => {
-                              if (typeof tip === 'object' && tip !== null && ('image' in tip || 'video' in tip)) return null;
+                              if (typeof tip === 'object' && tip !== null && 'image' in tip) return null;
 
                               if (typeof tip === 'string' && tip.startsWith('----------')) {
                                 return <li key={idx} className="wf-divider" aria-hidden="true" />;
@@ -235,7 +221,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
 
                               const tipStr = tip as string;
                               const isCallout = step.tips[idx - 1] === '*!*' || step.tips[idx + 1] === '*!*';
-                              const isNote = tipStr.startsWith('NOTE:') || tipStr.startsWith('Note:');
+                              const isNote = tipStr.startsWith('NOTE:') || tipStr.startsWith('Note:') || tipStr.startsWith('NOTA') || tipStr.startsWith('Nota') || tipStr.startsWith('注');
 
                               if (isCallout || isNote) {
                                 return (
@@ -271,14 +257,45 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
         {/* Video Section */}
         <section className="video-section" id="watch">
           <div className="container">
-            <h2 style={{color:"black", fontSize:"30px"}}>{t.video.title}</h2>
+            <h2 style={{ color: "black", fontSize: "30px" }}>{t.video.title}</h2>
             <p className="muted">
-              {t.video.description}<a href="https://www.youtube.com/@PilkMilkFactory" style={{color:"blue"}}>{t.video.channelName}</a>
+              {t.video.description}<a href="https://www.youtube.com/@PilkMilkFactory" style={{ color: "blue" }}> {t.video.channelName}</a>
             </p>
 
             <div className="video-grid">
               <article className="video-card">
                 <h3>{t.video.videoTitle}</h3>
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '300px',
+                    margin: '0 auto',
+                    paddingBottom: 'min(177.78%, 533px)',
+                    position: 'relative',
+                    backgroundColor: 'black',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/MF9NxkXZbr0"
+                    title={t.video.videoTitle}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                      borderRadius: '12px',
+                    }}
+                  />
+                </div>
+              </article>
+              <article className="video-card">
+                {/* <h3>{t.video.videoTitle}</h3> */}
                 <div
                   style={{
                     width: '100%',
@@ -288,30 +305,59 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     borderRadius: '12px',
                   }}
                 >
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
+                  <iframe
+                    src="https://www.youtube.com/embed/uboXD4mSgOQ"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                     style={{
                       position: 'absolute',
                       top: 0,
                       left: 0,
                       width: '100%',
                       height: '100%',
+                      border: 'none',
                       borderRadius: '12px',
                     }}
-                  >
-                    <source src="/assets/videos/loose(spider).mp4" type="video/mp4" />
-                    {t.video.videoFallback}
-                  </video>
+                  />
                 </div>
-              </article>             
+              </article>
+              <article className="video-card">
+                {/* <h3>{t.video.videoTitle}</h3> */}
+                <div
+                  style={{
+                    width: '100%',
+                    paddingBottom: '56.25%',
+                    position: 'relative',
+                    backgroundColor: 'black',
+                    borderRadius: '12px',
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/1x18xtZ49kY"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                      borderRadius: '12px',
+                    }}
+                  />
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
         {/* Directory for other fixes */}
-        <section className="content-section" id="method-library">
+        {/* <section className="content-section" id="method-library">
           <div className="container">
             <h2 className="section-title">{t.methods.title}</h2>
             <p className="muted">
@@ -336,13 +382,13 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
                     </a>
                     {/* <a href="#watch" className="btn outline">
                       {t.methods.videoBtn}
-                    </a> */}
+                    </a> 
                   </div>
                 </article>
               ))}
             </div>
           </div>
-        </section>
+        </section> *}
 
         {/* Stats Section */}
         <section className="goal-section" id="stats">
@@ -363,7 +409,7 @@ export default function LoosePartsPage({ params }: LoosePartsPageProps) {
           <Link href={`/${lang}`} className="btn secondary small">
             {t.nav.backHome}
           </Link>
-          <a href="#top" className="btn primary small" style={{color: "black"}}>
+          <a href="#top" className="btn primary small" style={{ color: "black" }}>
             {t.nav.backToTop}
           </a>
         </div>
