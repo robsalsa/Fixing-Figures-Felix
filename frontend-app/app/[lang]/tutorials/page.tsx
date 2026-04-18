@@ -53,14 +53,14 @@ export default function GuildRouterPage({ params }: GuildRouterPageProps) {
     //   href: 'accesories',
     //   category: 'special glue'
     // },
-    // {
-    //   id: 'broken-parts',
-    //   title: 'Broken Parts',
-    //   description: 'Broken parts are the worst, unfortunately this is one of the harder things to DIY. Even if it\'s hard that doesn\'t mean we cannot try to fix it! So, let\'s fix it! Guide is only for Ball Joint-like pieces.',
-    //   href: 'broken-parts',
-    //   category: t.categoryPaidFix,
-    //   image: '/assets/broken(igawa).png'
-    // },
+    {
+      id: 'broken-parts',
+      title: t.brokenPartTitle,
+      description: t.brokenPartDescription,
+      href: 'broken-parts',
+      category: t.categoryPaidFix,
+      image: '/assets/broken(igawa).png'
+    },
     {
       id: 'coming-soon',
       title: t.comingSoonTitle,
